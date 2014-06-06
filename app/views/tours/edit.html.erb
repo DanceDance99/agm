@@ -1,0 +1,22 @@
+<%= link_to 'Logout', logout_path, class: 'btn btn-danger' %>
+<script>
+  $(function() {
+    $( "#tour_start_date" ).datepicker();
+  });
+</script>
+
+
+<% days = %w(Sun Mon Tue Wed Thu Fri Sat) %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      <h2>Add a new tour</h2>
+      <%= bootstrap_form_for(@tour) do |f| %>
+        <%= render :partial => 'form', :locals => {:form => f }%>
+        <%= f.submit 'Update this tour', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>

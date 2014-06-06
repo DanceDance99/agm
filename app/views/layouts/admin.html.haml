@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %title Welcome to AGM shuttles Inc.
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'admin', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{href: "http://fonts.googleapis.com/css?family=Arimo:400,700", rel: "stylesheet", type: "text/css"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Didact+Gothic", rel: "stylesheet", type: "text/css"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Just+Another+Hand|Dancing+Script", rel: "stylesheet", type: "text/css"}/
+  %body
+
+    .container-fluid
+      .row
+        .col-md-12
+          = render 'layouts/messages'
+          = yield
+      %footer
+        .container
+          .row
+            .col-md-8
+              .copyright
+                %small © 2014 AGM shuttles Inc
+                %small USDOT: 2479956 MC: 858186
+                %strong
+                  %small bookings by phone: 702 327 9922
+            .col-md-4
+              #social-media
+                %strong
+                  %small Find us on:
+                = link_to(image_tag("facebook_icon.png", width: 24, height: 24), "https://www.facebook.com/agmshuttlesinc")
+                = link_to(image_tag("twitter_icon.png", width: 24, height: 24), "https://www.twitter.com/agmshuttlesinc")
+    / ! end of .container

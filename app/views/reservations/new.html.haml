@@ -1,0 +1,10 @@
+= bootstrap_form_for([@tour, @reservation], html: { id: 'payment-form'}) do |f|
+  = f.select :passengers, options_for_select([*5..10])
+  = f.select :date, options_from_collection_for_select(@tour_dates, :date, :human_date)
+  %h4 Additional services
+  = f.text_field :telephone_number
+  = f.text_field :hotel_name
+  = f.text_field :first_last_name
+  = f.hidden_field :added_by_admin, :value => true
+  .form-group.center
+    = f.submit 'Add Reservation', class: 'btn blue-button'

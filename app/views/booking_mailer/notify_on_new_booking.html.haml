@@ -1,0 +1,35 @@
+!!!!
+%html
+%body
+  %h1 New Booking
+  %h2 Customer information:
+  %ul
+    %li
+      Number of passengers: #{@booking.passengers}
+    %li
+      First and last name: #{@booking.first_last_name}
+    %li
+      Telphone number: #{@booking.phone_number}
+    %li
+      From: #{@booking.from_id}
+    %li
+      To: #{@booking.to_id}
+    %li
+      Depart date: #{@booking.depart_date}
+    %li
+      Return date" #{@booking.return_date}
+    %li
+      Amount paid: #{@booking.amount}
+    %li
+      Private shuttle? #{@booking.private_shuttle}
+    %li
+      Home pickup? #{@booking.home_pickup}
+    %li
+      Home drop off? #{@booking.home_dropoff}
+    %li
+      Home address #{@booking.home_address}
+    %li
+      Zipcode: #{@booking.zipcode}
+
+
+

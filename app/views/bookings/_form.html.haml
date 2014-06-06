@@ -1,0 +1,25 @@
+= form.select :passengers, options_for_select([*1..10])
+.radio-inline
+  = form.radio_button :round_trip, false, label: "One Way"
+.radio-inline
+  = form.radio_button :round_trip, true, label: "Round Trip"
+
+= form.check_box :private_shuttle
+
+= form.select :from_id, options_from_collection_for_select(@shuttle.shuttle_cities, :id, :name)
+= form.select :to_id, options_from_collection_for_select(@shuttle.shuttle_cities, :id, :name), :include_blank => true
+= form.hidden_field "depart_date", :id => 'depart_date_hidden_datepicker'
+.depart_description
+#depart_date_datepicker
+= form.hidden_field "return_date", :id => 'return_date_hidden_datepicker'
+.return_description
+#return_date_datepicker
+%h4 Additional services
+= form.check_box :home_pickup, label: 'Home pickup: $15.00 ($10.00 for senior citizens)'
+= form.check_box :home_dropoff, label: 'Home dropoff:  $15.00 ($10.00 for senior citizens)'
+= form.check_box :senior_citizen
+= form.text_field :first_last_name
+= form.text_field :home_address
+= form.text_field :zipcode
+= form.text_field :telephone_number
+

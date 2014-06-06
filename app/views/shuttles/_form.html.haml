@@ -1,0 +1,26 @@
+= form.text_field :name, label: 'Name:'
+= form.text_field 'start_date', label: 'Start date of shuttle:'
+%label Days shuttle is available on
+- Shuttle.flag_mapping["day_bits"].each do |day, bit|
+  = form.check_box day
+  
+= form.text_field :amount, label: 'Amount (in cents per Stripe)'
+= form.text_field :round_trip_amount
+= form.text_field :group_amount
+= form.text_field :group_round_trip_amount
+
+Route
+#shuttle_cities.items
+  =form.nested_fields_for :shuttle_cities do |fields|
+    .item
+      =link_to 'x', '', :class => 'remove' if fields.object.new_record?
+      =fields.text_field :name, :label => "City"
+      =fields.hidden_field :id
+ 
+%a.add.btn.btn-info.btn-xs{:href => '#'} Add City 
+  
+.spacer
+
+:coffeescript
+  jQuery ->
+   jQuery('form').nestedFields();

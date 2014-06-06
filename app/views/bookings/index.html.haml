@@ -1,0 +1,40 @@
+= link_to 'Back to shuttles', shuttles_path, class: 'btn btn-success'
+= link_to 'Add Booking', new_shuttle_booking_path, class: 'btn btn-info'
+%h2 Bookings for #{@shuttle.name}
+
+
+%ul.admin_container
+  -0.upto 6 do |day|
+    -date = @date + day
+    %li
+      =date.to_formatted_s :human
+      - @shuttle.bookings.where(:depart_date => date).each do |booking|        
+        %ul.admin_row
+          %li
+            = link_to booking.first_last_name.presence || "Booking", shuttle_booking_path(@shuttle, booking)
+          %li
+            = booking.telephone_number
+          %li
+            = booking.passengers
+            passengers
+          %li
+            = booking.from.name
+          %li
+            = booking.to.name
+      - @shuttle.bookings.where(:return_date => date).each do |booking|        
+        %ul.admin_row
+          %li
+            = link_to booking.first_last_name.presence || "Booking", shuttle_booking_path(@shuttle, booking)
+          %li
+            = booking.telephone_number
+          %li
+            = booking.passengers
+            passengers
+          %li
+            = booking.to.name
+          %li
+            = booking.from.name
+
+=link_to "Previous week", date_shuttle_bookings_path(:date => @date - 7)
+=link_to "Next week", date_shuttle_bookings_path(:date => @date + 7)
+

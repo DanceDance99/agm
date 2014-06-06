@@ -1,0 +1,21 @@
+= link_to 'Back to tours', tours_path, class: 'btn btn-success'
+= link_to 'Add Reservation', new_tour_reservation_path, class: 'btn btn-info'
+
+%h2 Reservations for #{@tour.name}
+
+%ul.admin_container
+  - @reservations.group_by(&:date).each do |day,reservations|
+    %li
+      =day.to_formatted_s :human
+      %ul.admin_row
+        -reservations.each do |reservation|        
+          %li
+            = link_to reservation.first_last_name, tour_reservation_path(@tour, reservation)
+          %li
+            = reservation.telephone_number
+          %li
+            = reservation.hotel_name
+
+          %li
+            = reservation.passengers
+            passengers
