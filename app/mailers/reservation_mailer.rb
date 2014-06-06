@@ -1,5 +1,5 @@
 class ReservationMailer < ActionMailer::Base
-  default from: 'funkafaction@gmail.com'
+  default from: 'agmexpressproduction@gmail.com'
 
   def notify_on_new_reservation(tour, reservation)
     @tour = tour

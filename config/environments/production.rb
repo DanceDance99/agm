@@ -81,13 +81,13 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'http://calm-hamlet-5828.herokuapp.com',
-  user_name:            'agmexpressproduction@gmail.com',
-  password:             'agmexpress12345',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+  ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'calm-hamlet-5828.herokuapp.com',
+  :authentication => :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
 end

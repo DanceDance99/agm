@@ -9,16 +9,16 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @booking.shuttle = @shuttle
-    @booking.token = params[:stripeToken] #this is not persisted, just used in a callback
+  @booking = Booking.new(booking_params)
+  @booking.shuttle = @shuttle
+  @booking.token = params[:stripeToken] #this is not persisted, just used in a callback
 
-    if @booking.save
-      BookingMailer.notify_on_new_booking(@booking).deliver
-      flash[:success] = "Your booking has been booked for #{@booking.passengers} person(s) on #{@booking.depart_date}.  Please save this info."
-      redirect_to @shuttle
-    else
-      render @shuttle
+  if @booking.save
+    BookingMailer.notify_on_new_booking(@booking).deliver
+    flash[:success] = "Your booking has been booked for #{@booking.passengers} person(s) on #{@booking.depart_date}.  Please save this info."
+    redirect_to @shuttle
+  else
+    render 'new'
     end
   end
 
