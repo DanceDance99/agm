@@ -8,32 +8,70 @@
     -date = @date + day
     %li
       =date.to_formatted_s :human
-      - @shuttle.bookings.where(:depart_date => date).each do |booking|        
+      - @shuttle.bookings.where(:depart_date => date).each do |booking|
         %ul.admin_row
           %li
-            = link_to booking.first_last_name.presence || "Booking", shuttle_booking_path(@shuttle, booking)
+            %strong Name:
+            #{booking.first_last_name}
           %li
-            = booking.telephone_number
+            %strong Passengers:
+            #{booking.passengers}
           %li
-            = booking.passengers
-            passengers
+            %strong Private shuttle?
+            #{booking.private_shuttle ? 'Yes' : 'No'}
           %li
-            = booking.from.name
+            %strong To:
+            #{booking.from.name}
           %li
-            = booking.to.name
-      - @shuttle.bookings.where(:return_date => date).each do |booking|        
+            %strong From:
+            #{booking.to.name}
+          %li
+            %strong Home pickup?
+            #{booking.home_pickup ? 'Yes' : 'No'}
+          %li
+            %strong Home dropoff?
+            #{booking.home_dropoff ? 'Yes' : 'No'}
+          %li
+            %strong Address:
+            #{booking.home_address.presence || 'N/A'}
+          %li
+            %strong Zipcode
+            #{booking.zipcode || 'N/A'}
+          %li
+            %strong Phone #:
+            #{booking.telephone_number.presence || 'N/A'}
+      - @shuttle.bookings.where(:return_date => date).each do |booking|
         %ul.admin_row
           %li
-            = link_to booking.first_last_name.presence || "Booking", shuttle_booking_path(@shuttle, booking)
+            %strong Name:
+            #{booking.first_last_name}
           %li
-            = booking.telephone_number
+            %strong Passengers:
+            #{booking.passengers}
           %li
-            = booking.passengers
-            passengers
+            %strong Private shuttle?
+            #{booking.private_shuttle ? 'Yes' : 'No'}
           %li
-            = booking.to.name
+            %strong To:
+            #{booking.from.name}
           %li
-            = booking.from.name
+            %strong From:
+            #{booking.to.name}
+          %li
+            %strong Home pickup?
+            #{booking.home_pickup ? 'Yes' : 'No'}
+          %li
+            %strong Home dropoff?
+            #{booking.home_dropoff ? 'Yes' : 'No'}
+          %li
+            %strong Address:
+            #{booking.home_address.presence || 'N/A'}
+          %li
+            %strong Zipcode
+            #{booking.zipcode || 'N/A'}
+          %li
+            %strong Phone #:
+            #{booking.telephone_number.presence || 'N/A'}
 
 =link_to "Previous week", date_shuttle_bookings_path(:date => @date - 7)
 =link_to "Next week", date_shuttle_bookings_path(:date => @date + 7)

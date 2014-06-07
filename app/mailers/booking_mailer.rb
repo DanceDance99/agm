@@ -5,4 +5,9 @@ class BookingMailer < ActionMailer::Base
     @booking = booking
     mail(to: 'tourbillontime@live.com', subject: 'New Shuttle Booking')
   end
+
+  def notify_customer_on_new_booking(booking)
+    @booking = booking
+    mail(to: @booking.email_address, subject: 'Shuttle Booking Confirmation')
+  end
 end

@@ -1,6 +1,6 @@
 #booking_modal_button{"data-shuttle-id" => @shuttle.id }
 
-= bootstrap_form_for([@shuttle, @booking]) do |f|
+= bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}, remote: true) do |f|
   =f.hidden_field :added_by_admin, :value => true
   =render :partial => 'form', :locals => {:form => f}
   .form-group.center

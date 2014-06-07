@@ -8,14 +8,21 @@
     %li
       =day.to_formatted_s :human
       %ul.admin_row
-        -reservations.each do |reservation|        
+        -reservations.each do |reservation|
           %li
-            = link_to reservation.first_last_name, tour_reservation_path(@tour, reservation)
+            %strong Tour:
+            #{link_to @tour.name, tour_path(@tour)}
           %li
-            = reservation.telephone_number
+            %strong Passengers:
+            #{reservation.passengers}
           %li
-            = reservation.hotel_name
+            %strong Name:
+            #{reservation.first_last_name}
+          %li
+            %strong Number:
+            #{reservation.telephone_number}
+          %li
+            %strong Hotel:
+            #{reservation.hotel_name}
+          %br
 
-          %li
-            = reservation.passengers
-            passengers

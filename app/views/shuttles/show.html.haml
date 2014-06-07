@@ -1,7 +1,7 @@
 = javascript_include_tag "https://js.stripe.com/v2/"
 = javascript_include_tag 'payment'
 :javascript
-  Stripe.setPublishableKey('pk_test_eOnfgUnC5GXWB6LzQKdozVF9');
+  Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
 .jumbotron
   .container
     .row
@@ -12,7 +12,7 @@
       .col-md-4
         #translate
           %a{href: "armenian.html"}
-            %img{height: "32", src: "flag-icon-armenia.png", width: "32"}/
+            %img{height: "32", src: "flag-icon-armenia.png", width: "32"}
         #jumbotron-telephone.text-center
           %span.medium-text Please
           %span.larger-text call us
@@ -314,7 +314,7 @@
                   .modal-body
                     %p Book this shuttle online or call us at 702 327 9922
                     %p.mini-text Pricing is for both adults and children
-                    = bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}) do |f|
+                    = bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}, remote: true) do |f|
                       =render :partial => 'bookings/form', :locals => {:form => f}
                       %span.payment-errors
                       .form-group

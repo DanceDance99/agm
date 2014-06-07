@@ -1,0 +1,29 @@
+
+= form.select :date, options_from_collection_for_select(@tour_dates, :date, :human_date)
+= form.select :passengers, options_for_select([*5..10])
+= form.text_field :first_last_name, label: "Full name"
+= form.text_field :email_address
+= form.text_field :telephone_number
+= form.text_field :hotel_name, label: 'Hotel name (this will be your pickup location)'
+
+
+
+:javascript
+  window.tour_dates = #{@tour_dates.to_json(:only => [:date, :available])}
+  window.unbooked = '#{escape_javascript options_for_select([*5..10])}'
+:coffeescript
+
+  jQuery ->
+    jQuery('#reservation_date').change (e) ->
+      selected_date = jQuery('#reservation_date').val()
+      tour_date = jQuery.grep(tour_dates, (object, index) ->
+        object.date == selected_date
+      )[0]
+      if tour_date.available > 5
+        jQuery('#reservation_passengers').html(unbooked)
+      else
+        options = ''
+        for index in [1..tour_date.available]
+          options += '<option value="' + index + '">' + index + '</option>'
+
+        jQuery('#reservation_passengers').html(options)

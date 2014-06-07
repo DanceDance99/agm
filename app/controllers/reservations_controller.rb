@@ -6,24 +6,25 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = Reservation.new
-    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 1.month.from_now).where("available > 0")
+    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 1.month.from_now).where("available > 0").order('date asc')
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.tour = @tour
     @reservation.token = params[:stripeToken]
-    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 1.month.from_now).where("available > 0")
+    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 1.month.from_now).where("available > 0").order('date asc')
 
     @tour.amount = @reservation.passengers * @tour.amount
 
 
     if @reservation.save
+      ReservationMailer.notify_customer_on_new_reservation(@tour, @reservation).deliver
       ReservationMailer.notify_on_new_reservation(@tour, @reservation).deliver
-      flash[:success] = "Your reservation has been booked for #{@reservation.passengers} person(s) on #{@reservation.date}.  Please save this info."
-      redirect_to @tour
+      flash[:success] = "Your reservation has been booked! You will receive an email confirmation soon."
+      render :js => "window.location = '#{url_for(@tour)}'"
     else
-      render 'new'
+      render action: 'create_failed'
     end
   end
 
@@ -71,7 +72,7 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:passengers, :telephone_number, :hotel_name, :first_last_name, :date, :added_by_admin)
+    params.require(:reservation).permit(:passengers, :telephone_number, :hotel_name, :first_last_name, :email_address, :date, :added_by_admin)
   end
 end
 

@@ -1,18 +1,11 @@
 !!!!
 %html
 %body
-  %h1 New Booking
-  %h2 Customer information:
+  %h1 Dear #{@booking.first_last_name.presence}, please find your booking information below:
   %ul
-    %li
-      %strong Name:
-      #{@booking.first_last_name}
     %li
       %strong Passengers:
       #{@booking.passengers}
-    %li
-      %strong Telephone number:
-      #{@booking.phone_number}
     %li
       %strong From:
       #{@booking.from.name}
@@ -40,6 +33,5 @@
     %li
       %strong Zipcode:
       #{@booking.zipcode.presence || 'N/A'}
-
-
-
+    %p *Please remember to bring your own child seat if a child is going to be traveling.
+    %p Thank you for booking with AGM Express. Please contact us at 702 327 9922 with any questions.

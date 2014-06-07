@@ -9,16 +9,18 @@ class BookingsController < ApplicationController
   end
 
   def create
-  @booking = Booking.new(booking_params)
-  @booking.shuttle = @shuttle
-  @booking.token = params[:stripeToken] #this is not persisted, just used in a callback
+    @booking = Booking.new(booking_params)
+    @booking.shuttle = @shuttle
+    @booking.token = params[:stripeToken] #this is not persisted, just used in a callback
 
-  if @booking.save
-    BookingMailer.notify_on_new_booking(@booking).deliver
-    flash[:success] = "Your booking has been booked for #{@booking.passengers} person(s) on #{@booking.depart_date}.  Please save this info."
-    redirect_to @shuttle
-  else
-    render 'new'
+    if @booking.save
+      BookingMailer.notify_customer_on_new_booking(@booking).deliver
+      BookingMailer.notify_on_new_booking(@booking).deliver
+      flash[:success] = "Your shuttle has been booked! You will receive an email confirmation soon."
+      render :js => "window.location = '#{url_for(@shuttle)}'"
+
+    else
+      render action: 'create_failed'
     end
   end
 
@@ -61,6 +63,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit( :passengers, :home_pickup, :home_dropoff, :home_address, :zipcode, :telephone_number, :amount, :first_last_name, :phone_number, :round_trip, :from_id, :to_id, :depart_date, :return_date, :added_by_admin, :private_shuttle, :senior_citizen)
+    params.require(:booking).permit( :passengers, :home_pickup, :home_dropoff, :email_address, :home_address, :zipcode, :telephone_number, :amount, :first_last_name, :phone_number, :round_trip, :from_id, :to_id, :depart_date, :return_date, :added_by_admin, :private_shuttle, :senior_citizen)
   end
 end

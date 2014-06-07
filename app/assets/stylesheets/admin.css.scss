@@ -5,18 +5,21 @@
  *= require_self
  //= require rails_bootstrap_forms
  */
+@import 'common';
+@import 'bookings';
+
 
 form {
   .items {
     .item { float:left;}
     margin: 10px;
-  
+
   }
-  
+
   .spacer {
     height: 15px;
   }
-  
+
   .add { }
   .remove { float: right; }
 }
@@ -27,15 +30,16 @@ form {
   border-radius: 5px;
   list-style-type: none;
   padding: 20px;
-  li { margin-bottom: 10px; }
+  li { margin-bottom: 15px; }
   .admin_row {
     border: 1px solid #ddd;
     margin-top: -1px;
-    li { 
-      display:inline-block; 
-      width: 180px;
-      margin-bottom: 0px;
+    li {
+      display:inline-block;
+      width: 240px;
+      margin-top: 4px;
+      margin-bottom: 4px;
     }
-    
+
   }
 }

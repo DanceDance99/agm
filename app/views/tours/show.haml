@@ -1,7 +1,7 @@
 = javascript_include_tag "https://js.stripe.com/v2/"
 = javascript_include_tag 'payment'
 :javascript
-  Stripe.setPublishableKey('pk_test_eOnfgUnC5GXWB6LzQKdozVF9');
+  Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
 .container.main-heading
   .row
     %h2.padding-bottom
@@ -92,13 +92,8 @@
         $
         \#{p '%.2f' % (@tour.amount.to_i/100.0)}
       %p.mini-text Pricing is for both adults and children
-      = bootstrap_form_for([@tour, @reservation], html: { id: 'payment-form'}) do |f|
-        = f.select :passengers, options_for_select([*5..10])
-        = f.select :date, options_from_collection_for_select(@tour_dates, :date, :human_date)
-        %h4 Additional services
-        = f.text_field :telephone_number
-        = f.text_field :hotel_name
-        = f.text_field :first_last_name
+      = bootstrap_form_for([@tour, @reservation], html: { id: 'payment-form'}, remote: true) do |f|
+        =render :partial => 'reservations/form', :locals => {:form => f}
         %span.payment-errors
         .form-group
           = label_tag :card_number, 'Credit card number:'

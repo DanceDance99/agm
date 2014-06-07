@@ -10,7 +10,8 @@ jQuery ->
     if(jQuery('#booking_from_id').val() and jQuery('#booking_to_id').val())
       
       jQuery('.depart_description').html(jQuery('#booking_from_id option:selected').text() + " to " + jQuery('#booking_to_id option:selected').text())
-      if jQuery('#booking_round_trip').is(':checked')
+      
+      if jQuery('[name=booking\\[round_trip\\]]:checked').val() == 'true'
         jQuery('.return_description').html(jQuery('#booking_to_id option:selected').text() + " to " + jQuery('#booking_from_id option:selected').text())
       else
         jQuery('.return_description').html('')

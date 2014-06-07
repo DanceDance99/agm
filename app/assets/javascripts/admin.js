@@ -9,5 +9,8 @@
 //= require bootstrap
 //= require jquery.nested-fields
 
+//= require public/bookings
+
 //= require_tree ./admin/
+
 

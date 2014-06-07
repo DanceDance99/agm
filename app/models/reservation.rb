@@ -7,6 +7,9 @@ class Reservation < ActiveRecord::Base
   validates :passengers, :presence => true
   validates :tour, :presence => true
   validates :first_last_name, :presence => true
+  validates :hotel_name, :presence => true
+  validates :telephone_number, :presence => true
+  validates :email_address, :presence => true
 
   attr_accessor :token
 
@@ -19,12 +22,18 @@ class Reservation < ActiveRecord::Base
 
   def charge_credit_card
     unless self.added_by_admin
-      Stripe.api_key = 'sk_test_9wCbfTCSK0xnqmV11z0FU00B'
-      Stripe::Charge.create(
-        :amount => self.tour.amount, # amount in cents, again
-        :currency => "usd",
-        :card => self.token
-      )
+      begin
+        Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+        Stripe::Charge.create(
+          :amount => self.tour.amount, # amount in cents, again
+          :currency => "usd",
+          :card => self.token
+        )
+
+      rescue Stripe::CardError => e
+        errors.add(:credit_card, e.message)
+      end
+
     end
   end
 end

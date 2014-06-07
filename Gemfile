@@ -23,6 +23,9 @@ gem "default_value_for", "~> 3.0.0"
 gem 'acts_as_list', :github => 'swanandp/acts_as_list'
 gem 'awesome_nested_fields'
 
+gem 'unicorn'
+gem "sentry-raven"
+
 group :development do
   gem 'spring'
   gem 'quiet_assets'

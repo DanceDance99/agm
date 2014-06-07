@@ -1,0 +1,2 @@
+jQuery('#payment-form #error_explanation').remove()
+jQuery('#payment-form').prepend('<%= escape_javascript(render("shared/error_messages", :object => @reservation, :formats => [:html])) %>');
