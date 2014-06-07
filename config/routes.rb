@@ -2,12 +2,14 @@ Rails.application.routes.draw do
 
   root to: 'shuttles#show'
 
+  get '/agm', to:'agm#index'
+
   resources :tours do
     resources :reservations
   end
 
   resources :shuttles do
-    
+
     resources :bookings do
       collection do
         get '/date/:date', :action => :index, :as => :date

@@ -14,7 +14,7 @@ class Booking < ActiveRecord::Base
   validates :depart_date, :presence => true
   validates :passengers, :presence => true
   validates :email_address, :presence => true
-  validates :telephone_number, :presence =>
+  validates :telephone_number, :presence => true
 
   default_value_for :round_trip, false
 

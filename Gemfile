@@ -24,7 +24,7 @@ gem 'acts_as_list', :github => 'swanandp/acts_as_list'
 gem 'awesome_nested_fields'
 
 gem 'unicorn'
-gem "sentry-raven"
+gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 
 group :development do
   gem 'spring'

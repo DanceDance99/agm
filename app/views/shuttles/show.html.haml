@@ -2,23 +2,6 @@
 = javascript_include_tag 'payment'
 :javascript
   Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
-.jumbotron
-  .container
-    .row
-      .col-md-8
-        #jumbotron-logo
-          %h1
-            = image_tag('logo.png', class: 'img-responsive')
-      .col-md-4
-        #translate
-          %a{href: "armenian.html"}
-            %img{height: "32", src: "flag-icon-armenia.png", width: "32"}
-        #jumbotron-telephone.text-center
-          %span.medium-text Please
-          %span.larger-text call us
-          %span.medium-text for
-          %span.larger-text reservations
-          %h2.text-center 702 327 9922
 .about-us
   .container
     #agm-slideshow.col-md-5.carousel.slide{"data-pause" => "hover", "data-ride" => "carousel"}
@@ -354,8 +337,5 @@
           %p Find us on:
           %ul.list-inline
             %li
-              %a{href: "http://facebook.com/agmtoursinc"}
-                %img{alt: "Facebook", height: "42", src: "facebook_icon.png", width: "48"}/
-            %li
-              %a{href: "http://twitter.com/agmtoursinc"}
-                %img{alt: "Facebook", height: "42", src: "twitter_icon.png", width: "48"}/
+              = link_to(image_tag("facebook_icon.png", width: 48, height: 42), "https://www.facebook.com/agmshuttlesinc")
+              = link_to(image_tag("twitter_icon.png", width: 48, height: 42), "https://www.twitter.com/agmshuttlesinc")

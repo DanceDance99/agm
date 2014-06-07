@@ -6,12 +6,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-   <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand|Dancing+Script' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <!--
+
 <div class='jumbotron'>
     <div class='container'>
       <div class='row'>
@@ -20,28 +18,24 @@
             <h1><%= image_tag('logo.png', alt: 'AGM Logo') %></h1>
           </div>
         </div>
-
-        <div class='col-md-5'>
-          <div class='booking-heading'>Book online or call 702 327 9922</div>
-          <div class="btn-group">
-            <button class="btn btn-default btn-lg dropdown-toggle all-shuttles-list" type="button" data-toggle="dropdown">
-              Select a Service <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role='menu'>
-              <li><a href='agmexpress.com'>Las Vegas, Glendale, Hollywood Express Shuttle</a></li>
-              <li><a href='/shuttles/57/bookings/new'>Valley of Fire shuttle</a><li>
-              <li><a href='/shuttles/56/bookings/new'>Las Vegas City shuttle</a></li>
-              <li><a href='/shuttles/60/bookings/new'>Grand Canyon shuttle</a></li>
-              <li><a href='/shuttles/23/bookings/new'>Red Rock shuttle</a></li>
-              <li><a href='/shuttles/58/bookings/new'>Hoover Dam shuttle</a></li>
-              <li><a href='/shuttles/59/bookings/new'>Death Valley shuttle</a></li>
-            </ul>
-          </div>
+        <div class="col-md-4">
+        <div id="translate">
+          <a href="armenian.html">
+            <%=image_tag('flag-icon-armenia.png', width: 32) %>
+          </a>
         </div>
+        <div class="text-center" id="jumbotron-telephone">
+          <span class="medium-text">Please</span>
+          <span class="larger-text">call us</span>
+          <span class="medium-text">for</span>
+          <span class="larger-text">reservations</span>
+          <h2 class="text-center">702 327 9922</h2>
+        </div>
+      </div>
       </div>
     </div>
   </div>
--->
+
 <div class="container-fluid">
 
   <div class="row">

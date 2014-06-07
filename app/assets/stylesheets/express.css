@@ -1,7 +1,7 @@
 
 /* global */
 body {
-  font-family: 'Arimo', sans-serif, 'Liberation Sans';
+    font-family: 'Didact Gothic', sans-serif;
   font-size: 16px;
   color: #333;
   font-weight: 400;
@@ -15,7 +15,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000000;
-   font-family: 'Arimo', sans-serif, 'Liberation Sans';
+  font-family: 'Didact Gothic', sans-serif;
   font-weight: 700;
   text-shadow: 1px 1px 1px #5e5d5d;
   margin-top: 0;
@@ -302,6 +302,12 @@ td, th {
     font-weight: 700;
     color: #870820;
     text-shadow: 1px 1px 1px #5e5d5d;
+}
+/* end */
+
+/* AGM EXPRESS MAIN PAGE */
+.container-bg {
+  background-color: #f5f2e8;
 }
 /* end */
 
