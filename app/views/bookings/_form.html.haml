@@ -15,11 +15,11 @@
 .return_description
 #return_date_datepicker
 = form.text_field :first_last_name, label: 'Full name'
-= form.text_field :email_address
+= form.text_field :email_address, label: 'Email address (*required)'
 = form.check_box :home_pickup, label: 'Home pickup: $15.00 ($10.00 for senior citizens)'
 = form.check_box :home_dropoff, label: 'Home dropoff:  $15.00 ($10.00 for senior citizens)'
 = form.check_box :senior_citizen
-= form.text_field :home_address
+= form.text_field :home_address, label: 'Home address (*required with home pickup/dropoff)'
 = form.text_field :zipcode
-= form.text_field :telephone_number
+= form.text_field :telephone_number, label: 'Telephone number (*required)'
 
