@@ -1,7 +1,6 @@
-/* global */
+
 body {
   font-family: 'Arimo', sans-serif, 'Liberation Sans';
-
 }
 
 p {
@@ -149,33 +148,4 @@ h4 {
   text-align: center;
 }
 /* end */
-
-
-/* NOT IN USE 6-8 */
-/* shuttle booking text heading */
-/*.booking-heading, .all-shuttles-list {
-  float: left;
-  margin-left: 5%;
-}
-.booking-heading {
-  margin-top: 28px;
-  margin-right: 4%;
-}*/
-/* end */
-
-/* select all shuttles button */
-/*.dropdown-toggle {
-  margin-top: 15px;
-}*/
-/* end */
-
-
-/* all shuttles heading */
-/*.all-shuttles h2 {
-  font-size: 55px;
-  text-align: center;
-}*/
-/* end */
-/* end * /
-
 
