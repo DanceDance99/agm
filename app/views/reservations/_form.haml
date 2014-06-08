@@ -1,9 +1,9 @@
 
 = form.select :date, options_from_collection_for_select(@tour_dates, :date, :human_date)
 = form.select :passengers, options_for_select([*5..10])
-= form.text_field :first_last_name, label: "Full name (*required)"
-= form.text_field :email_address, label: 'Email address (*required)'
-= form.text_field :telephone_number, label: 'Telephone number (*required)'
+= form.text_field :first_last_name, label: "Full name (required)"
+= form.text_field :email_address, label: 'Email address (required)'
+= form.text_field :telephone_number, label: 'Telephone number (required)'
 = form.text_field :hotel_name, label: 'Hotel name (this will be your pickup location)'
 
 

@@ -12,7 +12,7 @@
       <li>Days shuttle available on: <%= shuttle.days %></li>
       <%= link_to 'Edit', edit_shuttle_path(shuttle) %>
       <%= link_to 'Bookings', shuttle_bookings_path(shuttle) %>
-      
+
       <%= link_to "Delete shuttle",
         shuttle_path(shuttle),
         method: :delete,

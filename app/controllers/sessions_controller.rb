@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:notice] = 'Logged in sucessfully.'
-      redirect_to new_shuttle_path
+      redirect_to agm_admin_path
     else
       flash[:error] = 'Login failed. Please try again'
       redirect_to login_path

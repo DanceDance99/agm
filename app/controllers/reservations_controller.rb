@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  #before_action :require_admin, only: [:show]
+  before_action :require_admin
   before_action :load_tour, only: [:index, :new, :create]
 
   layout 'admin'

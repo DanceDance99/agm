@@ -1,13 +1,13 @@
 class ShuttlesController < ApplicationController
-  #before_action :require_admin
-  before_action :load_shuttle, :only => [:show, :edit, :update, :destroy]
-  
+  before_action :require_admin, only: [:index, :new, :edit]
+  before_action :load_shuttle, only: [:show, :edit, :update, :destroy]
+
   layout 'admin'
 
   def index
     @shuttles = Shuttle.all
-    
-    
+
+
   end
 
   def new
@@ -25,11 +25,11 @@ class ShuttlesController < ApplicationController
       render 'new'
     end
   end
-  
+
   def show
     @booking = Booking.new
-    @from_cities = @shuttle.shuttle_cities 
-    @to_cities = @shuttle.shuttle_cities 
+    @from_cities = @shuttle.shuttle_cities
+    @to_cities = @shuttle.shuttle_cities
 
     @shuttle.save #hack to rebuild dates until a rake task is employeed
 
@@ -55,16 +55,16 @@ class ShuttlesController < ApplicationController
     flash[:notice] = "#{@shuttle.name} has been deleted."
     redirect_to shuttles_path
   end
-  
+
 
   private
-  
+
   def load_shuttle
     @shuttle = Shuttle.find_by_id(params[:id])
-    
+
     #Temporary fix for home page
     redirect_to Shuttle.first unless @shuttle
-    
+
   end
 
   def shuttles_params

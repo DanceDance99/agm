@@ -1,7 +1,11 @@
 .container-bg
-  %row
-    %h2 Shuttle Transportation
-
-.container-bg
-  %row
-    %h2 VIP Tours
+  %h2.index Shuttle Transportation
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+  .carousel-inner
+    .item.active.index
+      = image_tag('express.jpg')
+      .carousel-caption
+        %p Really annoyed.

@@ -1,11 +1,7 @@
 
 /* global */
 body {
-    font-family: 'Didact Gothic', sans-serif;
-  font-size: 16px;
-  color: #333;
-  font-weight: 400;
-  background: #e9e3cc;
+  font-family: 'Arimo', sans-serif, 'Liberation Sans';
 }
 
 p {
@@ -14,11 +10,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000000;
-  font-family: 'Didact Gothic', sans-serif;
-  font-weight: 700;
-  text-shadow: 1px 1px 1px #5e5d5d;
-  margin-top: 0;
+   font-family: 'Arimo', sans-serif, 'Liberation Sans';
 }
 
 /* end */
@@ -34,14 +26,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .small-text {
   font-size: 12px;
-}
-
-.medium-text {
-  font-size: 18px
-}
-
-.larger-text {
-  font-size: 20px;
 }
 
 .strong-text {
@@ -102,43 +86,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-inner {
   border-radius: 3%;
-}
-/* end */
-
-
-/* heading */
-#jumbotron-telephone {
-  background-color: #e1e0de;
-  padding-left: 14px;
-  float: right;
-}
-
-#jumbotron-telephone h2 {
-  font-size: 40px;
-}
-
-.jumbotron {
-  background-color: #e1e1e1;
-  padding-bottom: 30px;
-  margin-bottom: 45px;
-  padding-top: 20px;
-  border-bottom: 3px solid #c0bebe;
-  -webkit-box-shadow: 0 8px 6px -6px #827f7f;
-     -moz-box-shadow: 0 8px 6px -6px #827f7f;
-          box-shadow: 0 8px 6px -6px #827f7f;
-}
-
-#jumbotron-logo img {
-  padding-top: 42px;
-}
-
-#translate {
-  float: right;
-}
-
-#translate img {
-  width: 32px;
-  height: 32px;
 }
 /* end */
 
@@ -302,20 +249,6 @@ td, th {
     font-weight: 700;
     color: #870820;
     text-shadow: 1px 1px 1px #5e5d5d;
-}
-/* end */
-
-/* AGM EXPRESS MAIN PAGE */
-.container-bg {
-  background-color: #f5f2e8;
-}
-/* end */
-
-/* footer */
-footer {
-  margin-top: 40px;
-  border-top: 1px solid #666;
-  padding: 10px 0;
 }
 /* end */
 

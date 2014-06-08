@@ -1,7 +1,6 @@
 /*
  *= require bootstrap
  *= require jquery.ui.datepicker
- *= require express
  *= require_self
  //= require rails_bootstrap_forms
  */
@@ -11,7 +10,95 @@
 .modal.large {
   .modal-dialog {
     width: 700px;
-    
+
   }
+}
+
+body {
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  background: #e9e3cc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #5e5d5d;
+  margin-top: 0;
+}
+
+/* heading */
+.jumbotron {
+  background-color: #ebe9e9;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  padding-top: 25px;
+  border-bottom: 3px solid #c0bebe;
+  -webkit-box-shadow: 0 8px 6px -6px #827f7f;
+     -moz-box-shadow: 0 8px 6px -6px #827f7f;
+          box-shadow: 0 8px 6px -6px #827f7f;
+}
+
+#jumbotron-telephone {
+  background-color: #e1e0de;
+  padding-left: 14px;
+  float: right;
+}
+
+#jumbotron-telephone h2 {
+  font-size: 40px;
+}
+
+
+#jumbotron-logo img {
+  padding-top: 42px;
+}
+
+#translate {
+  float: right;
+}
+
+#translate img {
+  width: 32px;
+  height: 32px;
+}
+
+.medium-text {
+  font-size: 18px
+}
+
+.larger-text {
+  font-size: 20px;
+}
+/* end */
+
+
+/* payment errors */
+.payment-errors {
+  color: #cb203c;
+}
+/* end */
+
+
+
+/* footer */
+footer {
+  margin-top: 40px;
+  border-top: 1px solid #666;
+  padding: 10px 0;
+}
+/* end */
+
+
+/* media queries */
+@media(min-width: 1200px) {
+   #social-media { float: right; }
+ }
+/* end */
+
+@media(min-width: 768px) {
+  .medium-text { font-size: 18px }
+  .larger-text { font-size: 27px; }
 }
 

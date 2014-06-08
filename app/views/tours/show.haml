@@ -1,3 +1,4 @@
+= stylesheet_link_tag 'localtours'
 = javascript_include_tag "https://js.stripe.com/v2/"
 = javascript_include_tag 'payment'
 :javascript
@@ -46,8 +47,8 @@
         = image_tag('grand-canyon.jpg', class: 'img-responsive')
       - if @tour.name == 'Death Valley Tour'
         = image_tag('death-valley.jpg', class: 'img-responsive')
-  .row.reservations-left
-    .col-md-8
+  .row
+    .col-md-8.reservations-left
       %h3.padding-bottom
         = @tour.name
       .tour-info
@@ -87,11 +88,10 @@
           %li If traveling with a child, please bring your own car seat
     .col-md-4.reservations-right
       %h3.padding-bottom Book this tour
-      %p Book this tour online or call us at 702 327 9922
+      %p.mini-text Pricing is for both adults and children
       %h3.blue-heading
         $
-        \#{p '%.2f' % (@tour.amount.to_i/100.0)}
-      %p.mini-text Pricing is for both adults and children
+        #{p '%.2f' % (@tour.amount.to_i/100.0)}
       = bootstrap_form_for([@tour, @reservation], html: { id: 'payment-form'}, remote: true) do |f|
         =render :partial => 'reservations/form', :locals => {:form => f}
         %span.payment-errors
@@ -107,4 +107,4 @@
           = select_month(Date.today, {add_month_numbers: true},  class: 'form-control', data: {stripe: 'exp-month'})
           = select_year(Date.today.year, {start_year: Date.today.year, end_year: Date.today.year + 4}, class: 'form-control', data: {stripe: 'exp-year'})
         .form-group.center
-          = f.submit 'BOOK TOUR', class: 'btn blue-button'
+          = f.submit 'BOOK TOUR', class: 'button btn btn-primary'

@@ -86,8 +86,10 @@ Rails.application.configure do
   :address        => ENV['MAILGUN_SMTP_SERVER'],
   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-  :domain         => 'calm-hamlet-5828.herokuapp.com',
+  :domain         => 'agmexpress.com',
   :authentication => :plain,
   }
   ActionMailer::Base.delivery_method = :smtp
+
+  config.force_ssl = true
 end

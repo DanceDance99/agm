@@ -1,15 +1,39 @@
-/* rails side */
+/* global */
+body {
+  font-family: 'Arimo', sans-serif, 'Liberation Sans';
+
+}
+
+p {
+  line-height: 20px;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #5e5d5d;
+  margin-top: 0;
+}
+
 .main-heading h2 {
+  font-family: 'Didact Gothic', sans-serif;
   font-size: 60px;
   text-align: center;
 }
 
 .bookings-left h4, .bookings-right h4 {
+  font-family: 'Didact Gothic', sans-serif;
   font-size: 32px;
 }
 
-.bookings-right h3, .bookings-left h3 {
+h3 {
+  font-family: 'Didact Gothic', sans-serif;
   font-size: 40px;
+}
+
+h4 {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 23px;
 }
 
 .shuttle-images {
@@ -47,58 +71,35 @@
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 68px;
-  font-size: 14px;
   line-height: 1.428571429;
   border-radius: 4px;
+  margin-left: 45px;
 }
 
-.blue-button {
-  font-size: 25px;
-  background-color: #428bca;
-  color: #fff;
-  padding: 6px 40px;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  width: 62%;
+.blue-heading h3 {
+  font-size: 30px;
 }
 
 .padding-bottom {
   padding-bottom: 12px;
 }
 
-.payment-errors {
-  color: #cb203c;
-  font-weight: 700;
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 /* end */
 
-/* shuttle booking text heading */
-.booking-heading, .all-shuttles-list {
-  float: left;
-  margin-left: 5%;
-}
-.booking-heading {
-  margin-top: 28px;
-  margin-right: 4%;
+/* payment button */
+.btn-primary {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
+  margin-left: 25px;
 }
 /* end */
 
-/* select all shuttles button */
-.dropdown-toggle {
-  margin-top: 15px;
-}
-/* end */
-
-
-/* all shuttles heading */
-.all-shuttles h2 {
-  font-size: 55px;
-  text-align: center;
-}
-/* end */
 
 /* common styles */
 .small-text  {
@@ -115,81 +116,66 @@
 
 .mini-text {
   font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 /* end */
 
-/* heading */
-.jumbotron {
-  background-color: #ebe9e9;
-  padding-bottom: 25px;
-  margin-bottom: 50px;
-  padding-top: 25px;
-  border-bottom: 3px solid #c0bebe;
-  -webkit-box-shadow: 0 8px 6px -6px #827f7f;
-     -moz-box-shadow: 0 8px 6px -6px #827f7f;
-          box-shadow: 0 8px 6px -6px #827f7f;
+/* tour images */
+.tour-images {
+  margin-bottom: 30px;
+  background-color: #f5f2e8;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 3px 3px 3px #938f8f;
 }
-/* end */
-
-/* carousels */
-.carousel-indicators {
-  bottom: 10;
-}
-
-.carousel-caption {
-  left: 10%;
-  right: 10%;
-  padding-bottom: 20px;
-}
-
-.item {
-  background: #fff;
-  box-shadow: inset 0px 0px 50px #000;
-}
-
-.carousel-inner img {
-  width: 494px;
-  height: 369px;
-  opacity: 0.7;
-}
-
-.carousel-inner {
+.tour-images img {
   border-radius: 3%;
   box-shadow: 2px 2px 5px #4f4f4e;
 }
 
-.carousel-caption a {
-  color: #e9e6dc;
-  text-decoration: none;
-  text-shadow: 2px 2px 2px rgba(0,0,0,.6);
-}
-
-.carousel-caption h2 {
-  font-size:  55px;
-  font-family: 'Just Another Hand', 'cursive';
-}
-
-.carousel-control.right, .carousel-control.left {
-  background-image: none;
+/* reservations */
+.reservations-left {
+  padding-top: 10px;
+  background-color: #f5f2e8;
+  border-radius: 3%;
+  padding-bottom: 5px;
 }
 /* end */
 
-/* footer */
-footer {
-  margin-top: 40px;
-  border-top: 1px solid #666;
-  padding: 10px 0;
+/* reservations-right */
+.reservations-right h3 {
+  text-align: center;
 }
 /* end */
 
-/* icons */
-.glyphicon-arrow-left:before {
-contentontent: "\e091";
+
+/* NOT IN USE 6-8 */
+/* shuttle booking text heading */
+/*.booking-heading, .all-shuttles-list {
+  float: left;
+  margin-left: 5%;
 }
+.booking-heading {
+  margin-top: 28px;
+  margin-right: 4%;
+}*/
 /* end */
 
-/* media queries */
-@media(min-width: 1200px) {
-   #social-media { float: right; }
- }
- /* end */
+/* select all shuttles button */
+/*.dropdown-toggle {
+  margin-top: 15px;
+}*/
+/* end */
+
+
+/* all shuttles heading */
+/*.all-shuttles h2 {
+  font-size: 55px;
+  text-align: center;
+}*/
+/* end */
+/* end * /
+
+

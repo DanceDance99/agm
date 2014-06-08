@@ -15,7 +15,7 @@
       <h2>Add a new shuttle</h2>
       <%= bootstrap_form_for(@shuttle) do |f| %>
         <%= render :partial => 'form', :locals => {:form => f} %>
-        
+
         <%= f.submit 'Add this shuttle', class: 'btn btn-success' %>
       <% end %>
     </div>

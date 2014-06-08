@@ -1,5 +1,6 @@
 class ToursController < ApplicationController
-  #before_action :require_admin
+  before_action :require_admin, only: [:index, :new, :edit]
+
   layout 'admin'
 
   def index
@@ -25,9 +26,9 @@ class ToursController < ApplicationController
     @tour = Tour.find_by(id: params[:id])
     @reservation = Reservation.new
     @tour_dates = @tour.tour_dates.where(:date => Date.today .. 1.month.from_now).where("available > 0").order('date asc')
-    
+
     @tour.save #hack to rebuild dates until a rake task is employeed
-    
+
     render :layout => 'application'
   end
 

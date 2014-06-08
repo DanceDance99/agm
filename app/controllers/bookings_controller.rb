@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  #before_action :require_admin, only: [:show]
+  before_action :require_admin
   before_filter :load_shuttle
 
   layout 'admin'
