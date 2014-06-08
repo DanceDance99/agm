@@ -2,8 +2,8 @@
  *= require bootstrap
  *= require jquery.ui.datepicker
  *= require_self
- *= require common
- *= require bookings
+ *= require common.css.scss
+ *= require bookings.css.scss
  //= require rails_bootstrap_forms
  */
 
