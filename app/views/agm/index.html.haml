@@ -1,11 +1,68 @@
-.container-bg
-  %h2.index Shuttle Transportation
-  %ol.carousel-indicators
-    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-  .carousel-inner
-    .item.active.index
-      = image_tag('express.jpg')
-      .carousel-caption
-        %p Really annoyed.
+= stylesheet_link_tag 'index.css'
+.container.container-bg.border-bottom
+  %h2 Shuttle Transportation
+  .row
+    #shuttle-service-carousel.carousel.slide{"data-ride" => "carousel"}
+      / Indicators
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#shuttle-service-carousel"}
+        %li{"data-slide-to" => "1", "data-target" => "#shuttle-service-carousel"}
+        %li{"data-slide-to" => "2", "data-target" => "#shuttle-service-carousel"}
+      / Slider Content (Wrapper for slides )
+      .carousel-inner
+        .item.active
+          = image_tag('express.jpg')
+          .carousel-caption
+            %h3 We provide luxurious and comfortable express transportation to the following destinations:
+            %h4 Las Vegas, Hollywood, Glendale
+            %h5 No need to worry, just sit back, relax and allow our professionals to escort you safely to your destination.
+      / Controls
+      %a.left.carousel-control{"data-slide" => "prev", href: "#shuttle-service-carousel"}
+        %span.glyphicon.glyphicon-chevron-left
+      %a.right.carousel-control{"data-slide" => "next", href: "#shuttle-service-carousel"}
+        %span.glyphicon.glyphicon-chevron-right
+  .row
+    .h3.blue-heading RESERVE SHUTTLE NOW
+.container.container-bg.border-top.vip-tours
+  %h2 VIP Tours
+  %p Don’t see a tour you like? We offer tours of the most popular destinations in the Western United States. Please contact us for details.
+  .col-md-12
+    .col-md-4
+      .tour-inner-container
+        = image_tag('hoover-dam.jpg')
+        %h3 Hoover Dam
+        %h4 $79.99
+        .blue-heading-small RESERVE SPOT
+    .col-md-4
+      .tour-inner-container
+        = image_tag('valley-of-fire.jpg')
+        %h3 Valley of Fire
+        %h4 $79.99
+        .blue-heading-small RESERVE SPOT
+    .col-md-4
+      .tour-inner-container
+        = image_tag('death-valley.jpg')
+        %h3 Death Valley
+        %h4 $79.99
+        .blue-heading-small RESERVE SPOT
+  .col-md-12
+    .col-md-4
+      .tour-inner-container
+        = image_tag('city-tour.jpg')
+        %h3 Las Vegas City Tour
+        %h4 $79.99
+        .blue-heading-small RESERVE SPOT
+    .col-md-4
+      .tour-inner-container
+        = image_tag('red-rock.jpg')
+        %h3 Red Rock Canyon
+        %h4 $79.99
+        .blue-heading-small RESERVE SPOT
+    .col-md-4
+      .tour-inner-container
+        = image_tag('grand-canyon.jpg')
+        %h3 Grand Canyon
+        %h4 $79.99
+        .blue-heading-small RESERVE SPOT
+
+
