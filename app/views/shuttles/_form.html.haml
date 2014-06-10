@@ -3,10 +3,10 @@
 %label Days shuttle is available on
 - Shuttle.flag_mapping["day_bits"].each do |day, bit|
   = form.check_box day
-  
+
 = form.text_field :amount, label: 'Amount (in cents per Stripe)'
-= form.text_field :round_trip_amount
-= form.text_field :group_amount
+= form.text_field :round_trip_amount, label: 'Round trip amount ($69.00)'
+= form.text_field :group_amount, label: 'Private shuttle: (one way): $350.00'
 = form.text_field :group_round_trip_amount
 
 Route
@@ -16,9 +16,9 @@ Route
       =link_to 'x', '', :class => 'remove' if fields.object.new_record?
       =fields.text_field :name, :label => "City"
       =fields.hidden_field :id
- 
-%a.add.btn.btn-info.btn-xs{:href => '#'} Add City 
-  
+
+%a.add.btn.btn-info.btn-xs{:href => '#'} Add City
+
 .spacer
 
 :coffeescript
