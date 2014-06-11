@@ -17,13 +17,13 @@ Rails.application.routes.draw do
         end
       end
     end
-
-
-  match '*path', to: redirect{|params| "/#{I18n.default_locale}/#{params[:path]}"}, via: :all
-  match '', to: redirect("/#{I18n.default_locale}"), via: :all
-
   get  '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get  'logout', to: 'sessions#destroy'
+
+match '*path', to: redirect{|params| "/#{I18n.default_locale}/#{params[:path]}"}, via: :all
+match '', to: redirect("/#{I18n.default_locale}"), via: :all
+
+
 end
 
