@@ -1,5 +1,7 @@
-<%= link_to 'Logout', logout_path, class: 'btn btn-danger' %>
 <%= link_to 'Add new shuttle', new_shuttle_path, class: 'btn btn-success' %>
+<%= link_to 'Tours menu', tours_path, class: 'btn btn-info' %>
+<%= link_to 'Logout', logout_path, class: 'btn btn-danger' %>
+
 <h2>List of all shuttles available</h2>
 <% @shuttles.each do |shuttle| %>
   <ul>
@@ -15,7 +17,6 @@
     <li><%= shuttle.days %></li>
     <%= link_to 'Edit', edit_shuttle_path(shuttle) %>
     <%= link_to 'Bookings', shuttle_bookings_path(shuttle) %>
-
     <%= link_to "Delete shuttle",
       shuttle_path(shuttle),
       method: :delete,
