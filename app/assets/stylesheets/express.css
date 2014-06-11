@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 25px;
 }
 
+.margin-top {
+  margin-top: 15px;
+}
+
 .no-padding {
   padding: 0;
 }
@@ -221,9 +225,9 @@ td, th {
     margin-bottom: 8px;
     width:auto;
     border-radius:10%;
-    -moz-border-radius:10%;
-    -webkit-border-radius:10%;
-    -khtml-border-radius: 10%;
+    -moz-border-radius:5%;
+    -webkit-border-radius:5%;
+    -khtml-border-radius: 5%;
     background:#d1caac;
     text-align:center;
     font-size: 24px;
@@ -232,17 +236,16 @@ td, th {
 }
 
 .pricing-reservations-large-price {
-    display:inline-block;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    padding-left: 3.5%;
-    padding-right: 3.5%;
+    display:block;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     margin-bottom: 8px;
-    width:auto;
+    margin-left: 55px;
     border-radius:10%;
-    -moz-border-radius:10%;
-    -webkit-border-radius:10%;
-    -khtml-border-radius: 10%;
+    width: 40%;
+    -moz-border-radius:5%;
+    -webkit-border-radius:5%;
+    -khtml-border-radius: 5%;
     background:#d1caac;
     text-align:center;
     font-size: 24px;

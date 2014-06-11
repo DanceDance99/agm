@@ -35,7 +35,7 @@ en:
     arrival: 'Arrival'
   pricing:
     title: 'Pricing'
-    description: "We offer affordable shuttle service whether you're traveling with us one way or round trip."
+    description: "We offer various affordable shuttle services:"
     oneway: 'One way:'
     roundtrip: 'Round trip:'
     bookingoptions: 'Book online or call us'

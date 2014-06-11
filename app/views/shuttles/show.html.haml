@@ -272,21 +272,13 @@
                 %span.pricing-reservations-large-price $39
               %li.large-text
                 #{t 'pricing.roundtrip'}          
-                %span.pricing-reservations-large-price $69
-            %p.text-center
-              %strong= t 'pricing.bookingoptions'
-            .text-center
-              %h3#pricing-reservations-telephone 702 327 9922
-            %ul.list-inline.text-center
-              %li
-                = image_tag("visa_logo.png")
-              %li
-                = image_tag("mastercard_logo.png")
-              %li
-                = image_tag("americanexpress_logo.png")
-              %li
-                = image_tag("discover_logo.png")
-            %small= t 'pricing.secure'
+                %span.pricing-reservations-large-price$69
+              %li.large-text
+                Private shuttle (one way)
+                %span.pricing-reservations-large-price $350
+              %li.large-text
+                Private shuttle (round trip)      
+                %span.pricing-reservations-large-price $600
             %button#booking_modal_button.btn.btn-primary.btn-lg{"data-shuttle-id" => @shuttle.id, "data-target" => "#booking_modal", "data-toggle" => "modal"}
               #{t 'pricing.bookbutton'}
             #booking_modal.modal.fade.large{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
@@ -315,6 +307,19 @@
                       .form-group.center
                         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
                         = f.submit 'Book Tour', class: 'button btn btn-primary'
+            %p.text-center.margin-top
+              %strong= t 'pricing.bookingoptions'
+            .text-center
+              %h3#pricing-reservations-telephone 702 327 9922
+            %ul.list-inline.text-center
+              %li
+                = image_tag("visa_logo.png")
+              %li
+                = image_tag("mastercard_logo.png")
+              %li
+                = image_tag("americanexpress_logo.png")
+              %li
+                = image_tag("discover_logo.png")
       .row.margin-bottom
         .amenities.text-center
           %h3 Amenities
