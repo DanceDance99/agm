@@ -29,7 +29,7 @@ hoover_dam = Tour.create(
 red_rock = Tour.create(
            name: 'Red Rock Tour',
            amount: 6999,
-           time: '5:00pm'
+           time: '5:00pm',
            location: 'Free pick-up and drop-off from your hotel.',
            duration: '6 hours',
            description: 'While you\'re in Las Vegas, take a visit to Red Rock Canyon, one of the Mojave Desert\'s most beautiful attractions.  you will hear about past explorers and the canyon\'s unique geography and wildlife. Next, you\'ll take a smooth ride around the scenic loop.',
@@ -41,7 +41,7 @@ red_rock = Tour.create(
 valley_of_fire = Tour.create(
            name: 'Valley of Fire Tour',
            amount: 11499,
-           time: '4:00pm'
+           time: '4:00pm',
            location: 'Free pick-up and drop-off from your hotel.',
            duration: '4 hours',
            description: 'Journey back 3000 years in time and discover the Great Anasasi “Lost City.”  Experience authentic Pueblos, pottery, baskets, arrowheads, tools, mystical ancient Indian Petroglyphs and other priceless artifacts.  This tour of early Native American life is truly the Jewel of the American Southwest.  The incredible Valley of Fire was once the spiritual center of this great Early American Civilization.  The rock formations and Indian art will amaze you. You will be moved to your soul on this spiritual and wonder filled adventure.',
@@ -53,7 +53,7 @@ valley_of_fire = Tour.create(
 death_valley = Tour.create(
            name: 'Death Valley Tour',
            amount: 17999,
-           time: '3:00pm'
+           time: '3:00pm',
            location: 'Free pick-up and drop-off from your hotel.',
            duration: '4 hours',
            description: 'Filled with craters, abstract land formations, canyons, mountains and desert, Death Valley isn\'t considered "A Land of the Extremes" for nothing. With activities like hiking, biking, camping, or bird watching, you can reconnect with nature like you never have before. ',
@@ -64,8 +64,8 @@ death_valley = Tour.create(
 
 las_vegas = Tour.create(
            name: 'Las Vegas City Tour',
-           amount: 5499
-           time: '6:00pm'
+           amount: 5499,
+           time: '6:00pm',
            location: 'Free pick-up and drop-off from your hotel.',
            duration: '4 hours',
            description: 'Las Vegas Guided Day Tour will truly introduce you to the whole of Las Vegas, from its heyday of classic casinos, legendary performers like Frank Sinatra and the Mafia to the new mega-resorts that characterize modern Las Vegas.',
@@ -76,8 +76,8 @@ las_vegas = Tour.create(
 
 grand_canyon = Tour.create(
            name: 'Grand Canyon Tour',
-           amount: 12999
-           time: '7:00pm'
+           amount: 12999,
+           time: '7:00pm',
            location: 'Free pick-up and drop-off from your hotel.',
            duration: '4 hours',
            description: 'Nearly 40 million visitors come to Las Vegas each year, but only a few of you will experience the fun and excitement of viewing the Grand Canyon, Las Vegas, Lake Mead, Hoover Dam and the beautiful desert landscape surroundings on board a private aircraft. Whether you want to impress a date, party with your friends or enjoy a family sightseeing excursion',
