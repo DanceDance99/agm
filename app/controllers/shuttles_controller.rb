@@ -6,8 +6,6 @@ class ShuttlesController < ApplicationController
 
   def index
     @shuttles = Shuttle.all
-
-
   end
 
   def new

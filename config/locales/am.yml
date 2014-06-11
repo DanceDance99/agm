@@ -21,4 +21,4 @@ am:
     secure: 'All phone payments are processed securely'
     bookbutton: 'Book shuttle service'
   booking:
-    title: 'Book your tour'
+    title: 'Book a shuttle'

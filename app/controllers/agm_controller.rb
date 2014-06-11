@@ -1,4 +1,5 @@
 class AgmController < ApplicationController
+  before_filter :require_admin
 
   def index
     @tours = Tour.all
