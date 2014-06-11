@@ -20,4 +20,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  shuttles:
+    title: 'Freeway traffic got you stressed?'
+    description1: 'No need to worry, just sit back, relax and allow our professionals to escort you safely to your destination.'
+    description2: 'We provide luxurious and comfortable express transportation to the following destinations:'
+    city1: 'Las Vegas'
+    city2: 'Glendale'
+    city3: 'Hollywood'
+    notice: "To better accommodate your weekend plans, we offer our services on Friday's and Sunday's"
+    notice2: '*Please note that departure/arrival times will vary depending on traffic conditions'
+    friday: 'Friday'
+    sunday: 'Sunday'
+    departure: 'Departure'
+    arrival: 'Arrival'
+  pricing:
+    title: 'Pricing'
+    description: "We offer affordable shuttle service whether you're traveling with us one way or round trip."
+    oneway: 'One way:'
+    roundtrip: 'Round trip:'
+    bookingoptions: 'Book online or call us for reservations'
+    secure: 'All phone payments are processed securely'
+    bookbutton: 'Book shuttle service'
+  booking:
+    title: 'Book your tour'

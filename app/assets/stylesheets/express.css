@@ -212,7 +212,7 @@ td, th {
 /* end */
 
 /* pricing */
-#pricing-bookings-telephone {
+#pricing-reservations-telephone {
     display:inline-block;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
@@ -231,7 +231,7 @@ td, th {
     color: #870820;
 }
 
-.pricing-bookings-large-price {
+.pricing-reservations-large-price {
     display:inline-block;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
@@ -281,6 +281,9 @@ only screen and (max-width: 760px),
   }
 }
 
+h4.modal-title {
+  font-size: 25px;
+}
 
 /* responsive part */
 @media(min-width: 768px) {

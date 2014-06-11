@@ -1,0 +1,24 @@
+am:
+  shuttles:
+    title: 'Մայրուղիների խցանումները ձեզ սթրեսի են ենթարկել?'
+    description1: 'Անհանգստանալու կարիք չկա, հարմար տեղավորվեք, սթափվեք եւ թույլ տվեք մեր մասնագիտացված վարորդներին ապահով ձեզ հասցնել ձեր ցանկացած վայրը.'
+    description2: 'Մենք առաջարկում ենք շքեղ,հարմարավետ եւ արագ երթեւեկություն հետեւյալ ուղղություններով:'
+    city1: 'Las Vegas'
+    city2: 'Glendale'
+    city3: 'Hollywood'
+    notice: "*Ձեր հանգստյան օրերին հարմարեցնելու նպատակով մեր ծառայություններն առաջարկում ենք ՈՒրբաթ եւ Կիրակի օրերին."
+    notice2: '*Please note that departure/arrival times will vary depending on traffic conditions'
+    friday: 'ՈԻրբաթ'
+    sunday: 'Կիրակի'
+    departure: 'Մեկնում'
+    arrival: 'Ժամանում'
+  pricing:
+    title: 'Գնացուցակ'
+    description: "Առաջարկում ենք մատչելի գներով երթուղային ծառայություն միակողմանի եւ հետադարձ ուղղություններով."
+    oneway: 'Միակողմանի:'
+    roundtrip: 'Հետադարձ:'
+    bookingoptions: 'Պատվերների համար կարող եք զանգահարել '
+    secure: 'All phone payments are processed securely'
+    bookbutton: 'Book shuttle service'
+  booking:
+    title: 'Book your tour'
