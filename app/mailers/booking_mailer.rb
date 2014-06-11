@@ -1,9 +1,9 @@
 class BookingMailer < ActionMailer::Base
-  default from: 'agmexpressproduction@gmail.com'
+  default from: 'agmecho@yahoo.com'
 
   def notify_on_new_booking(booking)
     @booking = booking
-    mail(to: 'tourbillontime@live.com', subject: 'New Shuttle Booking')
+    mail(to: 'agmecho@yahoo.com', subject: 'New Shuttle Booking')
   end
 
   def notify_customer_on_new_booking(booking)
