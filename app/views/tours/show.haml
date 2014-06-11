@@ -7,47 +7,47 @@
   .row
     %h2.padding-bottom
       = @tour.name
-  .row.tour-images
-    .col-md-4
-      - if @tour.name == 'Hoover Dam Tour'
-        = image_tag('hoover-dam.jpg', class: 'img-responsive')
-      - if @tour.name == 'Las Vegas City Tour'
-        = image_tag('city-tour.jpg', class: 'img-responsive')
-      - if @tour.name == 'Red Rock Canyon Tour'
-        = image_tag('red-rock.jpg', class: 'img-responsive')
-      - if @tour.name == 'Valley of Fire Tour'
-        = image_tag('valley-of-fire.jpg', class: 'img-responsive')
-      - if @tour.name == 'Grand Canyon Tour'
-        = image_tag('grand-canyon.jpg', class: 'img-responsive')
-      - if @tour.name == 'Death Valley Tour'
-        = image_tag('death-valley.jpg', class: 'img-responsive')
-    .col-md-4
-      - if @tour.name == 'Hoover Dam Tour'
-        = image_tag('hoover-dam.jpg', class: 'img-responsive')
-      - if @tour.name == 'Las Vegas City Tour'
-        = image_tag('city-tour.jpg', class: 'img-responsive')
-      - if @tour.name == 'Red Rock Canyon Tour'
-        = image_tag('red-rock.jpg', class: 'img-responsive')
-      - if @tour.name == 'Valley of Fire Tour'
-        = image_tag('valley-of-fire.jpg', class: 'img-responsive')
-      - if @tour.name == 'Grand Canyon Tour'
-        = image_tag('grand-canyon.jpg', class: 'img-responsive')
-      - if @tour.name == 'Death Valley Tour'
-        = image_tag('death-valley.jpg', class: 'img-responsive')
-    .col-md-4
-      - if @tour.name == 'Hoover Dam Tour'
-        = image_tag('hoover-dam.jpg', class: 'img-responsive')
-      - if @tour.name == 'Las Vegas City Tour'
-        = image_tag('city-tour.jpg', class: 'img-responsive')
-      - if @tour.name == 'Red Rock Canyon Tour'
-        = image_tag('red-rock.jpg', class: 'img-responsive')
-      - if @tour.name == 'Valley of Fire Tour'
-        = image_tag('valley-of-fire.jpg', class: 'img-responsive')
-      - if @tour.name == 'Grand Canyon Tour'
-        = image_tag('grand-canyon.jpg', class: 'img-responsive')
-      - if @tour.name == 'Death Valley Tour'
-        = image_tag('death-valley.jpg', class: 'img-responsive')
   .row
+    .col-md-4.tour-images
+      - if @tour.name == 'Hoover Dam Tour'
+        = image_tag('hoover-dam.jpg', class: 'img-responsive')
+      - if @tour.name == 'Las Vegas City Tour'
+        = image_tag('city-tour.jpg', class: 'img-responsive')
+      - if @tour.name == 'Red Rock Canyon Tour'
+        = image_tag('red-rock.jpg', class: 'img-responsive')
+      - if @tour.name == 'Valley of Fire Tour'
+        = image_tag('valley-of-fire.jpg', class: 'img-responsive')
+      - if @tour.name == 'Grand Canyon Tour'
+        = image_tag('grand-canyon.jpg', class: 'img-responsive')
+      - if @tour.name == 'Death Valley Tour'
+        = image_tag('death-valley.jpg', class: 'img-responsive')
+    .col-md-4.tour-images
+      - if @tour.name == 'Hoover Dam Tour'
+        = image_tag('hoover-dam2.jpg', class: 'img-responsive')
+      - if @tour.name == 'Las Vegas City Tour'
+        = image_tag('city-tour2.jpg', class: 'img-responsive')
+      - if @tour.name == 'Red Rock Canyon Tour'
+        = image_tag('red-rock2.jpg', class: 'img-responsive')
+      - if @tour.name == 'Valley of Fire Tour'
+        = image_tag('valley-of-fire2.jpg', class: 'img-responsive')
+      - if @tour.name == 'Grand Canyon Tour'
+        = image_tag('grand-canyon2.jpg', class: 'img-responsive')
+      - if @tour.name == 'Death Valley Tour'
+        = image_tag('death-valley2.jpg', class: 'img-responsive')
+    .col-md-4.tour-images
+      - if @tour.name == 'Hoover Dam Tour'
+        = image_tag('hoover-dam3.jpg', class: 'img-responsive')
+      - if @tour.name == 'Las Vegas City Tour'
+        = image_tag('city-tour3.jpg', class: 'img-responsive')
+      - if @tour.name == 'Red Rock Canyon Tour'
+        = image_tag('red-rock3.jpg', class: 'img-responsive')
+      - if @tour.name == 'Valley of Fire Tour'
+        = image_tag('valley-of-fire3.jpg', class: 'img-responsive')
+      - if @tour.name == 'Grand Canyon Tour'
+        = image_tag('grand-canyon3.jpg', class: 'img-responsive')
+      - if @tour.name == 'Death Valley Tour'
+        = image_tag('death-valley3.jpg', class: 'img-responsive')
+  .row.margin-top
     .col-md-8.reservations-left
       %h3.padding-bottom
         = @tour.name
@@ -63,7 +63,7 @@
         %h4 Departure point and time:
         %ul.padding-bottom
           %li
-            Free pickup from #{@tour.location} at #{@tour.time}
+            #{@tour.location} at #{@tour.time}
         %h4 Amenities
         %ul.list-inline.padding-bottom
           %li

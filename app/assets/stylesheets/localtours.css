@@ -123,15 +123,14 @@ h4 {
 
 /* tour images */
 .tour-images {
-  margin-bottom: 30px;
   background-color: #f5f2e8;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
   box-shadow: 3px 3px 3px #938f8f;
 }
 .tour-images img {
   border-radius: 3%;
   box-shadow: 2px 2px 5px #4f4f4e;
+  height: 300px;
 }
 
 /* reservations */
