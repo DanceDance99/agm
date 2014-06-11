@@ -7,9 +7,9 @@
       <%= link_to tour.name, tour %>
     </li>
     <li>
-      Price: $
+      <strong>Price: $</strong>
       <%= ' %.2f' % (tour.amount.to_i/100.0) %>
-      <li>Days tour available on: <%= tour.days %></li>
+      <li><strong>Days tour available on:</strong> <%= tour.days %></li>
       <%= link_to 'Reservations', tour_reservations_path(tour) %>
       <%= link_to 'Edit', edit_tour_path(tour) %>
         <%= link_to "Delete tour",
