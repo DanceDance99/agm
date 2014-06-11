@@ -79,8 +79,11 @@
             %span.mini-text Snacks
         %h4 Tour highlights
         %ul.padding-bottom
-          %li
-            = @tour.highlights
+          - highlights = @tour.highlights
+          - highlights_a = highlights.split(/,/)
+          - highlights = highlights_a.join(', ')
+          - highlights_a.each do |hl|
+            %li= hl
         %h4 Additional info
         %ul
           %li All tours are available with 5-10 passengers
