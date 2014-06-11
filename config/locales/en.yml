@@ -38,8 +38,8 @@ en:
     description: "We offer affordable shuttle service whether you're traveling with us one way or round trip."
     oneway: 'One way:'
     roundtrip: 'Round trip:'
-    bookingoptions: 'Book online or call us for reservations'
+    bookingoptions: 'Book online or call us'
     secure: 'All phone payments are processed securely'
-    bookbutton: 'Book shuttle service'
+    bookbutton: 'BOOK SHUTTLE SERVICE'
   booking:
     title: 'Book your tour'
