@@ -7,8 +7,11 @@
       <%= link_to shuttle.name, shuttle %>
     </li>
     <li>
-      Price: $
-      <%= ' %.2f' % (shuttle.amount.to_i/100.0) %>
+      Pricing:
+      One way: <%= ' %.2f' % (shuttle.amount.to_i/100.0) %>
+      Round trip: <%= ' %.2f' % (shuttle.round_trip_amount.to_i/100.00) %>
+      Private (one way): <%= ' %.2f' % (shuttle.group_amount.to_i/100.00) %>
+      Private (round trip): <%= ' %.2f' % (shuttle.group_round_trip_amount.to_i/100.00) %>
       <li>Days shuttle available on: <%= shuttle.days %></li>
       <%= link_to 'Edit', edit_shuttle_path(shuttle) %>
       <%= link_to 'Bookings', shuttle_bookings_path(shuttle) %>
