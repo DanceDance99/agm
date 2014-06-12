@@ -25,7 +25,7 @@ class Shuttle < ActiveRecord::Base
             :column => "day_bits"
 
 
-  def dates_for_journey(from, to, passengers, date_range = Date.today..1.month.from_now)
+  def dates_for_journey(from, to, passengers, date_range = Date.today..6.months.from_now)
 
     dates = self.shuttle_legs.where(:from_id => from, :date => date_range).where(["available >= ?",passengers]).map &:date
     current_city = to.position > from.position ? from.lower_item : from.higher_item
@@ -53,7 +53,7 @@ class Shuttle < ActiveRecord::Base
   private
 
   def create_missing_shuttle_legs
-    future_days = 31
+    future_days = 180
 
     date = Date.today
     names = flag_mapping["day_bits"]
