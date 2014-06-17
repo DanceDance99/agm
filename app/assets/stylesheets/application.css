@@ -103,7 +103,7 @@ footer {
 /* end */
 
 @media(min-width: 768px) {
-  .medium-text { font-size: 18px }
+  .medium-text { font-size: 18px; }
   .larger-text { font-size: 27px; }
 }
 
