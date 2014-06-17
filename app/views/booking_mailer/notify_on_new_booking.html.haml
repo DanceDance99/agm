@@ -12,7 +12,7 @@
       #{@booking.passengers}
     %li
       %strong Telephone number:
-      #{@booking.phone_number}
+      #{@booking.telephone_number}
     %li
       %strong From:
       #{@booking.from.name}
@@ -37,6 +37,9 @@
     %li
       %strong Home address
       #{@booking.home_address.presence || 'N/A'}
+    %li
+      %strong Pickup city
+      #{@booking.pickup_city.presence || 'N/A'}
     %li
       %strong Zipcode:
       #{@booking.zipcode.presence || 'N/A'}

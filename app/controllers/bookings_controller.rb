@@ -61,6 +61,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit( :passengers, :home_pickup, :home_dropoff, :email_address, :home_address, :zipcode, :telephone_number, :amount, :first_last_name, :phone_number, :round_trip, :from_id, :to_id, :depart_date, :return_date, :added_by_admin, :private_shuttle, :senior_citizen)
+    params.require(:booking).permit( :passengers, :home_pickup, :home_dropoff, :email_address, :home_address, :pickup_city, :zipcode, :telephone_number, :amount, :first_last_name, :phone_number, :round_trip, :from_id, :to_id, :depart_date, :return_date, :added_by_admin, :private_shuttle, :senior_citizen)
   end
 end

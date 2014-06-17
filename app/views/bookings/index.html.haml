@@ -35,6 +35,9 @@
             %strong Address:
             #{booking.home_address.presence || 'N/A'}
           %li
+            %strong Pickup city:
+            #{booking.pickup_city.presence || 'N/A'}
+          %li
             %strong Zipcode
             #{booking.zipcode || 'N/A'}
           %li
