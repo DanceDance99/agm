@@ -109,7 +109,6 @@ footer {
 
 @media(max-width: 480px) {
   .modal.large .modal-dialog {
-    position:fixed;
     top: 20px !important;
     right: 3%;
     left: 3%;
@@ -117,7 +116,6 @@ footer {
     margin: 0; }
 
   .modal-body {
-    max-height: 60%;
     padding: 15px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
