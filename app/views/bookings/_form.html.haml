@@ -1,8 +1,8 @@
-= form.select :passengers, options_for_select([*1..10])
+= form.select :passengers, options_for_select([*1..11])
 .radio-inline
-  = form.radio_button :round_trip, false, label: "One Way"
+  = form.radio_button :round_trip, false, label: "One Way ($39)"
 .radio-inline
-  = form.radio_button :round_trip, true, label: "Round Trip"
+  = form.radio_button :round_trip, true, label: "Round Trip ($69)"
 
 = form.check_box :private_shuttle, label: 'Private shuttle (One way - $350, Round trip - $600)'
 

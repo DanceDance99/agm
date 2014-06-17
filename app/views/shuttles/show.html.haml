@@ -1,8 +1,6 @@
 = stylesheet_link_tag 'express'
 = javascript_include_tag "https://js.stripe.com/v2/"
 = javascript_include_tag 'payment'
-:javascript
-  Stripe.setPublishableKey("#{ENV['STRIPE_PUBLISHABLE_KEY']}");
 .about-us
   .container
     #agm-slideshow.col-md-5.carousel.slide{"data-pause" => "hover", "data-ride" => "carousel"}
@@ -273,12 +271,6 @@
               %li.large-text
                 #{t 'pricing.roundtrip'}          
                 %span.pricing-reservations-large-price$69
-              %li.large-text
-                Private shuttle (one way)
-                %span.pricing-reservations-large-price $350
-              %li.large-text
-                Private shuttle (round trip)      
-                %span.pricing-reservations-large-price $600
             %button#booking_modal_button.btn.btn-primary.btn-lg{"data-shuttle-id" => @shuttle.id, "data-target" => "#booking_modal", "data-toggle" => "modal"}
               #{t 'pricing.bookbutton'}
             #booking_modal.modal.fade.large{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
@@ -305,6 +297,8 @@
                         = select_year(Date.today.year, {start_year: Date.today.year, end_year: Date.today.year + 4}, class: 'form-control', data: {stripe: 'exp-year'})
                       .modal-footer
                       .form-group.center
+                        %h4 Terms & Conditions
+                        %p No refunds. All sales are final. You’re only guaranteed a seat with a valid reservation.
                         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
                         = f.submit 'Book Tour', class: 'button btn btn-primary'
             %p.text-center.margin-top

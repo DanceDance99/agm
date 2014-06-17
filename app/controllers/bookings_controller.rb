@@ -44,7 +44,7 @@ class BookingsController < ApplicationController
 
     if @from != @to
 
-      passengers = @booking.private_shuttle? ? 10 : @booking.passengers
+      passengers = @booking.private_shuttle? ? 11 : @booking.passengers
 
       @depart_dates = @shuttle.dates_for_journey(@from, @to, passengers)
       if @booking.round_trip
