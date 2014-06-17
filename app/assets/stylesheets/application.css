@@ -109,14 +109,13 @@ footer {
 
 @media(max-width: 480px) {
   .modal.large .modal-dialog {
-  position: fixed;
-  top:   20px;
-  left:  20px;
-  right: 20px;
-  bottom: 20px;
-  width: auto;
-  margin: 0;
-  &.fade.in { top: 20px; }
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    bottom: 20px;
+    width: auto;
+    margin: 0;
 }
 
 
