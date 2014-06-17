@@ -103,3 +103,8 @@ footer {
   .larger-text { font-size: 27px; }
 }
 
+@media(max-width: 480px) {
+  .modal.large .modal-dialog {
+    width: 480px;
+}
+

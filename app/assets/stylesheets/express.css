@@ -313,8 +313,7 @@ h4.modal-title {
 @media(max-width: 480px) {
   #fix-for-iphone { font-size: 26px; }
   .about-us li { font-size: 20px; display: block; }
-  #jumbotron-telephone h2 { font-size: 30px;
-}
+  #jumbotron-telephone h2 { font-size: 30px; }
 }
 
 
