@@ -52,9 +52,7 @@ class BookingsController < ApplicationController
         @return_dates = @shuttle.dates_for_journey(@to, @from, passengers)
       end
     end
-
   end
-
 
   private
 

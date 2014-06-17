@@ -40,7 +40,7 @@ grand_canyon = Tour.create(
 
 
 hoover_dam = Tour.create(
-           name: 'Hoover Dam tour',
+           name: 'Hoover Dam Tour',
            amount: 7999,
            location: 'Free pick-up and drop-off from your hotel',
            duration: '3 hours',
