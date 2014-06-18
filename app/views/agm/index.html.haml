@@ -35,17 +35,17 @@
     .col-md-4
       .tour-inner-container
         - if tour.name == 'Hoover Dam Tour'
-          = image_tag('hoover-dam.jpg')
+          = link_to(image_tag('hoover-dam.jpg'), tour)
         - if tour.name == 'Valley of Fire Tour'
-          = image_tag('valley-of-fire.jpg')
+          = link_to(image_tag('valley-of-fire.jpg'), tour)
         - if tour.name == 'Las Vegas City Tour'
-          = image_tag('city-tour.jpg')
+          = link_to(image_tag('city-tour.jpg'), tour)
         - if tour.name == 'Death Valley Tour'
-          = image_tag('death-valley.jpg')
+          = link_to(image_tag('death-valley.jpg'), tour)
         - if tour.name == 'Red Rock Canyon Tour'
-          = image_tag('red-rock.jpg')
+          = link_to(image_tag('red-rock.jpg'), tour)
         - if tour.name == 'Grand Canyon Tour'
-          = image_tag('grand-canyon.jpg')
+          = link_to(image_tag('grand-canyon.jpg'), tour)
         %h3= tour.name
         %h4
           $ #{' %.2f' % (tour.amount.to_i/100.0)}
