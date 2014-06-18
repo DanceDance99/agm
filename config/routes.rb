@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root to: 'shuttles#show'
+   root to: 'agm#index'
 
     get '/agm', to:'agm#index'
     get '/agm/admin', to: 'agm#show'
