@@ -10,7 +10,6 @@
   margin-bottom: 15px;
 }
 
-
 .border-bottom {
   border-bottom: 1px solid #80807e;
   margin-bottom: 20px;
@@ -158,6 +157,10 @@
 
 .blue-heading-small {
   margin-left: 17px; }
+
+.blue-heading {
+  margin-left: 10px;
+}
 
 .tour-inner-container img {
   height: 200px; }
