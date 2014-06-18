@@ -148,3 +148,14 @@ h4 {
 }
 /* end */
 
+@media(max-width: 480px) {
+  .blue-heading {
+    margin-left: 0;
+    padding: 4px 40px;
+  }
+  .btn-primary {
+  margin-left: 0;
+}
+
+}
+
