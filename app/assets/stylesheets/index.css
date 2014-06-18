@@ -146,13 +146,13 @@
 @media(max-width: 480px) {
   .carousel-caption h4 {
   margin-bottom: 10px;
-  font-size: 40px; }
+  font-size: 35px; }
 
 .carousel-caption h3 {
-  font-size: 30px; }
+  font-size: 25px; }
 
 .carousel-caption h5 {
-  font-size: 25px;
+  font-size: 20px;
   color: #e9e6dc; }
 
 .blue-heading-small {
