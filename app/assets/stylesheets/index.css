@@ -145,8 +145,9 @@
 
 @media(max-width: 480px) {
   .carousel-caption h4 {
-  margin-bottom: 10px;
-  font-size: 35px; }
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px; }
 
 .carousel-caption h3 {
   font-size: 25px; }
