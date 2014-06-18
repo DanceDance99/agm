@@ -150,7 +150,7 @@ h4 {
 
 @media(max-width: 480px) {
   .blue-heading {
-    margin-left: 0;
+    margin-left: `8px;
     padding: 4px 40px;
   }
   .btn-primary {
