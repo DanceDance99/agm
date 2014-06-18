@@ -282,7 +282,7 @@
                     %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
                     %h4#myModalLabel.modal-title= t 'booking.title'
                   .modal-body
-                    %p.mini-text Pricing is for both adults and children
+                    %p.small-text Pricing is for both adults and children
                     = bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}, remote: true) do |f|
                       =render :partial => 'bookings/form', :locals => {:form => f}
                       %span.payment-errors
