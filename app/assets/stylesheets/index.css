@@ -144,3 +144,17 @@
 }
 /* end */
 
+@media(max-width: 480px) {
+  .carousel-caption h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 35px; }
+
+.carousel-caption h3 {
+  font-size: 15px; }
+
+.carousel-caption h5 {
+  font-size: 12px;
+  color: #e9e6dc; }
+}
+

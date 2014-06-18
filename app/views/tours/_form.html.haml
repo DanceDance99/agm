@@ -5,8 +5,7 @@
 
 
 = form.text_field :name
-%p
-  Starting Date: #{form.text_field 'start_date'}
+= form.text_field 'start_date'
 %label Days tour is available on:
 - Tour.flag_mapping["day_bits"].each do |day, bit|
   = form.check_box day
