@@ -14,7 +14,7 @@
 :coffeescript
 
   jQuery ->
-    jQuery('#reservation_date').change (e) ->
+    compute_tour_passengers = ->
       selected_date = jQuery('#reservation_date').val()
       tour_date = jQuery.grep(tour_dates, (object, index) ->
         object.date == selected_date
@@ -27,3 +27,8 @@
           options += '<option value="' + index + '">' + index + '</option>'
 
         jQuery('#reservation_passengers').html(options)
+
+    jQuery('#reservation_date').change (e) ->
+      compute_tour_passengers()
+
+    compute_tour_passengers()
