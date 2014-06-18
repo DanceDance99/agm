@@ -7,7 +7,6 @@ class Reservation < ActiveRecord::Base
   validates :passengers, :presence => true
   validates :tour, :presence => true
   validates :first_last_name, :presence => true
-  validates :hotel_name, :presence => true
   validates :telephone_number, :presence => true
   validates :email_address, :presence => true
   validates :pickup_location, :presence => true
