@@ -47,18 +47,20 @@
   margin-bottom: 40px;
   font-size: 65px;
   color: #e1d4a4;
-  text-shadow: 2px 2px 2px #5e5d5d;
+  text-shadow: 2px 2px 2px #181717;
 }
 
 .carousel-caption h3 {
   font-size: 45px;
   color: #e9e6dc;
   font-style: normal;
+  text-shadow: 2px 2px 2px #181717;
 }
 
 .carousel-caption h5 {
   font-size: 40px;
   color: #e9e6dc;
+  text-shadow: 2px 2px 2px #181717;
 }
 
 .blue-heading {

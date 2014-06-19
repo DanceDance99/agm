@@ -109,5 +109,8 @@
         .form-group
           = select_month(Date.today, {add_month_numbers: true},  class: 'form-control', data: {stripe: 'exp-month'})
           = select_year(Date.today.year, {start_year: Date.today.year, end_year: Date.today.year + 4}, class: 'form-control', data: {stripe: 'exp-year'})
+        .form-group
+          %h4.text-center Terms & Conditions
+          %p.text-center No refunds. All sales are final. You’re only guaranteed a seat with a valid reservation.
         .form-group.center
           = f.submit 'BOOK TOUR', class: 'button btn btn-primary'
