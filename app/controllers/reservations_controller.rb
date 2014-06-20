@@ -5,14 +5,14 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = Reservation.new
-    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 6.months.from_now).where("available > 0").order('date asc')
+    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 12.months.from_now).where("available > 0").order('date asc')
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.tour = @tour
     @reservation.token = params[:stripeToken]
-    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 6.months.from_now).where("available > 0").order('date asc')
+    @tour_dates = @tour.tour_dates.where(:date => Date.today .. 12.months.from_now).where("available > 0").order('date asc')
 
     @tour.amount = @reservation.passengers * @tour.amount
 

@@ -47,7 +47,7 @@ class BookingsController < ApplicationController
 
       @depart_dates = @shuttle.dates_for_journey(@from, @to, passengers)
       if @booking.round_trip
-        date_range = @booking.depart_date ? (@booking.depart_date + 1)..(@booking.depart_date + 6.months) : Date.today..6.months.from_now
+        date_range = @booking.depart_date ? (@booking.depart_date + 1)..(@booking.depart_date + 12.months) : Date.today..12.months.from_now
         @return_dates = @shuttle.dates_for_journey(@to, @from, passengers)
       end
     end

@@ -29,7 +29,7 @@ class Tour < ActiveRecord::Base
 
   def create_missing_tour_dates
     #need to know maximum days into the future that can be booked
-    future_days = 180
+    future_days = 365
 
     date = Date.today
     names = flag_mapping["day_bits"]
