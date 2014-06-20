@@ -5,5 +5,6 @@ class AgmController < ApplicationController
   end
 
   def show
+    @tours = Tour.all
   end
 end
