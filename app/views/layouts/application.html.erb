@@ -12,23 +12,36 @@
 
 <div class='jumbotron'>
     <div class='container'>
-      <div class='row'>
+      <div class='row logo'>
         <div class='col-md-7'>
           <div id='jumbotron-logo'>
-            <h1><%= image_tag('logo.png', alt: 'AGM Logo', class: 'img-responsive') %></h1>
+            <h1><%= link_to(image_tag('logo.png', alt: 'AGM Logo', class: 'img-responsive')) %></h1>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 float-right">
+         <div class="btn-group navigation">
+            <button class="btn btn-default btn-lg dropdown-toggle all-tours-list" type="button" data-toggle="dropdown">
+              Navigation<span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" role='menu'>
+              <li><%= link_to 'Home', root_path %></li>
+              <% @tours.each do |tour| %>
+                <li><%= link_to tour.name, tour %></li>
+              <% end %>
+            </ul>
+
+          </div>
         <div id="translate">
           <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
           <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
         </div>
-        <div class="text-center" id="jumbotron-telephone">
+        <div class="text-right" id="jumbotron-telephone">
           <span class="medium-text">Please</span>
           <span class="larger-text">call us</span>
           <span class="medium-text">for</span>
           <span class="larger-text">reservations</span>
-          <h2 class="text-center">702 327 9922</h2>
+          <h2 class="right">702 327 9922</h2>
         </div>
       </div>
       </div>

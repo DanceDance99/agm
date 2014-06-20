@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
+  @tours = Tour.all
+
   def require_admin
     if !logged_in
       flash[:error] = 'Access denied.'

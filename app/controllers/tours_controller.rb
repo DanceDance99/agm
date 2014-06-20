@@ -23,6 +23,7 @@ class ToursController < ApplicationController
   end
 
   def show
+    @tours = Tour.all
     @tour = Tour.find_by(id: params[:id])
     @reservation = Reservation.new
     @tour_dates = @tour.tour_dates.where(:date => Date.today .. 6.months.from_now).where("available > 0").order('date asc')
