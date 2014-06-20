@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+    @tours = Tour.all
   end
 
   def create
