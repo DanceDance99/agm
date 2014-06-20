@@ -67,6 +67,6 @@ class ShuttlesController < ApplicationController
   end
 
   def shuttles_params
-    params.require(:shuttle).permit(:name, :amount, :start_date, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :shuttle_cities_attributes, :round_trip_amount, :group_amount, :group_round_trip_amount )
+    params.require(:shuttle).permit(:name, :amount, :start_date, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, {:shuttle_cities_attributes => [:name]}, :round_trip_amount, :group_amount, :group_round_trip_amount )
   end
 end
