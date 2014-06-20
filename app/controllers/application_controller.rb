@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     if !logged_in
+      flash[:error] = 'Access denied.'
       redirect_to login_path
     end
   end
