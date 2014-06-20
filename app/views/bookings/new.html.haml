@@ -1,3 +1,5 @@
+= link_to 'Back to shuttles', shuttles_path, class: 'btn btn-info'
+
 #booking_modal_button{"data-shuttle-id" => @shuttle.id }
 
 = bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}, remote: true) do |f|

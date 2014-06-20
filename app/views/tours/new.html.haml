@@ -1,4 +1,4 @@
-= link_to 'Logout', logout_path, class: 'btn btn-danger'
+= link_to 'Back to tours', tours_path, class: 'btn btn-info'
 :javascript
   $(function() {
     $( "#tour_start_date" ).datepicker();
@@ -6,9 +6,9 @@
 .container
   .row
     .col-md-3
-      %h2 Add a new tour
+      %h2 Tour
       = bootstrap_form_for(@tour) do |f|
         = render :partial => 'form', :locals => {:form => f }
         = f.submit 'Add this tour', class: 'btn btn-success'
-        
-        
+
+

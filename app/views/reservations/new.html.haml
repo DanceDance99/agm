@@ -1,3 +1,4 @@
+= link_to 'Back to tours', tours_path, class: 'btn btn-success'
 = bootstrap_form_for([@tour, @reservation], html: { id: 'payment-form'}, remote: true) do |f|
   = render :partial => 'form', :locals => {:form => f}
   = f.hidden_field :added_by_admin, :value => true

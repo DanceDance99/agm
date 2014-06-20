@@ -1,4 +1,4 @@
-<%= link_to 'Logout', logout_path, class: 'btn btn-danger' %>
+<%= link_to 'Back to shuttles', shuttles_path, class: 'btn btn-info' %>
 <script>
   $(function() {
     $( "#shuttle_start_date" ).datepicker();
@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-md-3">
 
-      <h2>Add a new shuttle</h2>
+      <h2>Add new shuttle</h2>
       <%= bootstrap_form_for(@shuttle) do |f| %>
         <%= render :partial => 'form', :locals => {:form => f} %>
 
