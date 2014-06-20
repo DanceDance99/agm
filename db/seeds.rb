@@ -37,7 +37,7 @@ grand_canyon = Tour.create(
 hoover_dam = Tour.create(
            name: 'Hoover Dam Tour',
            amount: 7999,
-           time: '8:00am'
+           time: '8:00am',
            location: 'Free pick-up',
            duration: '5 hours (approx.)',
            description: 'Hoover Dam is the NUMBER ONE SIGHTSEEING ATTRACTION with people visiting Las Vegas. This modern wonder of the world has been called the “Greatest Dam ever Built”. It is a National Historic Landmark, and stands today as a testament to the thousands of men and women and their families who came to a harsh and barren land and in less than five years built a world renowned structure which changed the future of the west.',
