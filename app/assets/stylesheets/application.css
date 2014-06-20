@@ -138,5 +138,9 @@ footer {
     padding: 15px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
+
+  .medium-text { font-size: 12px; }
+  .larger-text { font-size: 20px; }
+  .navigation { margin-left: 120px; }
 }
 
