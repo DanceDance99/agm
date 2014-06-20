@@ -25,6 +25,7 @@ class ShuttlesController < ApplicationController
   end
 
   def show
+    @tours = Tour.all
     @booking = Booking.new
     @from_cities = @shuttle.shuttle_cities
     @to_cities = @shuttle.shuttle_cities
