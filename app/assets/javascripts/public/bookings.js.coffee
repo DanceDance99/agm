@@ -18,23 +18,24 @@ jQuery ->
 
       jQuery.post("/shuttles/" + shuttle_id + "/bookings/dates", jQuery('.new_booking').serialize(), (e) ->
 
-        jQuery('#depart_date_datepicker').datepicker('destroy')
-        jQuery('#return_date_datepicker').datepicker('destroy')
+        #jQuery('#depart_date_datepicker').datepicker('destroy')
+        #jQuery('#return_date_datepicker').datepicker('destroy')
 
 
         jQuery('#depart_date_datepicker').datepicker(
-          defaultDate: ''
-          altFormat: "yy-mm-dd"
-          altField: '#depart_date_hidden_datepicker'
+          defaultDate: '',
+          altFormat: "yy-mm-dd",
+          altField: '#depart_date_hidden_datepicker',
           beforeShowDay: (date) ->
-
             # format javascript date to match rails
-            date = date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+            date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds())
 
-            if $.inArray(date, Booking.departDates) != -1
-              return [true, "", "Available"]
+            date_str = $.datepicker.formatDate("yy-mm-dd", date_utc)
+
+            if $.inArray(date_str, Booking.departDates) != -1
+              return true
             else
-              return [false, "", "Unavailable"]
+              return false
         )
 
         jQuery('#return_date_datepicker').datepicker(
@@ -44,13 +45,13 @@ jQuery ->
           beforeShowDay: (date) ->
 
             # format javascript date to match rails
-            date = date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+            date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds())
 
-
-            if $.inArray(date, Booking.returnDates) != -1
-              return [true, "", "Available"]
+            date_str = $.datepicker.formatDate("yy-mm-dd", date_utc)
+            if $.inArray(date_str, Booking.returnDates) != -1
+              return true
             else
-              return [false, "", "Unavailable"]
+              return false
         )
       )
 
