@@ -12,12 +12,10 @@
   window.unbooked = '#{escape_javascript options_for_select([*5..11])}'
 
   var dateEnabled = #{@tour_dates.collect{|date| date.date.strftime("%Y-%m-%d")}}
-
   $(document).ready(function(){
     $("#datepicker").datepicker({
       beforeShowDay: function(date){
         var date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
-
         if ($.inArray($.datepicker.formatDate('yy-mm-dd', date_utc), dateEnabled) != -1)
         {
           return  true
@@ -26,6 +24,25 @@
         }
       }
     })
-
-
   })
+:coffeescript
+
+  jQuery ->
+    compute_tour_passengers = ->
+      selected_date = jQuery('#reservation_date').val()
+      tour_date = jQuery.grep(tour_dates, (object, index) ->
+        object.date == selected_date
+      )[0]
+      if tour_date.available > 5
+        jQuery('#reservation_passengers').html(unbooked)
+      else
+        options = ''
+        for index in [1..tour_date.available]
+          options += '<option value="' + index + '">' + index + '</option>'
+
+        jQuery('#reservation_passengers').html(options)
+
+    jQuery('#reservation_date').change (e) ->
+      compute_tour_passengers()
+
+    compute_tour_passengers()
