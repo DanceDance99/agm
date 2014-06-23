@@ -40,12 +40,13 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0 8px 6px -6px #827f7f;
 }
 
-#jumbotron-telephone {
-
-}
-
 #jumbotron-telephone h2 {
   font-size: 40px;
+  float: right;
+}
+
+#jumbotron-telephone-text {
+  text-align: right;
 }
 
 #jumbotron-logo img {
@@ -76,6 +77,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 20px;
 }
 
+.top-nav{
+  float: right;
+}
+
 #translate img {
   margin-top: 9px;
   width: 22px;
@@ -93,9 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .mini-text {
   font-size: 11px;
 }
-.float-right {
-  float: right;
-}
+
 /* end */
 
 
@@ -125,7 +128,28 @@ footer {
 @media(max-width: 768px) {
   .medium-text { font-size: 18px; }
   .larger-text { font-size: 27px; }
+  .navigation { margin-left: 0px; }
+
+  .navigation .btn-lg, .btn-group-lg > .btn {
+    padding-bottom: 6px;
+    padding-top: 6px;
+    margin-right: 20px; }
+
+  .top-nav {
+    float: left;
+    margin-left: 70px;}
+
+  #jumbotron-telephone-text {
+  text-align: left; }
+
+  #jumbotron-telephone h2 {
+  float: left; }
+
+  #jumbotron-telephone {
+    display: block;
+    margin-left: 30px;}
 }
+
 
 @media(max-width: 480px) {
   .modal.large .modal-dialog {
@@ -143,5 +167,6 @@ footer {
   .medium-text { font-size: 15px; }
   .larger-text { font-size: 25px; }
   .navigation { margin-left: 0; }
+  #jumbotron-telephone h2 { font-size: 30px; }
 }
 
