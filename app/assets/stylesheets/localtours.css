@@ -127,18 +127,19 @@ h4 {
 
 @media(max-width: 480px) {
   .blue-heading {
-    margin-left: 13px;
+    margin-left: 95px;
     padding: 4px 40px;
   }
   .btn-primary {
-  margin-left: 0; }
+  margin-left: 58px; }
 }
 
-@media(max-width: 768px) {
+@media(min-width: 768px) {
   .blue-heading {
   margin-left: 209px; }
 
   .btn-primary {
   margin-left: 160px; }
 }
+
 

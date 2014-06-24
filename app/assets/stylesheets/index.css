@@ -146,22 +146,22 @@
 
 @media(max-width: 480px) {
 .carousel-caption h4 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 30px; }
+  margin-top: 13px;
+  margin-bottom: 13px;
+  font-size: 35px; }
 
 .carousel-caption h3 {
-  font-size: 25px; }
+  font-size: 32px; }
 
 .carousel-caption h5 {
-  font-size: 20px;
+  font-size: 29px;
   color: #e9e6dc; }
 
 .blue-heading-small {
   margin-left: 17px; }
 
 .blue-heading {
-  margin-left: 10px;
+  margin-left: 90px;
   padding: 4px 8px;
   font-size: 25px;
 }
@@ -170,7 +170,7 @@
   height: 200px; }
 }
 
-@media(max-width: 768px) {
+@media(min-width: 768px) {
   .carousel-caption h4 {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -191,5 +191,4 @@
 
 .blue-heading-small {
   margin-left: 245px; }
-
 }
