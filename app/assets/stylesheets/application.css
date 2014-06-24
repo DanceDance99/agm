@@ -164,13 +164,13 @@ footer {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
 
-  .medium-text { font-size: 15px; }
-  .larger-text { font-size: 25px; }
+  .medium-text { font-size: 12px; }
+  .larger-text { font-size: 18px; }
   .navigation { margin:0px; }
-  .top-nav {float: left !important;}
-  #jumbotron-telephone h2 { font-size: 30px; }
-  #jumbotron-telephone { float: left !important; margin:0px;}
-  #jumbotron-telephone-text { text-align: left !important; margin:0px; }
+  .top-nav {float: left !important; width: 100%;}
+  #jumbotron-telephone h2 { font-size: 20px; }
+/*  #jumbotron-telephone { float: left !important; margin:0px;}
+  #jumbotron-telephone-text { text-align: left !important; margin:0px; }*/
   .jumbotron { background-image: none; }
 }
 
