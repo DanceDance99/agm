@@ -168,8 +168,7 @@ footer {
   .larger-text { font-size: 18px; }
   .navigation { margin:0px; }
   #jumbotron-telephone h2 { font-size: 20px; }
-  #jumbotron-telephone { margin:0px;}
-  #jumbotron-telephone-text { margin: -30px;}
+  #jumbotron-telephone { margin:0px; }
   .jumbotron { background-image: none; }
   .navigation .btn-lg, .btn-group-lg > .btn { margin:0px;}
 }
