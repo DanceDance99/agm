@@ -167,11 +167,12 @@ footer {
   .medium-text { font-size: 12px; }
   .larger-text { font-size: 18px; }
   .navigation { margin:0px; }
-  .top-nav {float: left !important; width: 100%;}
-  #jumbotron-telephone h2 { font-size: 20px; }
-/*  #jumbotron-telephone { float: left !important; margin:0px;}
-  #jumbotron-telephone-text { text-align: left !important; margin:0px; }*/
+  .top-nav {float: left !important;}
+  #jumbotron-telephone h2 { font-size: 20px; float: left; }
+  #jumbotron-telephone { float: left !important; margin:0px;}
+  #jumbotron-telephone-text { text-align: left !important; margin:0px; }
   .jumbotron { background-image: none; }
+  .navigation .btn-lg, .btn-group-lg > .btn { margin:0px;}
 }
 
 @media (min-width: 768px) and (max-width: 979px){
