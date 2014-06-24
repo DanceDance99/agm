@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 .jumbotron {
   background-image: url('car-image.png');
   background-repeat: no-repeat;
-  background-position: left 600px center;
+  background-position: left 555px center;
 }
 
 .col-md-7 {
@@ -168,5 +168,10 @@ footer {
   .larger-text { font-size: 25px; }
   .navigation { margin-left: 0; }
   #jumbotron-telephone h2 { font-size: 30px; }
+}
+
+@media(max-width: 768px) {
+  .jumbotron {
+  background-position: left 480px center; }
 }
 
