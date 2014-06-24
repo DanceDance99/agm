@@ -167,7 +167,7 @@ footer {
   .medium-text { font-size: 15px; }
   .larger-text { font-size: 25px; }
   .navigation { margin:0px; }
-  .top-nav {float: left; }
+  .top-nav {float: left; width: 70%;}
   #jumbotron-telephone h2 { font-size: 30px; }
   #jumbotron-telephone { float: left; margin:0px;}
   #jumbotron-telephone-text { text-align: left; margin:0px; }
