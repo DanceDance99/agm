@@ -63,12 +63,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 0;
 }
 
-#translate {
-
-}
-
-.navigation {
-
 }
 
 .navigation .btn-lg, .btn-group-lg > .btn {
@@ -148,9 +142,6 @@ footer {
     padding-top: 4px;
     margin-right: 0px;
     font-size: 13px; }
-  .top-nav {
-    float: left;
-    margin-left: 70px;}
 
   #jumbotron-telephone-text {
   text-align: left; }
@@ -159,7 +150,7 @@ footer {
   float: left; }
 
   #jumbotron-telephone {
-    display: block;
+    display: block; }
 }
 
 @media(max-width: 768px) {
@@ -172,9 +163,6 @@ footer {
     padding-top: 6px;
     margin-right: 20px; }
 
-  .top-nav {
-    float: left;
-    margin-left: 70px;}
 
   #jumbotron-telephone-text {
   text-align: left; }
