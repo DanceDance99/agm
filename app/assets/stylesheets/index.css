@@ -148,20 +148,20 @@
 .carousel-caption h4 {
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 35px; }
-
-.carousel-caption h3 {
   font-size: 30px; }
 
+.carousel-caption h3 {
+  font-size: 25px; }
+
 .carousel-caption h5 {
-  font-size: 25px;
+  font-size: 20px;
   color: #e9e6dc; }
 
 .blue-heading-small {
-  margin-left: 96px; }
+  margin-left: 93px; }
 
 .blue-heading {
-  margin-left: 92px;
+  margin-left: 30px;
   padding: 4px 8px;
   font-size: 25px;
 }

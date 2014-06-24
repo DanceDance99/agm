@@ -167,11 +167,11 @@ footer {
   .medium-text { font-size: 15px; }
   .larger-text { font-size: 25px; }
   .navigation { margin-left: 0; }
-  .top-nav {float: left;}
+  .top-nav {float: left; width: 320px; }
   #jumbotron-telephone h2 { font-size: 30px; }
   #jumbotron-telephone { float: left;}
-  #jumbotron-telephone-text { text-align: left; float: left;}
-  .jumbotron { background-image: none: }
+  #jumbotron-telephone-text { text-align: left; }
+  .jumbotron { background-image: none; }
 }
 
 @media (min-width: 768px) and (max-width: 979px){
