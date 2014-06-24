@@ -21,36 +21,32 @@
           </div>
         </div>
         <div class="col-md-4 top-nav">
-          <div class='row top-nav'>
-           <div class="btn-group navigation">
-              <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                Navigation<span class="caret"></span>
-              </button>
+         <div class="btn-group navigation">
+            <button class="btn btn-default btn-lg dropdown-toggle all-tours-list" type="button" data-toggle="dropdown">
+              Navigation<span class="caret"></span>
+            </button>
 
-              <ul class="dropdown-menu" role='menu'>
-                <li><%= link_to 'Home', root_path %></li>
-                <li><a href='/shuttles/1'>Express Shuttle</a></li>
-                <% @tours.each do |tour| %>
-                  <li><%= link_to tour.name, tour %></li>
-                <% end %>
-              </ul>
-              <div id="translate">
-                <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
-                <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
-            </div>
-            </div>
+            <ul class="dropdown-menu" role='menu'>
+              <li><%= link_to 'Home', root_path %></li>
+              <li><a href='/shuttles/1'>Express Shuttle</a></li>
+              <% @tours.each do |tour| %>
+                <li><%= link_to tour.name, tour %></li>
+              <% end %>
+            </ul>
+
           </div>
-          <div class='row top-nav'>
-            <div id="jumbotron-telephone-text">
-              <span class="medium-text">Please</span>
-              <span class="larger-text">call us</span>
-              <span class="medium-text">for</span>
-              <span class="larger-text">reservations</span>
-            </div>
-
-            <div id='jumbotron-telephone' class='top-nav'>
-              <h2>702 327 9922</h2>
-            </div>
+        <div id="translate">
+          <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
+          <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
+        </div>
+        <div id="jumbotron-telephone-text">
+          <span class="medium-text">Please</span>
+          <span class="larger-text">call us</span>
+          <span class="medium-text">for</span>
+          <span class="larger-text">reservations</span>
+        </div>
+        <div id='jumbotron-telephone'>
+          <h2>702 327 9922</h2>
         </div>
       </div>
       </div>

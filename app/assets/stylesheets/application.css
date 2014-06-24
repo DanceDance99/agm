@@ -40,15 +40,14 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0 8px 6px -6px #827f7f;
 }
 
-
 #jumbotron-telephone h2 {
   font-size: 40px;
-  /*float: right;*/
+  float: right;
 }
 
-/*#jumbotron-telephone-text {
+#jumbotron-telephone-text {
   text-align: right;
-}*/
+}
 
 #jumbotron-logo img {
   padding-top: 42px;
@@ -65,11 +64,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #translate {
-  float: left;
+  float: right;
 }
 
 .navigation {
- /* margin-left: 158px;*/
+  margin-left: 158px;
 }
 
 .navigation .btn-lg, .btn-group-lg > .btn {
@@ -79,7 +78,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top-nav{
-  float: right;
+   position: relative;
+  /* width: 300px;
+   height: 200px;*/
+   right: -100px;
 }
 
 #translate img {
@@ -164,18 +166,28 @@ footer {
     padding: 15px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
-  .medium-text { font-size: 12px; }
-  .larger-text { font-size: 18px; }
-  .navigation { margin:0px; }
-  .top-nav { float: left;}
-  #jumbotron-telephone h2 { font-size: 5px; }
-  #jumbotron-telephone { margin:0px; }
-  .jumbotron { background-image: none; }
-  .navigation .btn-lg, .btn-group-lg > .btn { margin:0px;}
+
+  .medium-text { font-size: 15px; }
+  .larger-text { font-size: 25px; }
+  #jumbotron-telephone h2  { font-size: 35px;}
+  #jumbotron-telephone { float: left;}
+  .top-nav{
+   position: relative;
+  /* width: 300px;
+   height: 200px;*/
+   left: -30px;
 }
 
-@media (min-width: 768px) and (max-width: 979px){
+}
+
+@media(max-width: 768px) {
   .jumbotron {
   background-position: left 480px center; }
+  .top-nav{
+   position: relative;
+  /* width: 300px;
+   height: 200px;*/
+   left: -10px;
+}
 }
 
