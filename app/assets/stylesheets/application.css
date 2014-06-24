@@ -167,11 +167,11 @@ footer {
   .medium-text { font-size: 15px; }
   .larger-text { font-size: 25px; }
   .navigation { margin-left: 0; }
-  #jumbotron-telephone h2 { font-size: 30px; float: left;  }
-  #jumbotron-telephone-text { text-align: left;}
+  #jumbotron-telephone h2 { font-size: 30px; }
 }
 
-@media(min-width: 768px) {
+@media(mmin-width: 768px) {
   .jumbotron {
-    background-position: left 480px center; }
+  background-position: left 480px center; }
 }
+

@@ -127,11 +127,11 @@ h4 {
 
 @media(max-width: 480px) {
   .blue-heading {
-    margin-left: 95px;
+    margin-left: 13px;
     padding: 4px 40px;
   }
   .btn-primary {
-  margin-left: 58px; }
+  margin-left: 0; }
 }
 
 @media(min-width: 768px) {
@@ -141,5 +141,4 @@ h4 {
   .btn-primary {
   margin-left: 160px; }
 }
-
 
