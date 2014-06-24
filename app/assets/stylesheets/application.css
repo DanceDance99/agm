@@ -63,14 +63,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 0;
 }
 
-#translate {
-
-}
-
-.navigation {
-
-}
-
 .navigation .btn-lg, .btn-group-lg > .btn {
   padding-bottom: 6px;
   padding-top: 6px;
@@ -81,7 +73,11 @@ h1, h2, h3, h4, h5, h6 {
    position: relative;
   /* width: 300px;
    height: 200px;*/
-   right: -100px;
+   right: -20px;
+}
+
+.jumbotron-telephone-text {
+  width: 99%;
 }
 
 #translate img {
@@ -142,15 +138,8 @@ footer {
     float: left;
     margin-left: 70px;}
 
-  #jumbotron-telephone-text {
-  text-align: left; }
-
-  #jumbotron-telephone h2 {
-  float: left; }
-
-  #jumbotron-telephone {
-    display: block;
-    margin-left: 30px;}
+   .jumbotron {
+  background-position: left 480px center; }
 }
 
 
@@ -176,17 +165,6 @@ footer {
     margin-right: 0px;
     font-size: 13px;
 
-}
-}
-
-@media(max-width: 768px) {
-  .jumbotron {
-  background-position: left 480px center; }
-  .top-nav{
-   position: relative;
-  /* width: 300px;
-   height: 200px;*/
-   left: -10px;
 }
 }
 
