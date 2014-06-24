@@ -168,6 +168,10 @@ footer {
   .larger-text { font-size: 25px; }
   .navigation { margin-left: 0; }
   #jumbotron-telephone h2 { font-size: 30px; }
+  #jumbotron-telephone { float: left; display: block;}
+  #jumbotron-telephone-text {
+  text-align: left;
+}
 }
 
 @media (min-width: 768px) and (max-width: 979px){
