@@ -40,14 +40,15 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0 8px 6px -6px #827f7f;
 }
 
+
 #jumbotron-telephone h2 {
   font-size: 40px;
-  float: right;
+  /*float: right;*/
 }
 
-#jumbotron-telephone-text {
+/*#jumbotron-telephone-text {
   text-align: right;
-}
+}*/
 
 #jumbotron-logo img {
   padding-top: 42px;
@@ -64,11 +65,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #translate {
-  float: right;
+  float: left;
 }
 
 .navigation {
-  margin-left: 158px;
+ /* margin-left: 158px;*/
 }
 
 .navigation .btn-lg, .btn-group-lg > .btn {
@@ -167,7 +168,6 @@ footer {
   .medium-text { font-size: 12px; }
   .larger-text { font-size: 18px; }
   .navigation { margin:0px; }
-  .top-nav {float: left !important;}
   #jumbotron-telephone h2 { font-size: 20px; float: left; }
   #jumbotron-telephone { float: left !important; margin:0px;}
   #jumbotron-telephone-text { text-align: left !important; margin:0px; }
