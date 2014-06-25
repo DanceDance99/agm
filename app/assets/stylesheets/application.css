@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #jumbotron-logo img {
-  padding-top: 42px;
+  padding-top: 54px;
 }
 
 .jumbotron {
@@ -116,6 +116,7 @@ footer {
   border-top: 1px solid #666;
   padding: 10px 0;
 }
+
 /* end */
 
 
