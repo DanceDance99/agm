@@ -63,6 +63,9 @@ class BookingsController < ApplicationController
     params.require(:booking).permit( :passengers, :home_pickup, :home_dropoff, :email_address, 
       :home_address, :pickup_city, :zipcode, :telephone_number, :amount, :first_last_name, 
       :phone_number, :round_trip, :from_id, :to_id, :depart_date, :return_date, :added_by_admin, 
-      :private_shuttle, :senior_citizen, :dest_address, :dest_city, :dest_zipcode)
+      :private_shuttle, :senior_citizen, :dest_address, :dest_city, :dest_zipcode,
+      :round_trip_source_address, :round_trip_source_city, :round_trip_source_zipcode, :round_trip_dest_address,
+      :round_trip_dest_city, :round_trip_dest_zipcode
+      )
   end
 end

@@ -2,7 +2,7 @@
 //= require jquery_ujs
 // require jquery.ui
 //= require jquery.ui.datepicker
-
+//= require jquery.nested-fields
 //= require jquery.turbolinks
 //= require bootstrap
 //= require bootstrap-datepicker
