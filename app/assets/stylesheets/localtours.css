@@ -127,29 +127,20 @@ h4 {
 
 @media(max-width: 480px) {
   .blue-heading {
-<<<<<<< HEAD
-    margin-left: 12px;
+    margin-left: 62px;
     padding: 4px 40px;
   }
+
   .btn-primary {
-    margin-left: 5px; }
+    margin-left: 20px; }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-=======
-    margin-left: 95px;
+  .blue-heading {
+    margin-left: 250px;
     padding: 4px 40px;
   }
   .btn-primary {
-  margin-left: 58px; }
-}
-
-@media(min-width: 768px) {
->>>>>>> object-caching-fix
-  .blue-heading {
-  margin-left: 209px; }
-
-  .btn-primary {
-  margin-left: 160px; }
+  margin-left: 150px; }
 }
 

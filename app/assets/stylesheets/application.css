@@ -72,7 +72,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-
 .navigation {
  margin-left: 215px; }
 
@@ -139,25 +138,21 @@ footer {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
 
-<<<<<<< HEAD
   .medium-text { font-size: 12px; }
   .larger-text { font-size: 18px; }
-  #jumbotron-telephone h2  { font-size: 25px; text-align: left; padding: 0;}
 
-  .navigation .btn-lg, .btn-group-lg > .btn {
-    padding-bottom: 4px;
-    padding-top: 4px;
-    margin-right: 0px;
-    font-size: 13px; }
+  #jumbotron-telephone h2  { font-size: 25px; text-align: left; padding: 0; margin-left: 35px;}
 
-  #translate { margin-left: 0px; }
+  .navigation { margin-left: 50px; }
+
+  #translate { margin-left: 90px; }
 
   #jumbotron-telephone-text {
     margin-left: 10px;
   }
 }
 
-@media(max-width: 768px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .medium-text { font-size: 18px; }
   .larger-text { font-size: 27px; }
   .navigation { margin-left: 0px; }
@@ -172,21 +167,11 @@ footer {
    #jumbotron-telephone h2  { text-align: left; padding: 0;}
    #translate { margin-left: 130px; }
 
-   .navigation {
-    margin-left: 90px; }
+   .navigation { margin-left: 90px; }
 
-=======
-  .medium-text { font-size: 15px; }
-  .larger-text { font-size: 25px; }
-  .navigation { margin-left: 0; }
-  #jumbotron-telephone h2 { font-size: 30px; float: left;  }
-  #jumbotron-telephone-text { text-align: left;}
-}
-
-@media(min-width: 768px) {
-  .jumbotron {
+    .jumbotron {
     background-position: left 480px center; }
->>>>>>> object-caching-fix
+
 }
 
 
