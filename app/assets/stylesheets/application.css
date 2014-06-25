@@ -146,10 +146,7 @@ footer {
     padding-bottom: 4px;
     padding-top: 4px;
     margin-right: 0px;
-    font-size: 13px;
-    margin-left: 40px; }
-
-  #translate { margin-left: 25px; }
+    font-size: 13px; }
 }
 
 @media(max-width: 768px) {
