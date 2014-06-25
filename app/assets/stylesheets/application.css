@@ -149,6 +149,10 @@ footer {
     font-size: 13px; }
 
   #translate { margin-left: 0px; }
+
+  #jumbotron-telephone-text {
+    margin-left: 10px;
+  }
 }
 
 @media(max-width: 768px) {
