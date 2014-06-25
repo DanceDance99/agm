@@ -20,6 +20,10 @@
           </div>
         </div>
         <div class="col-md-4 top-nav">
+          <div id="translate">
+          <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
+          <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
+        </div>
          <div class="btn-group navigation">
             <button class="btn btn-default btn-lg dropdown-toggle all-tours-list" type="button" data-toggle="dropdown">
               Navigation<span class="caret"></span>
@@ -32,12 +36,8 @@
                 <li><%= link_to tour.name, tour %></li>
               <% end %>
             </ul>
-
           </div>
-        <div id="translate">
-          <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
-          <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
-        </div>
+
         <div id="jumbotron-telephone-text">
           <span class="medium-text">Please</span>
           <span class="larger-text">call us</span>
