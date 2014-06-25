@@ -51,7 +51,7 @@
           %li= t 'shuttles.city1'
           %li= t 'shuttles.city2'
           %li= t 'shuttles.city3'
-          %small= t 'shuttles.notice'
+        %small= t 'shuttles.notice'
 
 .tours-information.text-center
   .container
@@ -259,7 +259,8 @@
               %br/
               %span.strong-text (Jones Market)
           %tr
-      %p.small.pull-right= t 'shuttles.notice2'
+      .shuttle-notice
+        %p= t 'shuttles.notice2'
     .tour-details.col-md-3
       .row.margin-bottom
         .pricing.text-center

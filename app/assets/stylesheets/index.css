@@ -1,8 +1,8 @@
 .container-bg h2, .carousel-caption h3, .carousel-caption h4, .carousel-caption h5, .vip-tours p, .blue-heading, .tour-inner-container h3, .tour-inner-container h4 {
     font-family: 'Didact Gothic', sans-serif;
 }
-.container-bg h2 {
 
+.container-bg h2 {
   text-align: center;
   font-size: 38px;
   font-style: italic;
@@ -20,6 +20,7 @@
   margin-top: 20px;
 
 }
+
 .container-bg {
   background-color: #f5f2e8;
   padding-bottom: 15px;
@@ -34,7 +35,6 @@
   width: 96%;
   height: 500px;
   border-radius: .5%;
-  opacity: 0.7;
 }
 
 .carousel-caption {
@@ -46,20 +46,20 @@
   margin-top: 40px;
   margin-bottom: 40px;
   font-size: 65px;
-  color: #e1d4a4;
+  color: #ffd63d;
   text-shadow: 2px 2px 2px #222121;
 }
 
 .carousel-caption h3 {
   font-size: 45px;
-  color: #e9e6dc;
+  color: #fff;
   font-style: normal;
   text-shadow: 2px 2px 2px #222121;
 }
 
 .carousel-caption h5 {
   font-size: 40px;
-  color: #e9e6dc;
+  color: #fff;
   text-shadow: 2px 2px 2px #222121;
 }
 
@@ -145,23 +145,23 @@
 /* end */
 
 @media(max-width: 480px) {
-  .carousel-caption h4 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 30px; }
+.carousel-caption h4 {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  font-size: 35px; }
 
 .carousel-caption h3 {
-  font-size: 25px; }
+  font-size: 32px; }
 
 .carousel-caption h5 {
-  font-size: 20px;
+  font-size: 29px;
   color: #e9e6dc; }
 
 .blue-heading-small {
   margin-left: 17px; }
 
 .blue-heading {
-  margin-left: 10px;
+  margin-left: 90px;
   padding: 4px 8px;
   font-size: 25px;
 }
@@ -170,3 +170,29 @@
   height: 200px; }
 }
 
+<<<<<<< HEAD
+@media (min-width: 768px) and (max-width: 979px) {
+=======
+@media(min-width: 768px) {
+>>>>>>> object-caching-fix
+  .carousel-caption h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 50px; }
+
+.carousel-caption h3 {
+  font-size: 39px; }
+
+.carousel-caption h5 {
+  font-size: 35px;
+  color: #e9e6dc; }
+
+.blue-heading {
+  margin-left: 245px;
+  padding: 4px 8px;
+  font-size: 25px;
+}
+
+.blue-heading-small {
+  margin-left: 245px; }
+}
