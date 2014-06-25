@@ -147,9 +147,9 @@ footer {
     padding-top: 4px;
     margin-right: 0px;
     font-size: 13px;
-    margin-left: 70px; }
+    margin-left: 40px; }
 
-  #translate { margin-left: 50px; }
+  #translate { margin-left: 25px; }
 }
 
 @media(max-width: 768px) {
