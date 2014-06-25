@@ -1,13 +1,56 @@
+:css
+  .left_label label{
+    text-align: left;
+    width: 100%;
+  }
+  #source_headline, #dest_headline{
+    text-align: left;
+  }
+:javascript
+  $(document).ready(function(){
+    content_text = "Going to " + $("#booking_from_id  option:selected").text() ;
+    $("#source_headline").text(content_text);
+    content_text = "Returning from " + $("#booking_from_id  option:selected").text() ;
+    $("#dest_headline").text(content_text);
+   
+    if( $("#booking_home_dropoff").is(':checked') == true || $("#booking_round_trip_true").is(':checked') == true ){
+      $("#dest_address").show();
+    }else{
+      $("#dest_address").hide();
+    }
+
+    $(".alter_address").on("change", function(){
+      if( $("#booking_home_dropoff").is(':checked') == true || $("#booking_round_trip_true").is(':checked') == true ){
+        $("#dest_address").show();
+      }else{
+        $("#dest_address").hide();
+      }
+    })
+
+    $('#booking_from_id').on("change", function(){
+      $("#booking_pickup_city").val( $("#booking_from_id  option:selected").text() );
+      content_text = "Going to " + $("#booking_from_id  option:selected").text() ;
+      $("#source_headline").text(content_text);
+    })
+
+    $('#booking_to_id').on("change", function(){
+      $("#booking_dest_city").val( $("#booking_to_id  option:selected").text() );
+      content_text = "Returning from " + $("#booking_from_id  option:selected").text() ;
+      $("#dest_headline").text(content_text);
+    })
+
+  })
+
 = form.select :passengers, options_for_select([*1..11])
 .radio-inline
-  = form.radio_button :round_trip, false, label: "One Way ($39)"
+  = form.radio_button :round_trip, false, label: "One Way ($39)", class: 'alter_address'
 .radio-inline
-  = form.radio_button :round_trip, true, label: "Round Trip ($69)"
+  = form.radio_button :round_trip, true, label: "Round Trip ($69)", class: 'alter_address'
 
 = form.check_box :private_shuttle, label: 'Private shuttle (One way - $350, Round trip - $600)'
 
-= form.select :from_id, options_from_collection_for_select(@shuttle.shuttle_cities, :id, :name)
-= form.select :to_id, options_from_collection_for_select(@shuttle.shuttle_cities, :id, :name), :include_blank => true
+= form.select :from_id, options_from_collection_for_select(@shuttle.shuttle_cities, :id, :name), class: 'source_loc'
+= form.select :to_id, options_from_collection_for_select(@shuttle.shuttle_cities, :id, :name), :include_blank => true, class: 'dest_loc'
 = form.hidden_field "depart_date", :id => 'depart_date_hidden_datepicker'
 .depart_description
 #depart_date_datepicker
@@ -16,10 +59,18 @@
 #return_date_datepicker
 = form.text_field :first_last_name, label: 'Full name'
 = form.text_field :email_address, label: 'Email address (required)'
-= form.check_box :home_pickup, label: 'Home pickup: $15.00 ($10.00 for senior citizens)'
-= form.check_box :home_dropoff, label: 'Home dropoff:  $15.00 ($10.00 for senior citizens)'
+= form.check_box :home_pickup, label: 'Home pickup: $15.00 ($10.00 for senior citizens)', class: 'alter_address'
+= form.check_box :home_dropoff, label: 'Home dropoff:  $15.00 ($10.00 for senior citizens)', class: 'alter_address'
 = form.check_box :senior_citizen
-= form.text_field :home_address, label: 'Pickup or dropoff address (required with home pickup/dropoff)'
-= form.select :pickup_city, ['Las Vegas', 'Glendale', 'Hollywood']
-= form.text_field :zipcode
+.row
+  #source_address.col-md-6.left_label
+    %h5#source_headline
+    = form.text_field :home_address, label: 'Address to be picked up'
+    = form.select :pickup_city, ['Las Vegas', 'Glendale', 'Hollywood']
+    = form.text_field :zipcode
+  #dest_address.col-md-6.left_label
+    %h5#dest_headline
+    = form.text_field :dest_address, label: 'Address to be droped off'
+    = form.select :dest_city, ['Las Vegas', 'Glendale', 'Hollywood'], label: 'City'
+    = form.text_field :dest_zipcode, label: 'Zipcode'
 = form.text_field :telephone_number, label: 'Telephone number (required)'

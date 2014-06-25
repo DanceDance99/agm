@@ -139,6 +139,7 @@ footer {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
 
+<<<<<<< HEAD
   .medium-text { font-size: 12px; }
   .larger-text { font-size: 18px; }
   #jumbotron-telephone h2  { font-size: 25px; text-align: left; padding: 0;}
@@ -174,6 +175,18 @@ footer {
    .navigation {
     margin-left: 90px; }
 
+=======
+  .medium-text { font-size: 15px; }
+  .larger-text { font-size: 25px; }
+  .navigation { margin-left: 0; }
+  #jumbotron-telephone h2 { font-size: 30px; float: left;  }
+  #jumbotron-telephone-text { text-align: left;}
+}
+
+@media(min-width: 768px) {
+  .jumbotron {
+    background-position: left 480px center; }
+>>>>>>> object-caching-fix
 }
 
 

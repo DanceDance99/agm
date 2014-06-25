@@ -37,6 +37,9 @@ class Tour < ActiveRecord::Base
     future_days.times do
       if self.day_bits & (2 ** (date.wday)) > 0   # find the bit for each weekday and check if it is flagged
         self.tour_dates.where(:date => date).first_or_create
+      else
+        present_tour = self.tour_dates.find_by_date(date)
+        present_tour.destroy if present_tour && present_tour.available == 11
       end
 
       date = date + 1

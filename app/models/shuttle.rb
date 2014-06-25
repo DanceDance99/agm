@@ -67,6 +67,20 @@ class Shuttle < ActiveRecord::Base
         self.shuttle_cities.reverse.each_cons(2) do |from, to|
           self.shuttle_legs.where(:date => date, :from => from, :to => to).first_or_create
         end
+      else
+        self.shuttle_cities.each_cons(2) do |from, to|
+          present_shuttles = self.shuttle_legs.where(:date => date, :from => from, :to => to)
+          present_shuttles.each do |shuttle|
+            shuttle.destroy if shuttle && shuttle.available == 11
+          end
+        end
+
+        self.shuttle_cities.reverse.each_cons(2) do |from, to|
+          present_shuttles = self.shuttle_legs.where(:date => date, :from => from, :to => to)
+          present_shuttles.each do |shuttle|
+            shuttle.destroy if shuttle && shuttle.available == 11
+          end
+        end
       end
 
       date = date + 1

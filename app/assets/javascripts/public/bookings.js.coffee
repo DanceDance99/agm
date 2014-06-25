@@ -36,6 +36,10 @@ jQuery ->
               return true
             else
               return false
+        ).on('changeDate', (ev) -> 
+          selected_date = $('#depart_date_datepicker').data('datepicker').date
+          selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+          $("#depart_date_hidden_datepicker").val( selected_date )
         )
 
         jQuery('#return_date_datepicker').datepicker(
@@ -52,6 +56,10 @@ jQuery ->
               return true
             else
               return false
+        ).on('changeDate', (ev) -> 
+          selected_date = $('#return_date_datepicker').data('datepicker').date
+          selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+          $("#return_date_hidden_datepicker").val( selected_date )
         )
       )
 
