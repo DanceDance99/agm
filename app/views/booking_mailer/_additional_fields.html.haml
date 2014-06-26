@@ -1,0 +1,27 @@
+%li
+  %strong Home drop off address
+  #{@booking.round_trip_source_address.presence || 'N/A'}
+%li
+  %strong Drop off city
+  #{@booking.round_trip_source_city.presence || 'N/A'}
+%li
+  %strong Zipcode
+  #{@booking.round_trip_source_zipcode.presence || 'N/A'}
+%li
+  %strong Destination pick up address
+  #{@booking.dest_address.presence || 'N/A'}
+%li
+  %strong Destination pick up city
+  #{@booking.dest_city.presence || 'N/A'}
+%li
+  %strong Zipcode
+  #{@booking.dest_zipcode.presence || 'N/A'}
+%li
+  %strong Destination drop off address
+  #{@booking.round_trip_dest_address.presence || 'N/A'}
+%li
+  %strong Destination drop off city
+  #{@booking.round_trip_dest_city.presence || 'N/A'}
+%li
+  %strong Zipcode
+  #{@booking.round_trip_dest_zipcode.presence || 'N/A'}

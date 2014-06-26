@@ -265,12 +265,12 @@ only screen and (max-width: 760px),
 
   /* Force table to not be like tables anymore */
   table, thead, tbody, th, td, tr {
-    display: block;
+    /*display: block;*/
   }
 
   /* Hide table headers (but not display: none;, for accessibility) */
   thead tr {
-    position: absolute;
+    /* position: absolute; */
     top: -9999px;
     left: -9999px;
   }

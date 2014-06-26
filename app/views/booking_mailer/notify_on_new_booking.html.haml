@@ -35,7 +35,7 @@
       %strong Home drop off?
       #{@booking.home_dropoff ? 'Yes' : 'No'}
     %li
-      %strong Home address
+      %strong Home pickup address
       #{@booking.home_address.presence || 'N/A'}
     %li
       %strong Pickup city
@@ -43,6 +43,7 @@
     %li
       %strong Zipcode:
       #{@booking.zipcode.presence || 'N/A'}
+    = render "additional_fields"
 
 
 
