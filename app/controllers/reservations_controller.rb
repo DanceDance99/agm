@@ -9,7 +9,10 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    selected_date = params["reservation"]["date"]
+    date = DateTime.strptime(selected_date, "%m/%d/%Y") if selected_date
     @reservation = Reservation.new(reservation_params)
+    @reservation.date = date if date
     @reservation.tour = @tour
     @reservation.token = params[:stripeToken]
     @tour_dates = @tour.tour_dates.where(:date => Date.today .. 12.months.from_now).where("available > 0").order('date asc')
