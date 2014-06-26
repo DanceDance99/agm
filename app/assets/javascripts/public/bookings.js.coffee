@@ -17,22 +17,19 @@ jQuery ->
         jQuery('.return_description').html('')
 
       jQuery.post("/shuttles/" + shuttle_id + "/bookings/dates", jQuery('.new_booking').serialize(), (e) ->
-
         #jQuery('#depart_date_datepicker').datepicker('destroy')
         #jQuery('#return_date_datepicker').datepicker('destroy')
 
-
         jQuery('#depart_date_datepicker').datepicker(
-          defaultDate: '',
-          altFormat: "yy-mm-dd",
-          altField: '#depart_date_hidden_datepicker',
+          defaultDate: ''
+          altFormat: "yy-mm-dd"
+          altField: '#depart_date_hidden_datepicker'
           beforeShowDay: (date) ->
             # format javascript date to match rails
             date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds())
 
             date_str = $.datepicker.formatDate("yy-mm-dd", date_utc)
-
-            if $.inArray(date_str, Booking.departDates) != -1
+            if $.inArray(date_str, window.Booking.departDates) != -1
               return true
             else
               return false
@@ -52,7 +49,7 @@ jQuery ->
             date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds())
 
             date_str = $.datepicker.formatDate("yy-mm-dd", date_utc)
-            if $.inArray(date_str, Booking.returnDates) != -1
+            if $.inArray(date_str, window.Booking.returnDates) != -1
               return true
             else
               return false

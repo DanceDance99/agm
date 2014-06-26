@@ -8,9 +8,9 @@
   }
 :javascript
   $(document).ready(function(){
-    content_text = "Going to " + $("#booking_from_id  option:selected").text() ;
+    content_text = "Going to " + $("#booking_to_id  option:selected").text() ;
     $(".source_headline").text(content_text);
-    content_text = "Returning from " + $("#booking_from_id  option:selected").text() ;
+    content_text = "Returning from " + $("#booking_to_id  option:selected").text() ;
     $(".dest_headline").text(content_text);
    
     if( $("#booking_home_dropoff").is(':checked') == true ){
@@ -58,13 +58,16 @@
 
     $('#booking_from_id').on("change", function(){
       $("#booking_pickup_city").val( $("#booking_from_id  option:selected").text() );
-      content_text = "Going to " + $("#booking_from_id  option:selected").text() ;
+      content_text = "Going to " + $("#booking_to_id  option:selected").text() ;
       $(".source_headline").text(content_text);
     })
 
     $('#booking_to_id').on("change", function(){
+      $("#booking_pickup_city").val( $("#booking_from_id  option:selected").text() );
+      content_text = "Going to " + $("#booking_to_id  option:selected").text() ;
+      $(".source_headline").text(content_text);
       $("#booking_dest_city").val( $("#booking_to_id  option:selected").text() );
-      content_text = "Returning from " + $("#booking_from_id  option:selected").text() ;
+      content_text = "Returning from " + $("#booking_to_id  option:selected").text() ;
       $(".dest_headline").text(content_text);
     })
 
@@ -98,18 +101,18 @@
     = form.select :pickup_city, ShuttleCity.all.collect(&:name)
     = form.text_field :zipcode
   #dest_address.col-md-6.left_label
-    %h5.dest_headline
+    %h5 &nbsp;
     = form.text_field :dest_address, label: 'Address to be droped off'
     = form.select :dest_city, ShuttleCity.all.collect(&:name), label: 'City'
     = form.text_field :dest_zipcode, label: 'Zipcode'
 #round_trip_address.row
   #round_trip_source_address.col-md-6.left_label
-    %h5.dest_headline
+    %h5.dest_headline{style: 'text-align:left; margin-left: 20px;'}
     = form.text_field :round_trip_source_address, label: 'Address to be dropped off'
     = form.select :round_trip_source_city, ShuttleCity.all.collect(&:name), label: "City"
     = form.text_field :round_trip_source_zipcode, label: 'Zipcode'
   #round_trip_dest_address.col-md-6.left_label
-    %h5.source_headline
+    %h5 &nbsp;
     = form.text_field :round_trip_dest_address, label: 'Address to be picked up'
     = form.select :round_trip_dest_city, ShuttleCity.all.collect(&:name), label: 'City'
     = form.text_field :round_trip_dest_zipcode, label: 'Zipcode'
