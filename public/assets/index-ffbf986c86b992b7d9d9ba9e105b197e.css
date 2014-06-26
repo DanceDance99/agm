@@ -1,0 +1,214 @@
+.container-bg h2, .carousel-caption h3, .carousel-caption h4, .carousel-caption h5, .vip-tours p, .blue-heading, .tour-inner-container h3, .tour-inner-container h4 {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.container-bg h2 {
+  text-align: center;
+  font-size: 38px;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #80807e;
+  margin-bottom: 20px;
+}
+
+.border-top {
+  border-top: 1px solid #80807e;
+  margin-top: 20px;
+
+}
+
+.container-bg {
+  background-color: #f5f2e8;
+  padding-bottom: 15px;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  margin: 0 auto;
+  width: 96%;
+  height: 500px;
+  border-radius: .5%;
+}
+
+.carousel-caption {
+  left: 8%;
+  right: 8%;
+}
+
+.carousel-caption h4 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-size: 80px;
+  color: #ffd63d;
+  text-shadow: 2px 2px 2px #222121;
+}
+
+.carousel-caption h3 {
+  font-size: 46px;
+  color: #fff;
+  font-style: normal;
+  text-shadow: 2px 2px 2px #222121;
+}
+
+.carousel-caption h5 {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #222121;
+}
+
+.blue-heading {
+  color: #fff;
+  background-color: #428bca;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid #2d75b3;
+  white-space: nowrap;
+  padding: 6px 68px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  margin-left: 375px;
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+.blue-heading a { color: #fff;
+}
+
+/* VIP Tours */
+.vip-tours p { font-size: 20px;
+}
+
+.tour-inner-container {
+  background-color: #e8e8e6;
+  margin-bottom: 15px;
+  padding: 8px;
+  margin-top: 15px;
+  border-bottom: 2px solid #d3d3d1;
+  box-shadow: 0px 1px 1px #a0a09d;
+}
+
+.tour-inner-container img {
+  width: 100%;
+  height: 260px;
+}
+
+.tour-inner-container h3 {
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+}
+
+.tour-inner-container h4 {
+  text-align: center;
+  font-size: 38px;
+  color: #cb203c;
+  text-shadow: 1px 1px 1px #b09297;
+}
+
+.tour-inner-container a { color: #fff;
+}
+
+.blue-heading-small {
+  color: #fff;
+  background-color: #428bca;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid #2d75b3;
+  white-space: nowrap;
+  padding: 6px 30px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  margin-left: 68px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* end */
+
+@media(max-width: 480px) {
+.carousel-caption h4 {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  font-size: 44px; }
+
+.carousel-caption h3 { font-size: 30px; }
+
+.carousel-caption h5 {
+  font-size: 22px;
+  color: #e9e6dc; }
+
+.blue-heading-small { margin-left: 60px; }
+
+.blue-heading {
+  margin-left: 50px;
+  padding: 4px 8px;
+  font-size: 25px;
+}
+
+.tour-inner-container img { height: 200px; }
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .carousel-caption h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 57px; }
+
+.carousel-caption h3 { font-size: 39px; }
+
+.carousel-caption h5 {
+  font-size: 28px;
+  color: #e9e6dc; }
+
+.blue-heading {
+  margin-left: 245px;
+  padding: 4px 8px;
+  font-size: 25px;
+}
+
+.blue-heading-small {
+  margin-left: 245px; }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .carousel-caption h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 75px; }
+
+  .carousel-caption h3 {
+    font-size: 40px; }
+
+  .carousel-caption h5 {
+    font-size: 30px;
+    color: #e9e6dc; }
+
+  .blue-heading {
+    margin-left:3 55px;
+    padding: 4px 8px;
+    font-size: 25px;
+  }
+
+  .blue-heading-small { margin-left: 47px; }
+
+  .tour-inner-container h3 { font-size: 22px; }
+
+  .tour-inner-container h4 { font-size: 33px; }
+}

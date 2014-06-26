@@ -13,15 +13,19 @@
 <body>
 
 <div class='jumbotron'>
-    <div class='container'>
-      <div class='row logo'>
-        <div class='col-md-7'>
+    <div class='container heading'>
+        <div class='col-md-8'>
           <div id='jumbotron-logo'>
             <h1><%= link_to(image_tag('logo.png', alt: 'AGM Logo', class: 'img-responsive'), root_path) %></h1>
           </div>
         </div>
-        <div class="col-md-4 float-right">
-         <div class="btn-group navigation">
+        <div class="col-md-4 top-nav">
+          <div id="translate">
+          <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
+          <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
+        </div>
+        <div class='navigation'>
+         <div class="btn-group">
             <button class="btn btn-default btn-lg dropdown-toggle all-tours-list" type="button" data-toggle="dropdown">
               Navigation<span class="caret"></span>
             </button>
@@ -33,24 +37,21 @@
                 <li><%= link_to tour.name, tour %></li>
               <% end %>
             </ul>
-
-
           </div>
-        <div id="translate">
-          <%= link_to(image_tag("flag-icon-usa.png"), locale: 'en') %>
-          <%= link_to(image_tag("flag-icon-armenia.png"), locale: 'am')%>
         </div>
-        <div class="text-right" id="jumbotron-telephone">
+
+        <div id="jumbotron-telephone-text">
           <span class="medium-text">Please</span>
           <span class="larger-text">call us</span>
           <span class="medium-text">for</span>
           <span class="larger-text">reservations</span>
-          <h2 class="float-right">702 327 9922</h2>
+        </div>
+        <div id='jumbotron-telephone'>
+          <h2>702 327 9922</h2>
         </div>
       </div>
       </div>
     </div>
-  </div>
 
 <div class="container-fluid">
   <div class="row">

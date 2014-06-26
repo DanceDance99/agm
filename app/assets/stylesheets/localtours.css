@@ -35,33 +35,11 @@ h4 {
   font-size: 23px;
 }
 
-.shuttle-images {
-  background-color: #f4f3ee;
-  padding: 14px;
-  border-bottom: solid 1px #cec8b3;
-  border-top: solid 1px #cec8b3;
-  margin-bottom: 30px;
-}
-
-.shuttle-images img {
-  border-radius: 3%;
-  box-shadow: 3px 3px 2px #999b9d;
-}
-
-.shuttle-info {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #fff;
-  border-radius: 1%;
-}
-
 .blue-heading {
   color: #fff;
   background-color: #428bca;
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 14px;
   font-weight: normal;
   text-align: center;
   vertical-align: middle;
@@ -113,12 +91,6 @@ h4 {
   margin-top: 25px;
 }
 
-.mini-text {
-  font-size: 14px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
 /* end */
 
 /* tour images */
@@ -131,6 +103,7 @@ h4 {
   border-radius: 3%;
   box-shadow: 2px 2px 5px #4f4f4e;
   height: 300px;
+  width: 100%;
 }
 
 /* reservations */
@@ -146,16 +119,35 @@ h4 {
 .reservations-right h3 {
   text-align: center;
 }
+
+.pricing-notice p {
+  text-align: center;
+}
 /* end */
 
 @media(max-width: 480px) {
   .blue-heading {
-    margin-left: 13px;
+    margin-left: 25px;
     padding: 4px 40px;
   }
-  .btn-primary {
-  margin-left: 0;
+
+  .btn-primary { margin-left: 1px; }
 }
 
+@media (min-width: 768px) and (max-width: 979px) {
+  .blue-heading {
+    margin-left: 250px;
+    padding: 4px 40px;
+  }
+
+  .btn-primary { margin-left: 150px; }
 }
 
+@media (min-width: 992px) and (max-width: 1024px) {
+    .blue-heading {
+    margin-left: 43px;
+    padding: 4px 40px;
+  }
+
+  .btn-primary { margin-left: 10px; }
+}
