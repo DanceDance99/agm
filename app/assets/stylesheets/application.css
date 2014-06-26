@@ -154,6 +154,10 @@ footer {
   #jumbotron-telephone-text {
     margin-left: 62px;
   }
+
+  .heading {
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {

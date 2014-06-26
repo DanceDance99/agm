@@ -313,7 +313,7 @@ h4.modal-title {
   .about-us li { font-size: 20px; display: block; }
   .about-us-text h2 { font-size: 25px; }
   .about-us-text p { font-size: 20px; }
-  .about-us-text { margin-left: 8px; }
+  .about-us-text { margin-left: 12px; }
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
