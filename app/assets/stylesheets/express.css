@@ -311,6 +311,8 @@ h4.modal-title {
 @media(max-width: 480px) {
   #fix-for-iphone { font-size: 26px; }
   .about-us li { font-size: 20px; display: block; }
+  .about-us-text h2 { font-size: 25px; }
+  .about-us-text p { font-size: 120px; }
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
