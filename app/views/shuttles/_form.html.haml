@@ -12,7 +12,7 @@
 Route
 #shuttle_cities.items
   =form.nested_fields_for :shuttle_cities do |fields|
-    .item
+    %fieldset.item
       =link_to 'x', '', :class => 'remove' if fields.object.new_record?
       =fields.text_field :name, :label => "City"
       =fields.hidden_field :id

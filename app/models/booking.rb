@@ -15,6 +15,7 @@ class Booking < ActiveRecord::Base
   validates :passengers, :presence => true
   validates :email_address, :presence => true
   validates :telephone_number, :presence => true
+  validate :address_fields_status
 
   default_value_for :round_trip, false
 
@@ -94,8 +95,32 @@ class Booking < ActiveRecord::Base
         )
       rescue Stripe::CardError => e
         errors.add(:credit_card, e.message)
+      #rescue => e
+
       end
     end
 
+  end
+
+  def address_fields_status
+    if self.home_pickup
+      errors.add(:home_address, "should be there") if self.home_address.nil? || self.home_address.blank?
+      errors.add(:zipcode, "can't be blank")  if self.zipcode.nil? || self.zipcode.blank?
+
+      if self.round_trip
+        errors.add(:round_trip_source_address, "should be there") if self.round_trip_source_address.nil? || self.round_trip_source_address.blank?
+        errors.add(:round_trip_source_zipcode, "can't be blank")  if self.round_trip_source_zipcode.nil? || self.round_trip_source_zipcode.blank?
+      end
+    end
+
+    if self.home_dropoff
+      errors.add(:dest_address, "should be there") if self.dest_address.nil? || self.dest_address.blank?
+      errors.add(:dest_zipcode, "can't be blank")  if self.dest_zipcode.nil? || self.dest_zipcode.blank?
+
+      if self.round_trip
+        errors.add(:round_trip_dest_address, "should be there") if self.round_trip_dest_address.nil? || self.round_trip_dest_address.blank?
+        errors.add(:round_trip_dest_zipcode, "can't be blank")  if self.round_trip_dest_zipcode.nil? || self.round_trip_dest_zipcode.blank?
+      end
+    end
   end
 end

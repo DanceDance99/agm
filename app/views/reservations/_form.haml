@@ -23,13 +23,40 @@
           return false
         }
       }
+    }).on('changeDate', function(){
+      selected_date = $('#datepicker').data('datepicker').date
+      selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+
+      tour_date = jQuery.grep(tour_dates, function(object, index){
+        return object.date == selected_date;
+      })[0]
+
+      options = '';
+
+      if(tour_date.available > 6){
+        counter = 0 ;
+        for(var counter = 5; counter <= tour_date.available; counter++) {
+        //for(index in [1..tour_date.available]){
+          options += '<option value="' + counter + '">' + counter + '</option>' ;
+        }
+        jQuery('#reservation_passengers').html(unbooked)
+      }else{
+        counter = 0 ;
+        for(var counter = 1; counter <= tour_date.available; counter++) {
+        //for(index in [1..tour_date.available]){
+          options += '<option value="' + counter + '">' + counter + '</option>' ;
+        }
+      }
+      jQuery('#reservation_passengers').html(options)
     })
   })
 :coffeescript
 
   jQuery ->
     compute_tour_passengers = ->
-      selected_date = jQuery('#reservation_date').val()
+      selected_date = $('#datepicker').data('datepicker').date
+      console.log(selected_date)
+      selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
       tour_date = jQuery.grep(tour_dates, (object, index) ->
         object.date == selected_date
       )[0]
@@ -41,8 +68,5 @@
           options += '<option value="' + index + '">' + index + '</option>'
 
         jQuery('#reservation_passengers').html(options)
-
-    jQuery('#reservation_date').change (e) ->
-      compute_tour_passengers()
 
     compute_tour_passengers()

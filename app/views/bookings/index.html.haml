@@ -35,20 +35,26 @@
             %strong Address:
             #{booking.home_address.presence || 'N/A'}
           %li
-            %strong Pickup city:
-            #{booking.pickup_city.presence || 'N/A'}
-          %li
             %strong Zipcode
             #{booking.zipcode || 'N/A'}
           %li
-            %strong Drop up Address:
+            %strong Destination Address:
             #{booking.dest_address.presence || 'N/A'}
           %li
-            %strong Pickup city:
-            #{booking.dest_city.presence || 'N/A'}
-          %li
-            %strong Zipcode
+            %strong Destination Zipcode
             #{booking.dest_zipcode || 'N/A'}
+          %li
+            %strong Roundtrip Pick up Address:
+            #{booking.round_trip_source_address.presence || 'N/A'}
+          %li
+            %strong Roundtrip Pick up Zipcode
+            #{booking.round_trip_source_zipcode || 'N/A'}
+          %li
+            %strong Roundtrip Drop off Address:
+            #{booking.round_trip_dest_address.presence || 'N/A'}
+          %li
+            %strong Roundtrip Drop off Zipcode
+            #{booking.round_trip_dest_zipcode || 'N/A'}
           %li
             %strong Phone #:
             #{booking.telephone_number.presence || 'N/A'}
@@ -77,15 +83,27 @@
             #{booking.home_dropoff ? 'Yes' : 'No'}
           %li
             %strong Address:
+            #{booking.home_address.presence || 'N/A'}
+          %li
+            %strong Zipcode
+            #{booking.zipcode || 'N/A'}
+          %li
+            %strong Destination Address:
+            #{booking.dest_address.presence || 'N/A'}
+          %li
+            %strong Destination Zipcode
+            #{booking.dest_zipcode || 'N/A'}
+          %li
+            %strong Roundtrip Pick up Address:
             #{booking.round_trip_source_address.presence || 'N/A'}
           %li
-            %strong Zipcode
+            %strong Roundtrip Pick up Zipcode
             #{booking.round_trip_source_zipcode || 'N/A'}
           %li
-            %strong Address:
+            %strong Roundtrip Drop off Address:
             #{booking.round_trip_dest_address.presence || 'N/A'}
           %li
-            %strong Zipcode
+            %strong Roundtrip Drop off Zipcode
             #{booking.round_trip_dest_zipcode || 'N/A'}
           %li
             %strong Phone #:
