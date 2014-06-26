@@ -99,12 +99,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 55px;
 }
 
-.about-us-text h2 {
+.about-us-text {
   margin-top: 32px;
+}
+
+.about-us-text h2 {
   color: #870d24;
   font-size: 40px;
 }
-
 
 .about-us-text p {
   font-size: 25px;
@@ -226,7 +228,7 @@ td, th {
     color: #870820;
 }
 
-.pricing-reservations-large-price {
+.pricing-reservations-large-price, .pricing-reservations-large-price-one-way {
     display:inline-block;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
@@ -244,6 +246,10 @@ td, th {
     font-weight: 700;
     color: #870820;
     text-shadow: 1px 1px 1px #5e5d5d;
+}
+
+.pricing-reservations-large-price-one-way {
+  margin-left: 8px;
 }
 /* end */
 
@@ -282,6 +288,7 @@ h4.modal-title {
 
 /* responsive part */
 @media (min-width: 768px) and (max-width: 979px) {
+  .about-us-text { margin-left: 20px; }
   .about-us-text h2 { font-size: 38px; }
   .about-us-text p { font-size: 22px; }
   .about-us-text small { font-size: 15px; }
@@ -304,6 +311,18 @@ h4.modal-title {
 @media(max-width: 480px) {
   #fix-for-iphone { font-size: 26px; }
   .about-us li { font-size: 20px; display: block; }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .about-us-text h2 { font-size: 33px; }
+  .about-us-text p { font-size: 18px; }
+  .about-us-text small { font-size: 12px; }
+  .about-us-text  { margin-top: 20px; }
+  .about-us li { font-size: 30px; }
+  .btn, .btn-primary, .btn-lg {
+    font-size: 15px;
+    padding: 9px;
+  }
 }
 
 
