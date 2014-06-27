@@ -42,302 +42,302 @@
         %span
       %a.right.carousel-control{"data-slide" => "next", href: "#agm-slideshow"}
         %span
-    .about-us-text
-      .col-md-7
-        %h2= t 'shuttles.title'
-        %p= t 'shuttles.description1'
-        %p.strong-text= t 'shuttles.description2'
-        %ul.list-inline
-          %li= t 'shuttles.city1'
-          %li= t 'shuttles.city2'
-          %li= t 'shuttles.city3'
-          %small= t 'shuttles.notice'
+    .col-md-7.about-us-text
+      %h2= t 'shuttles.title'
+      %p= t 'shuttles.description1'
+      %p.strong-text= t 'shuttles.description2'
+      %ul.list-inline
+        %li= t 'shuttles.city1'
+        %li= t 'shuttles.city2'
+        %li= t 'shuttles.city3'
+      %small= t 'shuttles.notice'
 
 .tours-information.text-center
-  .container
-    .schedule-listing.col-md-9
-      %table
-        %thead
-          %tr.black-border.grey-bg
-            %th.no-padding
-              %h5.square-heading= t 'shuttles.friday'
-            %th
-              %h4= t 'shuttles.departure'
-            %th
-              %h4= t 'shuttles.arrival'
-            %th
-        %thead
-          %tr
-            %th.long-arrow-bg
-              %h2 Las Vegas
-              = image_tag("double_arrow.png", class: 'visible-lg')
-            %th
-            %th
-              %h2 Glendale
-            %th.short-arrow-bg
-              %h2 Hollywood
-              = image_tag("single_arrow.png", class: 'visible-lg')
-        %tbody
-          %tr
-            %td
-              %span.visible-xs.visible-md= t 'shuttles.friday'
-              %span.visible-xs.visible-md= t 'shuttles.departure'
-              %h3 8:00am
-              3389 S Jones Blvd
-              %br/
-              Las Vegas, NV 89146
-              %br/
-              %span.strong-text (Jones Market)
-            %td.padding-top
-              %h3 8:30am
-              3801 S. LV Blvd.
-              %br/
-              Las Vegas, NV 89109)
-              %br/
-              %span.strong-text (Tropicana Hotel)
-            %td.padding-top
-              %span.visible-xs.visible-md= t 'shuttles.Friday'
-              %span.visible-xs.visible-md= t 'shuttles.arrival'
-              %h3 1:00pm
-              1717 W. Glenoaks Blvd.
-              %br/
-              Glendale, CA 91201
-              %br/
-              %span.strong-text (Jons Market)
-            %td
-              %h3 1:30pm
-              1601 N. Vermont Ave.
-              %br/
-              Los Angeles, CA 90027
-              %br/
-              %span.strong-text (Jons Market)
-        %thead
-          %tr
-            %th.short-arrow-bg2
-              %h2 Hollywood
-              = image_tag("single_arrow.png", class: 'visible-lg')
-            %th
-              %h2 Glendale
-            %th
-            %th.long-arrow-bg2.img
-              %h2 Las Vegas
-              = image_tag("double_arrow.png", class: 'visible-lg')
-        %tbody
-          %tr
-            %td
-              %span.visible-xs.visible-md= t 'shuttles.friday'
-              %span.visible-xs.visible-md= t 'shuttles.departure'
-              %h3 7:00PM
-              1601 N. Vermont Ave.
-              %br/
-              Los Angeles, CA 90027
-              %br/
-              %span.strong-text (Jones Market)
-            %td.padding-top
-              %h3 7:30pm
-              1717 W. Glenoaks Blvd.
-              %br/
-              Glendale, CA 91201
-              %br/
-              %span.strong-text (Jones Market)
-            %td.padding-top
-              %span.visible-xs.visible-md
-                %strong Friday
-              %span.visible-xs.visible-md
-                %strong Arrival
-              %h3 12:00am
-              3801 S. LV Blvd.
-              %br/
-              Las Vegas, NV 89109
-              %br/
-              %span.strong-text (Tropicana Hotel)
-            %td
-              %h3 12:15am
-              3389 S Jones Blvd.
-              %br/
-              Las Vegas, NV 89146
-              %br/
-              %span.strong-text (Jones Market)
-      %table
-        %thead
-          %tr.black-border.grey-bg
-            %th.no-padding
-              %h5.square-heading= t 'shuttles.sunday'
-            %th
-              %h4= t 'shuttles.departure'
-            %th
-              %h4= t 'shuttles.arrival'
-            %th
-        %thead
-          %tr
-            %th.long-arrow-bg
-              %h2 Las Vegas
-              = image_tag("double_arrow.png", class: 'visible-lg')
-            %th
-            %th
-              %h2 Glendale
-            %th.short-arrow-bg.img
-              %h2 Hollywood
-              = image_tag("single_arrow.png", class: 'visible-lg')
-        %tbody
-          %tr
-            %td
-              %span.visible-xs.visible-md= t 'shuttles.sunday'
-              %span.visible-xs.visible-md= t 'shuttles.departure'
-              %h3 9:30am
-              3389 S Jones Blvd
-              %br/
-              Las Vegas, NV 89146
-              %br/
-              %span.strong-text (Jones Market)
-            %td.padding-top
-              %h3 10:00am
-              3801 S. LV Blvd.
-              %br/
-              Las Vegas, NV 89109)
-              %br/
-              %span.strong-text (Tropicana Hotel)
-            %td.padding-top
-              %span.visible-xs.visible-md= t 'shuttles.sunday'
-              %span.visible-xs.visible-md= t 'shuttles.arrival'
-              %h3 2:30pm
-              1717 W. Glenoaks Blvd.
-              %br/
-              Glendale, CA 91201
-              %br/
-              %span.strong-text (Jons Market)
-            %td
-              %h3 3:00pm
-              1601 N. Vermont Ave.
-              %br/
-              Los Angeles, CA 90027
-              %br/
-              %span.strong-text (Jons Market)
-        %thead
-          %tr
-            %th.short-arrow-bg2
-              %h2 Hollywood
-              = image_tag("single_arrow.png", class: 'visible-lg')
-            %th
-              %h2 Glendale
-            %th
-            %th.long-arrow-bg2.img
-              %h2 Las Vegas
-              = image_tag("double_arrow.png", class: 'visible-lg')
-        %tbody
-          %tr
-            %td
-              %span.visible-xs.visible-md= t 'shuttles.sunday'
-              %span.visible-xs.visible-md= t 'shuttles.departure'
-              %h3 7:00pm
-              1601 N. Vermont Ave.
-              %br/
-              Los Angeles, CA 90027
-              %br/
-              %span.strong-text (Jons Market)
-            %td.padding-top
-              %h3 7:30pm
-              1717 W. Glenoaks Blvd.
-              %br/
-              Glendale, CA 91201
-              %br/
-              %span.strong-text (Jones Market)
-            %td.padding-top
-              %span.visible-xs.visible-md= t 'shuttles.sunday'
-              %span.visible-xs.visible-md= t 'shuttles.arrival'
-              %h3 12:00am
-              3801 S. LV Blvd.
-              %br/
-              Las Vegas, NV 89109
-              %br/
-              %span.strong-text (Tropicana Hotel)
-            %td
-              %h3 12:15am
-              3389 S Jones Blvd.
-              %br/
-              Las Vegas, NV 89146
-              %br/
-              %span.strong-text (Jones Market)
-          %tr
-      %p.small.pull-right= t 'shuttles.notice2'
-    .tour-details.col-md-3
-      .row.margin-bottom
-        .pricing.text-center
-          %h3= t 'pricing.title'
-          %p= t 'pricing.description'
-          #pricing-reservations
-            %ul
-              %li.large-text
-                #{t 'pricing.oneway'}          
-                %span.pricing-reservations-large-price $39
-              %li.large-text
-                #{t 'pricing.roundtrip'}          
-                %span.pricing-reservations-large-price$69
-            %button#booking_modal_button.btn.btn-primary.btn-lg{"data-shuttle-id" => @shuttle.id, "data-target" => "#booking_modal", "data-toggle" => "modal"}
-              #{t 'pricing.bookbutton'}
-            #booking_modal.modal.large{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
-              .modal-dialog
-                .modal-content
-                  .modal-header
-                    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-                    %h4#myModalLabel.modal-title= t 'booking.title'
-                  .modal-body
-                    = render 'layouts/messages'
-                    %p.small-text Pricing is for both adults and children
-                    = bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}, remote: true) do |f|
-                      =render :partial => 'bookings/form', :locals => {:form => f}
-                      %span.payment-errors
-                      .form-group
-                        = label_tag :card_number, 'Credit card number:'
-                        = text_field_tag :card_number, nil, name: nil, class: 'form-control', data: {stripe: 'number'}
-                      .form-group
-                        = label_tag :security_code, 'Security code:'
-                        = text_field_tag :security_code, nil, name: nil, class: 'form-control', data: {stripe: 'cvc'}
-                      .form-group
-                        = label_tag :exp_date, 'Expiration:'
-                      .form-group
-                        = select_month(Date.today, {add_month_numbers: true},  class: 'form-control', data: {stripe: 'exp-month'})
-                        = select_year(Date.today.year, {start_year: Date.today.year, end_year: Date.today.year + 4}, class: 'form-control', data: {stripe: 'exp-year'})
-                      .modal-footer
-                      .form-group.center
-                        %h4 Terms & Conditions
-                        %p No refunds. All sales are final. You’re only guaranteed a seat with a valid reservation.
-                        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-                        = f.submit 'Book Tour', class: 'button btn btn-primary'
-            %p.text-center.margin-top
-              %strong= t 'pricing.bookingoptions'
-            .text-center
-              %h3#pricing-reservations-telephone 702 327 9922
-            %ul.list-inline.text-center
-              %li
-                = image_tag("visa_logo.png")
-              %li
-                = image_tag("mastercard_logo.png")
-              %li
-                = image_tag("americanexpress_logo.png")
-              %li
-                = image_tag("discover_logo.png")
-      .row.margin-bottom
-        .amenities.text-center
-          %h3 Amenities
-          %p Enjoy the following amenities on our shuttles:
-          %ul.list-inline
+.container
+  .schedule-listing.col-md-9
+    %table
+      %thead
+        %tr.black-border.grey-bg
+          %th.no-padding
+            %h5.square-heading= t 'shuttles.friday'
+          %th
+            %h4= t 'shuttles.departure'
+          %th
+            %h4= t 'shuttles.arrival'
+          %th
+      %thead
+        %tr
+          %th.long-arrow-bg
+            %h2 Las Vegas
+            = image_tag("double_arrow.png", class: 'visible-lg')
+          %th
+          %th
+            %h2 Glendale
+          %th.short-arrow-bg
+            %h2 Hollywood
+            = image_tag("single_arrow.png", class: 'visible-lg')
+      %tbody
+        %tr
+          %td
+            %span.visible-xs.visible-md= t 'shuttles.friday'
+            %span.visible-xs.visible-md= t 'shuttles.departure'
+            %h3 8:00am
+            3389 S Jones Blvd
+            %br/
+            Las Vegas, NV 89146
+            %br/
+            %span.strong-text (Jones Market)
+          %td.padding-top
+            %h3 8:30am
+            3801 S. LV Blvd.
+            %br/
+            Las Vegas, NV 89109)
+            %br/
+            %span.strong-text (Tropicana Hotel)
+          %td.padding-top
+            %span.visible-xs.visible-md= t 'shuttles.Friday'
+            %span.visible-xs.visible-md= t 'shuttles.arrival'
+            %h3 1:00pm
+            1717 W. Glenoaks Blvd.
+            %br/
+            Glendale, CA 91201
+            %br/
+            %span.strong-text (Jons Market)
+          %td
+            %h3 1:30pm
+            1601 N. Vermont Ave.
+            %br/
+            Los Angeles, CA 90027
+            %br/
+            %span.strong-text (Jons Market)
+      %thead
+        %tr
+          %th.short-arrow-bg2
+            %h2 Hollywood
+            = image_tag("single_arrow.png", class: 'visible-lg')
+          %th
+            %h2 Glendale
+          %th
+          %th.long-arrow-bg2.img
+            %h2 Las Vegas
+            = image_tag("double_arrow.png", class: 'visible-lg')
+      %tbody
+        %tr
+          %td
+            %span.visible-xs.visible-md= t 'shuttles.friday'
+            %span.visible-xs.visible-md= t 'shuttles.departure'
+            %h3 7:00PM
+            1601 N. Vermont Ave.
+            %br/
+            Los Angeles, CA 90027
+            %br/
+            %span.strong-text (Jones Market)
+          %td.padding-top
+            %h3 7:30pm
+            1717 W. Glenoaks Blvd.
+            %br/
+            Glendale, CA 91201
+            %br/
+            %span.strong-text (Jones Market)
+          %td.padding-top
+            %span.visible-xs.visible-md
+              %strong Friday
+            %span.visible-xs.visible-md
+              %strong Arrival
+            %h3 12:00am
+            3801 S. LV Blvd.
+            %br/
+            Las Vegas, NV 89109
+            %br/
+            %span.strong-text (Tropicana Hotel)
+          %td
+            %h3 12:15am
+            3389 S Jones Blvd.
+            %br/
+            Las Vegas, NV 89146
+            %br/
+            %span.strong-text (Jones Market)
+    %table
+      %thead
+        %tr.black-border.grey-bg
+          %th.no-padding
+            %h5.square-heading= t 'shuttles.sunday'
+          %th
+            %h4= t 'shuttles.departure'
+          %th
+            %h4= t 'shuttles.arrival'
+          %th
+      %thead
+        %tr
+          %th.long-arrow-bg
+            %h2 Las Vegas
+            = image_tag("double_arrow.png", class: 'visible-lg')
+          %th
+          %th
+            %h2 Glendale
+          %th.short-arrow-bg.img
+            %h2 Hollywood
+            = image_tag("single_arrow.png", class: 'visible-lg')
+      %tbody
+        %tr
+          %td
+            %span.visible-xs.visible-md= t 'shuttles.sunday'
+            %span.visible-xs.visible-md= t 'shuttles.departure'
+            %h3 9:30am
+            3389 S Jones Blvd
+            %br/
+            Las Vegas, NV 89146
+            %br/
+            %span.strong-text (Jones Market)
+          %td.padding-top
+            %h3 10:00am
+            3801 S. LV Blvd.
+            %br/
+            Las Vegas, NV 89109)
+            %br/
+            %span.strong-text (Tropicana Hotel)
+          %td.padding-top
+            %span.visible-xs.visible-md= t 'shuttles.sunday'
+            %span.visible-xs.visible-md= t 'shuttles.arrival'
+            %h3 2:30pm
+            1717 W. Glenoaks Blvd.
+            %br/
+            Glendale, CA 91201
+            %br/
+            %span.strong-text (Jons Market)
+          %td
+            %h3 3:00pm
+            1601 N. Vermont Ave.
+            %br/
+            Los Angeles, CA 90027
+            %br/
+            %span.strong-text (Jons Market)
+      %thead
+        %tr
+          %th.short-arrow-bg2
+            %h2 Hollywood
+            = image_tag("single_arrow.png", class: 'visible-lg')
+          %th
+            %h2 Glendale
+          %th
+          %th.long-arrow-bg2.img
+            %h2 Las Vegas
+            = image_tag("double_arrow.png", class: 'visible-lg')
+      %tbody
+        %tr
+          %td
+            %span.visible-xs.visible-md= t 'shuttles.sunday'
+            %span.visible-xs.visible-md= t 'shuttles.departure'
+            %h3 7:00pm
+            1601 N. Vermont Ave.
+            %br/
+            Los Angeles, CA 90027
+            %br/
+            %span.strong-text (Jons Market)
+          %td.padding-top
+            %h3 7:30pm
+            1717 W. Glenoaks Blvd.
+            %br/
+            Glendale, CA 91201
+            %br/
+            %span.strong-text (Jones Market)
+          %td.padding-top
+            %span.visible-xs.visible-md= t 'shuttles.sunday'
+            %span.visible-xs.visible-md= t 'shuttles.arrival'
+            %h3 12:00am
+            3801 S. LV Blvd.
+            %br/
+            Las Vegas, NV 89109
+            %br/
+            %span.strong-text (Tropicana Hotel)
+          %td
+            %h3 12:15am
+            3389 S Jones Blvd.
+            %br/
+            Las Vegas, NV 89146
+            %br/
+            %span.strong-text (Jones Market)
+        %tr
+    .shuttle-notice
+      %p= t 'shuttles.notice2'
+  .tour-details.col-md-3
+    .row.margin-bottom
+      .pricing.text-center
+        %h3= t 'pricing.title'
+        %p= t 'pricing.description'
+        #pricing-reservations
+          %ul
+            %li.large-text
+              #{t 'pricing.oneway'}          
+              %span.pricing-reservations-large-price-one-way $39
+            %li.large-text
+              #{t 'pricing.roundtrip'}          
+              %span.pricing-reservations-large-price $69
+          %button#booking_modal_button.btn.btn-primary.btn-lg{"data-shuttle-id" => @shuttle.id, "data-target" => "#booking_modal", "data-toggle" => "modal"}
+            #{t 'pricing.bookbutton'}
+          #booking_modal.modal.large{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+            .modal-dialog
+              .modal-content
+                .modal-header
+                  %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+                  %h4#myModalLabel.modal-title= t 'booking.title'
+                .modal-body
+                  = render 'layouts/messages'
+                  %p.small-text Pricing is for both adults and children
+                  = bootstrap_form_for([@shuttle, @booking], html: { id: 'payment-form'}, remote: true) do |f|
+                    =render :partial => 'bookings/form', :locals => {:form => f}
+                    %span.payment-errors
+                    .form-group
+                      = label_tag :card_number, 'Credit card number:'
+                      = text_field_tag :card_number, nil, name: nil, class: 'form-control', data: {stripe: 'number'}
+                    .form-group
+                      = label_tag :security_code, 'Security code:'
+                      = text_field_tag :security_code, nil, name: nil, class: 'form-control', data: {stripe: 'cvc'}
+                    .form-group
+                      = label_tag :exp_date, 'Expiration:'
+                    .form-group
+                      = select_month(Date.today, {add_month_numbers: true},  class: 'form-control', data: {stripe: 'exp-month'})
+                      = select_year(Date.today.year, {start_year: Date.today.year, end_year: Date.today.year + 4}, class: 'form-control', data: {stripe: 'exp-year'})
+                    .modal-footer
+                    .form-group.center
+                      %h4 Terms & Conditions
+                      %p No refunds. All sales are final. You’re only guaranteed a seat with a valid reservation.
+                      %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+                      = f.submit 'Book Tour', class: 'button btn btn-primary'
+          %p.text-center.margin-top
+            %strong= t 'pricing.bookingoptions'
+          .text-center
+            %h3#pricing-reservations-telephone 702 327 9922
+          %ul.list-inline.text-center
             %li
-              = image_tag('wifi_icon.png', alt: 'Wifi', width: 52, height: 42)
-              %span.small-text
-                Wifi
-                %span
+              = image_tag("visa_logo.png")
             %li
-              = image_tag('water_icon.png', alt: 'Wifi', width: 40, height: 40)
-              %span.small-text Water
+              = image_tag("mastercard_logo.png")
             %li
-              = image_tag('snack_icon.png', alt: 'Wifi', width: 34, height: 36)
-              %span.small-text Snacks
-      .row
-        .keep-in-touch.text-center
-          %h3 Keep in touch
-          %p Find us on:
-          %ul.list-inline
+              = image_tag("americanexpress_logo.png")
             %li
-              = link_to(image_tag("facebook_icon.png", width: 48, height: 42), "https://www.facebook.com/agmshuttlesinc")
-              = link_to(image_tag("twitter_icon.png", width: 48, height: 42), "https://www.twitter.com/agmshuttlesinc")
+              = image_tag("discover_logo.png")
+    .row.margin-bottom
+      .amenities.text-center
+        %h3 Amenities
+        %p Enjoy the following amenities on our shuttles:
+        %ul.list-inline
+          %li
+            = image_tag('wifi_icon.png', alt: 'Wifi', width: 52, height: 42)
+            %span.small-text
+              Wifi
+              %span
+          %li
+            = image_tag('water_icon.png', alt: 'Wifi', width: 40, height: 40)
+            %span.small-text Water
+          %li
+            = image_tag('snack_icon.png', alt: 'Wifi', width: 34, height: 36)
+            %span.small-text Snacks
+    .row
+      .keep-in-touch.text-center
+        %h3 Keep in touch
+        %p Find us on:
+        %ul.list-inline
+          %li
+            = link_to(image_tag("facebook_icon.png", width: 48, height: 42), "https://www.facebook.com/agmshuttlesinc")
+            = link_to(image_tag("twitter_icon.png", width: 48, height: 42), "https://www.twitter.com/agmshuttlesinc")

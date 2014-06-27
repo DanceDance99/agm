@@ -99,33 +99,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 55px;
 }
 
-.about-us-text h2 {
+.about-us-text {
   margin-top: 32px;
+}
+
+.about-us-text h2 {
   color: #870d24;
-  font-size: 19px;
-}
-
-.about-us-text-armenian h2 {
-  color: #870d24;
-  font-size: 19px;
-}
-
-.about-us-text-armenian p {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.about-us-text-armenian small {
-  font-size: 12px;
+  font-size: 40px;
 }
 
 .about-us-text p {
-  font-size: 16px;
+  font-size: 25px;
   line-height: 24px;
 }
 
 .about-us-text small {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .about-us ul li:before {
@@ -201,6 +190,10 @@ th h2 {
 td, th {
   padding: 6px;
 }
+
+.shuttle-notice {
+  float: right;
+}
 /* end */
 
 
@@ -225,9 +218,9 @@ td, th {
     margin-bottom: 8px;
     width:auto;
     border-radius:10%;
-    -moz-border-radius:5%;
-    -webkit-border-radius:5%;
-    -khtml-border-radius: 5%;
+    -moz-border-radius:10%;
+    -webkit-border-radius:10%;
+    -khtml-border-radius: 10%;
     background:#d1caac;
     text-align:center;
     font-size: 24px;
@@ -235,23 +228,28 @@ td, th {
     color: #870820;
 }
 
-.pricing-reservations-large-price {
-    display:block;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
+.pricing-reservations-large-price, .pricing-reservations-large-price-one-way {
+    display:inline-block;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
     margin-bottom: 8px;
-    margin-left: 55px;
+    width:auto;
     border-radius:10%;
-    width: 40%;
-    -moz-border-radius:5%;
-    -webkit-border-radius:5%;
-    -khtml-border-radius: 5%;
+    -moz-border-radius:10%;
+    -webkit-border-radius:10%;
+    -khtml-border-radius: 10%;
     background:#d1caac;
     text-align:center;
     font-size: 24px;
     font-weight: 700;
     color: #870820;
     text-shadow: 1px 1px 1px #5e5d5d;
+}
+
+.pricing-reservations-large-price-one-way {
+  margin-left: 8px;
 }
 /* end */
 
@@ -289,17 +287,17 @@ h4.modal-title {
 }
 
 /* responsive part */
-@media(min-width: 768px) {
+@media (min-width: 768px) and (max-width: 979px) {
+  .about-us-text { margin-left: 20px; }
   .about-us-text h2 { font-size: 38px; }
-  .about-us-text-armenian h2 { font-size: 38px; }
   .about-us-text p { font-size: 22px; }
   .about-us-text small { font-size: 15px; }
-  .about-us-text-armenian p { font-size: 22px; }
-  .about-us-text-armenian small { font-size: 15px; }
   .medium-text { font-size: 18px }
   .larger-text { font-size: 27px; }
   .shuttle-details { padding-top: 50px; }
   .schedule-listing p { text-align: center;}
+  .tour-details { margin-top: 10px; }
+  .shuttle-notice { float:none;}
 }
 
 @media(min-width: 1200px) {
@@ -313,7 +311,21 @@ h4.modal-title {
 @media(max-width: 480px) {
   #fix-for-iphone { font-size: 26px; }
   .about-us li { font-size: 20px; display: block; }
-  #jumbotron-telephone h2 { font-size: 30px; }
+  .about-us-text h2 { font-size: 25px; }
+  .about-us-text p { font-size: 20px; }
+  .about-us-text { margin-left: 12px; }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .about-us-text h2 { font-size: 33px; }
+  .about-us-text p { font-size: 18px; }
+  .about-us-text small { font-size: 12px; }
+  .about-us-text  { margin-top: 20px; }
+  .about-us li { font-size: 30px; }
+  .btn, .btn-primary, .btn-lg {
+    font-size: 15px;
+    padding: 9px;
+  }
 }
 
 

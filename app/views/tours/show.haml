@@ -14,7 +14,7 @@
       - if @tour.name == 'Las Vegas City Tour'
         = image_tag('city-tour.jpg', class: 'img-responsive')
       - if @tour.name == 'Red Rock Canyon Tour'
-        = image_tag('red-rock.jpg', class: 'img-responsive')
+        = image_tag('red-rock.jpg')
       - if @tour.name == 'Valley of Fire Tour'
         = image_tag('valley-of-fire.jpg', class: 'img-responsive')
       - if @tour.name == 'Grand Canyon Tour'
@@ -27,7 +27,7 @@
       - if @tour.name == 'Las Vegas City Tour'
         = image_tag('city-tour2.jpg', class: 'img-responsive')
       - if @tour.name == 'Red Rock Canyon Tour'
-        = image_tag('red-rock2.jpg', class: 'img-responsive')
+        = image_tag('red-rock2.jpg')
       - if @tour.name == 'Valley of Fire Tour'
         = image_tag('valley-of-fire2.jpg', class: 'img-responsive')
       - if @tour.name == 'Grand Canyon Tour'
@@ -40,7 +40,7 @@
       - if @tour.name == 'Las Vegas City Tour'
         = image_tag('city-tour3.jpg', class: 'img-responsive')
       - if @tour.name == 'Red Rock Canyon Tour'
-        = image_tag('red-rock3.jpg', class: 'img-responsive')
+        = image_tag('red-rock3.jpg')
       - if @tour.name == 'Valley of Fire Tour'
         = image_tag('valley-of-fire3.jpg', class: 'img-responsive')
       - if @tour.name == 'Grand Canyon Tour'
@@ -91,7 +91,8 @@
         %p Please call us at 702 327 9922 if you would like to customize your tour, including the tour time.
     .col-md-4.reservations-right
       %h3.padding-bottom Book this tour
-      %p.mini-text Pricing is for both adults and children
+      .pricing-notice
+        %p Pricing is for both adults and children
       %h3.blue-heading
         $
         #{p '%.2f' % (@tour.amount.to_i/100.0)}
