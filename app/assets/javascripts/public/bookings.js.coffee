@@ -26,7 +26,7 @@ jQuery ->
           altField: '#depart_date_hidden_datepicker'
           beforeShowDay: (date) ->
             # format javascript date to match rails
-            date_str = format_date(date_utc)
+            date_str = format_date(date)
 
             if $.inArray(date_str, window.Booking.departDates) != -1
               return true
@@ -45,7 +45,7 @@ jQuery ->
           beforeShowDay: (date) ->
 
             # format javascript date to match rails
-            date_str = format_date(date_utc)
+            date_str = format_date(date)
 
             if $.inArray(date_str, window.Booking.returnDates) != -1
               return true
