@@ -5,4 +5,9 @@ class AgmController < ApplicationController
     @shuttles = Shuttle.all
   end
 
+  def show
+    @shuttles = Shuttle.all
+    @tours = Tour.all
+  end
+
 end

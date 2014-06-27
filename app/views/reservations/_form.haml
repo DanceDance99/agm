@@ -1,4 +1,4 @@
-= form.text_field :date, id: 'datepicker'  #, options_from_collection_for_select(@tour_dates, :date, :human_date)
+= form.text_field :date, id: 'datepicker'
 = form.select :passengers, options_for_select([*5..11])
 = form.text_field :first_last_name, label: "Full name (required)"
 = form.text_field :email_address, label: 'Email address (required)'
@@ -13,10 +13,12 @@
 
   var dateEnabled = #{@tour_dates.collect{|date| date.date.strftime("%Y-%m-%d")}}
   $(document).ready(function(){
+    window.tour_dates = #{@tour_dates.to_json(:only => [:date, :available])}
+    window.unbooked = '#{escape_javascript options_for_select([*5..11])}'
     $("#datepicker").datepicker({
       beforeShowDay: function(date){
-        var date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
-        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date_utc), dateEnabled) != -1)
+        var date_utc = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1,  date.getHours(), date.getMinutes(), date.getSeconds());
+        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date), dateEnabled) != -1)
         {
           return  true
         }else{
@@ -35,8 +37,8 @@
 
       if(tour_date.available > 6){
         counter = 0 ;
+        console.log(tour_date.avalable)
         for(var counter = 5; counter <= tour_date.available; counter++) {
-        //for(index in [1..tour_date.available]){
           options += '<option value="' + counter + '">' + counter + '</option>' ;
         }
         jQuery('#reservation_passengers').html(unbooked)
@@ -49,24 +51,34 @@
       }
       jQuery('#reservation_passengers').html(options)
     })
+    //compute_tour_passengers()
   })
-:coffeescript
 
-  jQuery ->
-    compute_tour_passengers = ->
+  function compute_tour_passengers(){
       selected_date = $('#datepicker').data('datepicker').date
-      console.log(selected_date)
       selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
-      tour_date = jQuery.grep(tour_dates, (object, index) ->
-        object.date == selected_date
-      )[0]
-      if tour_date.available > 5
-        jQuery('#reservation_passengers').html(unbooked)
-      else
-        options = ''
-        for index in [1..tour_date.available]
-          options += '<option value="' + index + '">' + index + '</option>'
+      tour_date = jQuery.grep(tour_dates, function(object, index){
+        console.log(selected_date);
+        console.log(object.date );
+        console.log("------------------------------")
+        return object.date == selected_date;
+      })[0]
+      console.log(tour_date);
 
-        jQuery('#reservation_passengers').html(options)
+      options = '';
 
-    compute_tour_passengers()
+      if(tour_date.available > 6){
+        counter = 0 ;
+        for(var counter = 5; counter <= tour_date.available; counter++) {
+          options += '<option value="' + counter + '">' + counter + '</option>' ;
+        }
+      }else{
+        counter = 0 ;
+        for(var counter = 1; counter <= tour_date.available; counter++) {
+          options += '<option value="' + counter + '">' + counter + '</option>' ;
+        }
+      }
+      jQuery('#reservation_passengers').html(options)
+
+    }
+

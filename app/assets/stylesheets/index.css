@@ -190,6 +190,7 @@
     right: .7em;
     width: 290px;
     font-size: 14px;
+  }
 }
 
 
@@ -226,7 +227,7 @@
   .tour-inner-container h4 { font-size: 33px; }
 
   .center-text {
-    bottom: 1.3em;
+    bottom: 1.4em;
     left: 0em;
   }
 }
