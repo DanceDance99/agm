@@ -36,9 +36,9 @@
           <h2>702 327 9922</h2>
         </div>
 
-        <div class='col-md-12'>
+        <div class='col-md-12 col-sm-8'>
             <ul class='nav nav-pills'>
-              <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
+              <li class="<%= 'active' if current_page?('/') %>"><%= link_to 'Home', root_path %></li>
               <% @shuttles.each do |shuttle| %>
                 <li class="<%= 'active' if current_page?(shuttle_path(shuttle)) %>"><%= link_to shuttle.name, shuttle %></li>
               <% end %>

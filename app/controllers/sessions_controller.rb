@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
   def new
     @tours = Tour.all
+    @shuttles = Shuttle.all
   end
 
   def create
