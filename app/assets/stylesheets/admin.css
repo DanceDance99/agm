@@ -1,0 +1,58 @@
+/*
+ *= require bootstrap
+ *= require datepicker
+ *= require express
+ *= require_self
+ //= require rails_bootstrap_forms
+ */
+@import 'common';
+@import 'bookings';
+
+
+form .items {
+  margin: 10px;
+}
+
+form .items .item {
+  float: left;
+}
+
+form .spacer {
+  height: 15px;
+}
+
+form .remove {
+  float: right;
+}
+
+.admin_container {
+  background: white;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.admin_container li {
+  margin-bottom: 16px;
+}
+
+.admin_container .admin_row {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+}
+
+.admin_container .admin_row li {
+  display: inline-block;
+  width: 300px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.datepicker td, .datepicker th {
+  border: 1px solid #747272;
+  background-color: #f9f7f6;
+}
+
+.datepicker td.day.disabled {
+  color: #e4e3e3;
+}

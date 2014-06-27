@@ -1,0 +1,7 @@
+#error_explanation {
+  color: #cb203c;
+}
+#error_explanation ul {
+  list-style: none;
+  margin: 0 0 18px 0;
+}

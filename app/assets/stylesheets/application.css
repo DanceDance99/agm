@@ -8,10 +8,6 @@
  */
 
 
-.modal.large .modal-dialog {
-  width: 700px;
-}
-
 body {
   font-size: 16px;
   color: #333;
@@ -28,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .alert {
   font-weight: 700;
+}
+
+.modal.large .modal-dialog {
+  width: 700px;
 }
 
 .datepicker td, .datepicker th {
