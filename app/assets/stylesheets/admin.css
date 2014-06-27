@@ -47,12 +47,3 @@ form .remove {
   margin-bottom: 4px;
   margin-top: 4px;
 }
-
-.datepicker td, .datepicker th {
-  border: 1px solid #747272;
-  background-color: #f9f7f6;
-}
-
-.datepicker td.day.disabled {
-  color: #e4e3e3;
-}
