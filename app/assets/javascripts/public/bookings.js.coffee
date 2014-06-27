@@ -26,16 +26,15 @@ jQuery ->
           altField: '#depart_date_hidden_datepicker'
           beforeShowDay: (date) ->
             # format javascript date to match rails
-            date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds())
+            date_str = format_date(date_utc)
 
-            date_str = $.datepicker.formatDate("yy-mm-dd", date_utc)
             if $.inArray(date_str, window.Booking.departDates) != -1
               return true
             else
               return false
-        ).on('changeDate', (ev) -> 
+        ).on('changeDate', (ev) ->
           selected_date = $('#depart_date_datepicker').data('datepicker').date
-          selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+          selected_date = format_date(selected_date)
           $("#depart_date_hidden_datepicker").val( selected_date )
         )
 
@@ -46,16 +45,15 @@ jQuery ->
           beforeShowDay: (date) ->
 
             # format javascript date to match rails
-            date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds())
+            date_str = format_date(date_utc)
 
-            date_str = $.datepicker.formatDate("yy-mm-dd", date_utc)
             if $.inArray(date_str, window.Booking.returnDates) != -1
               return true
             else
               return false
-        ).on('changeDate', (ev) -> 
+        ).on('changeDate', (ev) ->
           selected_date = $('#return_date_datepicker').data('datepicker').date
-          selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+          selected_date = format_date(selected_date)
           $("#return_date_hidden_datepicker").val( selected_date )
         )
       )
