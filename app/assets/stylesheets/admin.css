@@ -5,9 +5,6 @@
  *= require_self
  //= require rails_bootstrap_forms
  */
-@import url('common.css');
-@import url('bookings.css');
-
 
 form .items {
   margin: 10px;
@@ -55,4 +52,30 @@ form .remove {
 
 .datepicker td.day.disabled {
   color: #e4e3e3;
+}
+
+#return_date_datepicker {
+  display: none;
+}
+
+.ui-datepicker-current-day {
+  background: #357ebd;
+}
+
+.ui-datepicker-current-day .ui-state-active {
+  background: #428bca;
+  color: white;
+}
+
+#return_date_datepicker {
+  display: none;
+}
+
+.ui-datepicker-current-day {
+  background: #357ebd;
+}
+
+.ui-datepicker-current-day .ui-state-active {
+  background: #428bca;
+  color: white;
 }
