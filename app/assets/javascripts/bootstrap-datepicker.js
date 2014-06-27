@@ -1256,3 +1256,18 @@
     });
 
 }( window.jQuery ));
+
+function format_date(s_date){
+    day   = s_date.getUTCDate()
+    month = s_date.getUTCMonth()
+    year  = s_date.getUTCFullYear()
+
+    if(parseInt(day) < 10){
+        day = "0" + day
+    }
+
+    if(parseInt(month) < 10){
+        month = "0" + month
+    }
+    return year + '-' + month + '-' + day
+}
