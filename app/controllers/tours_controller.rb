@@ -23,6 +23,7 @@ class ToursController < ApplicationController
   end
 
   def show
+    @shuttles = Shuttle.all
     @tours = Tour.all
     @tour = Tour.find_by(id: params[:id])
     @reservation = Reservation.new

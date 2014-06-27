@@ -2,9 +2,7 @@ class AgmController < ApplicationController
 
   def index
     @tours = Tour.all
+    @shuttles = Shuttle.all
   end
 
-  def show
-    @tours = Tour.all
-  end
 end

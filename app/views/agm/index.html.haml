@@ -1,38 +1,13 @@
 = stylesheet_link_tag 'index.css'
 .container.container-bg.border-bottom
   %h2 Express Shuttle with Mercedes Sprinter
-  .row
-    #shuttle-service-carousel.carousel.slide{"data-ride" => "carousel"}
-      / Indicators
-      %ol.carousel-indicators
-        %li.active{"data-slide-to" => "0", "data-target" => "#shuttle-service-carousel"}
-        %li{"data-slide-to" => "1", "data-target" => "#shuttle-service-carousel"}
-        %li{"data-slide-to" => "2", "data-target" => "#shuttle-service-carousel"}
-      / Slider Content (Wrapper for slides )
-      .carousel-inner
-        .item.active
-          = image_tag('express.jpg')
-          .carousel-caption
-            %h3 We provide luxurious and comfortable express transportation to the following destinations:
-            %h4 Las Vegas, Hollywood, Glendale
-            %h5 No need to worry, just sit back, relax and allow our professionals to escort you safely to your destination.
-        .item
-          = image_tag('express2.jpg')
-          .carousel-caption
-            %h3 We provide luxurious and comfortable express transportation to the following destinations:
-            %h4 Las Vegas, Hollywood, Glendale
-            %h5 No need to worry, just sit back, relax and allow our professionals to escort you safely to your destination.
-        .item
-          = image_tag('express3.jpg')
-          .carousel-caption
-            %h3 We provide luxurious and comfortable express transportation to the following destinations:
-            %h4 Las Vegas, Hollywood, Glendale
-            %h5 No need to worry, just sit back, relax and allow our professionals to escort you safely to your destination.
-      / Controls
-      %a.left.carousel-control{"data-slide" => "prev", href: "#shuttle-service-carousel"}
-        %span.glyphicon.glyphicon-chevron-left
-      %a.right.carousel-control{"data-slide" => "next", href: "#shuttle-service-carousel"}
-        %span.glyphicon.glyphicon-chevron-right
+  .col-md-12.outer
+    =image_tag(('express.jpg'), class: 'img-responsive')
+    .bottomleft
+      %p No need to worry, just sit back, relax and allow our professionals to escort you safely to your destination.
+    %p.center-text Las Vegas, Hollywood, Glendale
+    %p.topright We provide luxurious and comfortable express transportation to the following destinations:
+
   .row
     %h3.blue-heading
       %a{href: "/shuttles/1"} RESERVE SHUTTLE NOW
@@ -53,7 +28,7 @@
         - if tour.name == 'Red Rock Canyon Tour'
           = link_to(image_tag('red-rock.jpg'), tour)
         - if tour.name == 'Grand Canyon Tour'
-          = link_to(image_tag('grand-canyon.jpg'), tour)
+          = link_to(image_tag('grand-canyon2.jpg'), tour)
         %h3= tour.name
         %h4
           $ #{' %.2f' % (tour.amount.to_i/100.0)}
