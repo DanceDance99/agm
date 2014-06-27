@@ -15,8 +15,8 @@
   $(document).ready(function(){
     $("#datepicker").datepicker({
       beforeShowDay: function(date){
-        var date_utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),  date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
-        if ($.inArray($.datepicker.formatDate('yy-mm-dd', date_utc), dateEnabled) != -1)
+        var date_utc_formatted = format_date(date)
+        if($.inArray(date_utc_formatted, dateEnabled) != -1)
         {
           return  true
         }else{
@@ -25,7 +25,7 @@
       }
     }).on('changeDate', function(){
       selected_date = $('#datepicker').data('datepicker').date
-      selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+      selected_date = format_date( selected_date)
 
       tour_date = jQuery.grep(tour_dates, function(object, index){
         return object.date == selected_date;
@@ -36,14 +36,12 @@
       if(tour_date.available > 6){
         counter = 0 ;
         for(var counter = 5; counter <= tour_date.available; counter++) {
-        //for(index in [1..tour_date.available]){
           options += '<option value="' + counter + '">' + counter + '</option>' ;
         }
         jQuery('#reservation_passengers').html(unbooked)
       }else{
         counter = 0 ;
         for(var counter = 1; counter <= tour_date.available; counter++) {
-        //for(index in [1..tour_date.available]){
           options += '<option value="' + counter + '">' + counter + '</option>' ;
         }
       }
@@ -55,10 +53,9 @@
   jQuery ->
     compute_tour_passengers = ->
       selected_date = $('#datepicker').data('datepicker').date
-      console.log(selected_date)
-      selected_date = $.datepicker.formatDate("yy-mm-dd", selected_date)
+      selected_date = format_date( selected_date)
       tour_date = jQuery.grep(tour_dates, (object, index) ->
-        object.date == selected_date
+        object.date.toString() == selected_date
       )[0]
       if tour_date.available > 5
         jQuery('#reservation_passengers').html(unbooked)
