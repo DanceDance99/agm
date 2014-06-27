@@ -1259,7 +1259,7 @@
 
 function format_date(s_date){
     day   = s_date.getUTCDate()
-    month = s_date.getUTCMonth()
+    month = s_date.getUTCMonth() + 1
     year  = s_date.getUTCFullYear()
 
     if(parseInt(day) < 10){
