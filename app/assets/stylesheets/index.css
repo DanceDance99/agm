@@ -159,25 +159,25 @@
 
 .tour-inner-container img { height: 200px; }
 
+.topright {
+  top: 1em;
+  right: 1em;
+  width: 190px;
+  font-size: 13px;
+}
+
 .center-text {
-  font-size: 35px;
-  bottom: 4em;
-  left: .6em;
+  font-size: 45px;
+  bottom: 3.7em;
+  left: .3em;
   width: 300px;
  }
 
 .bottomleft {
-  width: 300px;
+  width: 190px;
   font-size: 13px;
   bottom: 0;
  }
-
- .topright {
-  top: 1em;
-  right: .7em;
-  width: 300px;
-  font-size: 13px;
-  }
 }
 
 
