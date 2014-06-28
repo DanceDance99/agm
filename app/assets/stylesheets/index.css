@@ -64,11 +64,9 @@
     text-shadow: 2px 2px 2px #222121;
 }
 
-
 .express-shuttle-display {
   position: relative;
-  background-image: url('express2.jpg');
-
+  background-image: url('express.jpg');
 }
 
 
@@ -151,17 +149,6 @@
 /* end */
 
 @media(max-width: 480px) {
-.carousel-caption h4 {
-  margin-top: 13px;
-  margin-bottom: 13px;
-  font-size: 35px; }
-
-.carousel-caption h3 { font-size: 26px; }
-
-.carousel-caption h5 {
-  font-size: 20px;
-  color: #e9e6dc; }
-
 .blue-heading-small { margin-left: 20px; }
 
 .blue-heading {
@@ -173,23 +160,23 @@
 .tour-inner-container img { height: 200px; }
 
 .center-text {
-  font-size: 55px;
-  bottom: 1.3em;
-  left: .4em;
+  font-size: 35px;
+  bottom: 4em;
+  left: .6em;
   width: 300px;
  }
 
-  .bottomleft {
-    width: 290px;
-    font-size: 14px;
-    bottom: 0;
+.bottomleft {
+  width: 300px;
+  font-size: 13px;
+  bottom: 0;
  }
 
  .topright {
-    top: 1em;
-    right: .7em;
-    width: 290px;
-    font-size: 14px;
+  top: 1em;
+  right: .7em;
+  width: 300px;
+  font-size: 13px;
   }
 }
 
