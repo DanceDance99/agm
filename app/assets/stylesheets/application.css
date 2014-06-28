@@ -141,12 +141,12 @@ footer {
 
   .larger-text { font-size: 18px; }
 
-  #jumbotron-telephone h2  { font-size: 25px; text-align: left; padding: 0; margin-left: 80px;}
+  #jumbotron-telephone h2  { font-size: 25px; text-align: left; padding: 0; margin-left: 78px;}
 
-  #translate { margin-left: 40px; }
+  #translate { margin-left: 50px; }
 
   #jumbotron-telephone-text {
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   .heading {
