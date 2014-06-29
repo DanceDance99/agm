@@ -1,6 +1,7 @@
 !!!!
 %html
 %body
+  = image_tag attachments['logo.png'].url, alt: 'AGM Tours, Inc. logo', class: 'center-img'
   %h1
     Dear #{@reservation.first_last_name}, please find your tour information below:
   %ul
@@ -8,7 +9,7 @@
       %strong Tour name:
       #{@tour.name}
     %li
-      %strong # of Passengers:
+      %strong Passengers:
       #{@reservation.passengers}
     %li
       %strong Date:
@@ -17,4 +18,4 @@
       %strong Pickup location:
       #{@reservation.pickup_location}
     %p *Please remember to bring your own child seat if a child is going to be traveling.
-    %p Thank you for booking with AGM Express. Please contact us at 702 327 9922 with any questions.
+    %p Thank you for booking with AGM Tours, Inc. Please contact us at 702 327 9922 with any questions.
