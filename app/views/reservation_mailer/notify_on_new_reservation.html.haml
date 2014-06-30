@@ -12,8 +12,8 @@
       %strong Passengers:
       #{@reservation.passengers}
     %li
-      %strong Amount:
-      #{@tour.amount}
+      %strong Amount paid: $
+      #{p '%.2f' % (@tour.amount.to_i/100.0)}
     %li
       %strong Date:
       #{@reservation.date}

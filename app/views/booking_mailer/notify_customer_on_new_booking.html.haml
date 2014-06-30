@@ -7,6 +7,14 @@
     %li
       %strong Passengers:
       #{@booking.passengers}
+    - if @booking.round_trip
+      %li
+        %strong Round trip amount (paid): $
+        #{p '%.2f' % (@booking.amount.to_i/100.0)}
+    - else
+      %li
+        %strong One way trip amount (paid): $
+        #{p '%.2f' % (@booking.amount.to_i/100.0)}
     %li
       %strong From:
       #{@booking.from.name}
@@ -29,16 +37,6 @@
     %li
       %strong Home drop off?
       #{@booking.home_dropoff ? 'Yes' : 'No'}
-    %br
-    %li
-      %strong Home pickup address
-      #{@booking.home_address.presence || 'N/A'}
-    %li
-      %strong Pickup city
-      #{@booking.pickup_city.presence || 'N/A'}
-    %li
-      %strong Zipcode:
-      #{@booking.zipcode.presence || 'N/A'}
     %br
     = render 'additions_fields'
     %p *Please remember to bring your own child seat if a child is going to be traveling.

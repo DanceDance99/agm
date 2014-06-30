@@ -6,7 +6,7 @@
   %li
     %strong One way trip #{@booking.amount}
 
-- if !@booking.round_trip && @booking.home_pickup
+- if @booking.home_pickup
   %li
     %strong Pick up from #{@booking.from.name} to #{@booking.to.name}
   %li
@@ -19,7 +19,7 @@
     %strong Zipcode:
     #{@booking.zipcode.presence || 'N/A'}
   %br
-- if !@booking.round_trip && @booking.home_dropoff
+- if @booking.home_dropoff
   %li
     %strong Drop off from #{@booking.from.name} to #{@booking.to.name}
   %li
