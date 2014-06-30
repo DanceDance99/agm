@@ -1,11 +1,3 @@
-- if @booking.round_trip
-  %li
-    %strong Round trip #{@booking.amount}
-
-- else
-  %li
-    %strong One way trip #{@booking.amount}
-
 - if @booking.home_pickup
   %li
     %strong Pick up from #{@booking.from.name} to #{@booking.to.name}
