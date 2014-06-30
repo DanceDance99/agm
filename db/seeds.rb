@@ -1,3 +1,5 @@
+User.create(username: 'Armen', password: 'bulgaria')
+
 shuttle = Shuttle.create(name: 'Shuttle', sunday: true, friday: true, start_date: Date.today)
 shuttle.amount = 3900
 shuttle.round_trip_amount = 6900
