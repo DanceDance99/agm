@@ -63,10 +63,10 @@
             #{booking.private_shuttle ? 'Yes' : 'No'}
           %li
             %strong From:
-            #{booking.from.name}
+            #{booking.to.name}
           %li
             %strong To:
-            #{booking.to.name}
+            #{booking.from.name}
           %li
             %strong Home pickup?
             #{booking.home_pickup ? 'Yes' : 'No'}
