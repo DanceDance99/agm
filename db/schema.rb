@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624024905) do
+ActiveRecord::Schema.define(version: 20140701084806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: true do |t|
     t.integer  "passengers"
-    t.boolean  "home_pickup",      default: false
-    t.boolean  "home_dropoff",     default: false
+    t.boolean  "home_pickup",               default: false
+    t.boolean  "home_dropoff",              default: false
     t.text     "home_address"
     t.integer  "zipcode"
     t.string   "telephone_number"
@@ -42,6 +42,12 @@ ActiveRecord::Schema.define(version: 20140624024905) do
     t.string   "dest_address"
     t.string   "dest_city"
     t.string   "dest_zipcode"
+    t.string   "round_trip_source_address"
+    t.string   "round_trip_source_city"
+    t.string   "round_trip_source_zipcode"
+    t.string   "round_trip_dest_address"
+    t.string   "round_trip_dest_city"
+    t.string   "round_trip_dest_zipcode"
   end
 
   create_table "reservations", force: true do |t|
@@ -82,10 +88,11 @@ ActiveRecord::Schema.define(version: 20140624024905) do
     t.string   "start_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "day_bits",                default: 0, null: false
+    t.integer  "day_bits",                default: 0,    null: false
     t.integer  "round_trip_amount"
     t.integer  "group_round_trip_amount"
     t.integer  "group_amount"
+    t.boolean  "shuttle_lag_rebuilt",     default: true
   end
 
   create_table "tour_dates", force: true do |t|
@@ -108,7 +115,8 @@ ActiveRecord::Schema.define(version: 20140624024905) do
     t.string   "start_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "day_bits",    default: 0, null: false
+    t.integer  "day_bits",          default: 0,    null: false
+    t.boolean  "tour_date_rebuilt", default: true
   end
 
   create_table "users", force: true do |t|
