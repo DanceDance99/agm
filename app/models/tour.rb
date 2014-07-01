@@ -28,6 +28,12 @@ class Tour < ActiveRecord::Base
   private
 
   def create_missing_tour_dates
+    return unless self.tour_date_rebuilt
+    self.update_column(:tour_date_rebuilt, false)
+
+    puts "Updating tour date....................."
+    puts "Updating tour date....................."
+    puts "Updating tour date....................."
     #need to know maximum days into the future that can be booked
     future_days = 365
 
