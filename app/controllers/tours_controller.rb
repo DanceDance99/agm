@@ -29,7 +29,7 @@ class ToursController < ApplicationController
     @reservation = Reservation.new
     @tour_dates = @tour.tour_dates.where(:date => Date.today .. 12.months.from_now).where("available > 0").order('date asc')
 
-    @tour.save #hack to rebuild dates until a rake task is employeed
+    @tour.save if @tour.tour_date_rebuilt #hack to rebuild dates until a rake task is employeed
 
     render :layout => 'application'
   end
@@ -40,6 +40,8 @@ class ToursController < ApplicationController
 
   def update
     @tour = Tour.find_by(id: params[:id])
+    @tour.update_column(:tour_date_rebuilt, true)
+
     if @tour.update_attributes(tours_params)
       flash[:success] = "#{@tour.name} has been successfully updated."
       redirect_to tours_path
@@ -49,7 +51,7 @@ class ToursController < ApplicationController
     end
   end
 
-    def destroy
+  def destroy
     @tour = Tour.find(params[:id])
     @tour.destroy
 

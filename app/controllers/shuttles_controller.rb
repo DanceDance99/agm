@@ -31,7 +31,7 @@ class ShuttlesController < ApplicationController
     @from_cities = @shuttle.shuttle_cities
     @to_cities = @shuttle.shuttle_cities
 
-    @shuttle.save #hack to rebuild dates until a rake task is employeed
+    @shuttle.save  if @shuttle.shuttle_lag_rebuilt #hack to rebuild dates until a rake task is employeed
 
     render :layout => 'application'
   end
@@ -40,6 +40,7 @@ class ShuttlesController < ApplicationController
   end
 
   def update
+    @shuttle.update_column(:shuttle_lag_rebuilt, true)
     if @shuttle.update_attributes(shuttles_params)
       flash[:success] = "#{@shuttle.name} has been successfully updated."
       redirect_to shuttles_path

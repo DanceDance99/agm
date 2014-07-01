@@ -53,6 +53,9 @@ class Shuttle < ActiveRecord::Base
   private
 
   def create_missing_shuttle_legs
+    return unless self.shuttle_lag_rebuilt
+    self.update_column(:shuttle_lag_rebuilt, false)
+
     future_days = 365
 
     date = Date.today
