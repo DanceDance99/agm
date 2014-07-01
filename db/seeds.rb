@@ -1,6 +1,6 @@
 User.create(username: 'Armen', password: 'bulgaria')
 
-shuttle = Shuttle.create(name: 'Shuttle', sunday: true, friday: true, start_date: Date.today)
+shuttle = Shuttle.create(name: 'Express Shuttle', sunday: true, friday: true, start_date: Date.today)
 shuttle.amount = 3900
 shuttle.round_trip_amount = 6900
 shuttle.group_amount = 35000
