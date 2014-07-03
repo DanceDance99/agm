@@ -15,6 +15,7 @@ gem 'jquery-ui-rails'
 gem 'bootstrap_form'
 gem 'jquery-turbolinks'
 gem 'figaro'
+gem 'sentry-raven'
 
 gem 'haml'
 gem 'flag_shih_tzu'
