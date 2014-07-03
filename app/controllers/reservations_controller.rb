@@ -21,8 +21,8 @@ class ReservationsController < ApplicationController
 
 
     if @reservation.save
-      #ReservationMailer.notify_customer_on_new_reservation(@tour, @reservation).deliver
-      #ReservationMailer.notify_on_new_reservation(@tour, @reservation).deliver
+      ReservationMailer.notify_customer_on_new_reservation(@tour, @reservation).deliver
+      ReservationMailer.notify_on_new_reservation(@tour, @reservation).deliver
       flash[:success] = "Your reservation has been booked! You will receive an email confirmation soon."
       render :js => "window.location = '#{url_for(@tour)}'"
     else
