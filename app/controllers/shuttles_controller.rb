@@ -19,7 +19,7 @@ class ShuttlesController < ApplicationController
       flash[:success] = "shuttle #{@shuttle.name} has been successfully added."
       redirect_to shuttles_path
     else
-      flash[:error] = "The shuttle #{@shuttle.name} was not successfully saved. Please try again"
+      flash[:error] = "The shuttle #{@shuttle.name} was not successfully saved. Please try again."
       render 'new'
     end
   end
