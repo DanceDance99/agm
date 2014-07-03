@@ -5,7 +5,7 @@ class ReservationMailer < ActionMailer::Base
     @tour = tour
     @reservation = reservation
     attachments.inline['logo.png'] = File.read("#{Rails.root.to_s + '/app/assets/images/logo.png'}")
-    mail(to: 'hi@sponsi.com', subject: 'New Tour Reservation')
+    mail(to: 'funkafaction@gmail.com', subject: 'New Tour Reservation')
   end
 
   def notify_customer_on_new_reservation(tour, reservation)
