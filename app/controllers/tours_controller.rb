@@ -17,7 +17,7 @@ class ToursController < ApplicationController
       flash[:success] = "Tour #{@tour.name} has been successfully added."
       redirect_to tours_path
     else
-      flash[:error] = "The tour #{@tour.name} was not successfully saved. Please try again"
+      flash[:error] = "The tour #{@tour.name} was not successfully saved. Please try again."
       render 'new'
     end
   end

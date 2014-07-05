@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       flash[:notice] = 'Logged in sucessfully.'
       redirect_to agm_admin_path
     else
-      flash[:error] = 'Login failed. Please try again'
+      flash[:error] = 'Login failed. Please try again.'
       redirect_to login_path
     end
   end
