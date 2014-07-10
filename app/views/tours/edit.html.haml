@@ -3,12 +3,12 @@
   $(function() {
     $( "#tour_start_date" ).datepicker();
   });
+- days = %w(Sun Mon Tue Wed Thu Fri Sat)
 .container
   .row
     .col-md-3
-      %h2 Add New Tour
+      %h2 Edit Tour
       = bootstrap_form_for(@tour) do |f|
         = render :partial => 'form', :locals => {:form => f }
-        = f.submit 'Add this tour', class: 'btn btn-success'
-
+        = f.submit 'Update this tour', class: 'btn btn-success'
 

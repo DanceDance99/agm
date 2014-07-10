@@ -1,0 +1,13 @@
+= link_to 'Logout', logout_path, class: 'btn btn-danger'
+:javascript
+  $(function() {
+    $( "#shuttle_start_date" ).datepicker();
+  });
+- days = %w(Sun Mon Tue Wed Thu Fri Sat)
+.container
+  .row
+    .col-md-3
+      %h2 Edit shuttle
+      = bootstrap_form_for(@shuttle) do |f|
+        = render :partial => 'form', :locals => {:form => f}
+        = f.submit 'Update Shuttle', class: 'btn btn-success'

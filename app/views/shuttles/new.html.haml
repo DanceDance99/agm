@@ -1,0 +1,13 @@
+= link_to 'Back to shuttles', shuttles_path, class: 'btn btn-info'
+:javascript
+  $(function() {
+    $( "#shuttle_start_date" ).datepicker();
+  });
+- days = %w(Sun Mon Tue Wed Thu Fri Sat)
+.container
+  .row
+    .col-md-3
+      %h2 Add new shuttle
+      = bootstrap_form_for(@shuttle) do |f|
+        = render :partial => 'form', :locals => {:form => f}
+        = f.submit 'Add this shuttle', class: 'btn btn-success'

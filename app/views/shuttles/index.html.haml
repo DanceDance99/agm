@@ -1,0 +1,27 @@
+= link_to 'Add new shuttle', new_shuttle_path, class: 'btn btn-success'
+= link_to 'Tours menu', tours_path, class: 'btn btn-info'
+= link_to 'Logout', logout_path, class: 'btn btn-danger'
+%h2 List of all shuttles available
+- @shuttles.each do |shuttle|
+  %ul
+    %li
+      = link_to shuttle.name, shuttle
+    %strong
+      %li Pricing:
+    %li
+      One way: $#{' %.2f' % (shuttle.amount.to_i/100.0)}
+    %li
+      Round trip: $#{' %.2f' % (shuttle.round_trip_amount.to_i/100.00)}
+    %li
+      Private (one way): $#{' %.2f' % (shuttle.group_amount.to_i/100.00)}
+    %li
+      Private (round trip): $#{' %.2f' % (shuttle.group_round_trip_amount.to_i/100.00)}
+    %strong
+      %li Days shuttle available on:
+    %li= shuttle.days
+    = link_to 'Edit', edit_shuttle_path(shuttle)
+    = link_to 'Bookings', shuttle_bookings_path(shuttle)
+    = link_to "Delete shuttle",
+      shuttle_path(shuttle),
+      method: :delete,
+      data: { confirm: "Are you sure you want to delete this shuttle" }
