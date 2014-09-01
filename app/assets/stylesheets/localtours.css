@@ -53,13 +53,9 @@ h4 {
   margin-left: 45px;
 }
 
-.blue-heading h3 {
-  font-size: 30px;
-}
+.blue-heading h3 { font-size: 30px; }
 
-.padding-bottom {
-  padding-bottom: 12px;
-}
+.padding-bottom { padding-bottom: 12px; }
 
 .center {
   margin-left: auto;
@@ -83,9 +79,7 @@ h4 {
   margin-bottom: 20px;
 }
 
-.margin-top {
-  margin-top: 25px;
-}
+.margin-top { margin-top: 25px; }
 
 /* end */
 
@@ -116,9 +110,7 @@ h4 {
   text-align: center;
 }
 
-.pricing-notice p {
-  text-align: center;
-}
+.pricing-notice p { text-align: center; }
 /* end */
 
 @media(max-width: 480px) {

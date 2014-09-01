@@ -5,6 +5,7 @@
 .ui-datepicker-current-day {
   background: #357ebd;
 }
+
 .ui-datepicker-current-day .ui-state-active {
   background: #428bca;
   color: white;
