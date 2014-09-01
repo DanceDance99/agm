@@ -29,7 +29,7 @@ en:
     city3: 'Hollywood'
     notice: "To better accommodate your weekend plans, we offer our services on Friday's and Sunday's"
     notice2: '*Please note that departure/arrival times will vary depending on traffic conditions'
-    friday: 'Friday'
+    weekdays: 'Tuesday & Friday'
     sunday: 'Sunday'
     departure: 'Departure'
     arrival: 'Arrival'

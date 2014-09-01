@@ -38,14 +38,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .square-heading {
   display:block;
-    clear:right;
-    float:left;
-    padding: 3.5%;
-    width:auto;
-    height:auto;
-    background:#e1e1e1;
-    text-align:center;
-    margin: 0;
+  clear:right;
+  float:left;
+  padding: 3.5%;
+  width:auto;
+  height:auto;
+  background:#e1e1e1;
+  text-align:center;
+  margin: 0;
 }
 
 .rounded-heading {
@@ -80,6 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-control.right {
   background-image: none;
 }
+
 .carousel-control.left {
   background-image: none;
 }
@@ -151,7 +152,7 @@ th h2 {
 }
 
 .schedule-listing h5 {
-  font-size: 27px;
+  font-size: 23px;
   margin: 0;
 }
 

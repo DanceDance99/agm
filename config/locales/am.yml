@@ -8,7 +8,7 @@ am:
     city3: 'Hollywood'
     notice: "*Ձեր հանգստյան օրերին հարմարեցնելու նպատակով մեր ծառայություններն առաջարկում ենք ՈՒրբաթ եւ Կիրակի օրերին."
     notice2: '*Please note that departure/arrival times will vary depending on traffic conditions'
-    friday: 'ՈԻրբաթ'
+    weekdays: 'Tuesday & ՈԻրբաթ'
     sunday: 'Կիրակի'
     departure: 'Մեկնում'
     arrival: 'Ժամանում'
