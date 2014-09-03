@@ -25,6 +25,8 @@ gem 'awesome_nested_fields'
 gem 'unicorn'
 gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 
+gem 'newrelic_rpm'
+
 group :development do
   gem 'spring'
   gem 'quiet_assets'

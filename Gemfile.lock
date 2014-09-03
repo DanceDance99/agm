@@ -103,6 +103,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.10.0)
     multipart-post (2.0.0)
+    newrelic_rpm (3.9.3.241)
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -203,6 +204,7 @@ DEPENDENCIES
   jquery-ui-rails
   letter_opener
   mocha
+  newrelic_rpm
   pg
   pry
   quiet_assets
